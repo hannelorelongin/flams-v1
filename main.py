@@ -4,6 +4,8 @@ from pathlib import Path
 
 from Bio import SeqIO
 from Bio.Blast import NCBIWWW
+from flams.display import display_result
+from flams.run_blast import run_blast
 
 
 def read_fasta(file: Path):
@@ -12,7 +14,9 @@ def read_fasta(file: Path):
 
 def main(args):
     protein_seq = read_fasta(Path(args.input[0]))
-    NCBIWWW.qblast("blastp", )
+    
+    result = run_blast(protein_seq, *args)
+    display_result(result)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Find Lysine Acetylation Modification Sites.')

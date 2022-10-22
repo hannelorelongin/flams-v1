@@ -27,3 +27,13 @@ You'll be moved automatically to that branch.
 `git add .`
 `git commit -m "{Short description of change}"`
 `git push`
+
+To merge the code from the branch to the main branch, you need to create a pull request (can be done through the web interface).
+
+
+# Dev notes
+
+## Creating local BLAST database
+Manual: http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec125
+
+`makeblastdb -in data/acetylation.faa -dbtype prot`
