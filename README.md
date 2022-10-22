@@ -16,7 +16,8 @@ Install dependencies:
 `pip install -r requirements.txt`
 
 ## Run
-`python flams/main.py {input fasta file} -o {output path}`
+`python flams/main.py --in {input fasta file} N`
+where N is position of lysine
 
 ## Linters
 Before commiting the code run:
