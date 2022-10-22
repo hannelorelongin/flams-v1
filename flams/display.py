@@ -1,6 +1,3 @@
-import csv
-
-
 def display_result(blast_records):
     # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec129
     with open(r"D:\git\flams\output.tsv", "w") as out_file:
