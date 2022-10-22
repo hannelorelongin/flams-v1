@@ -16,7 +16,19 @@ Install dependencies:
 `pip install -r requirements.txt`
 
 ## Run
-`python main.py {input fasta file} -o {output path}`
+`python flams/main.py {input fasta file} -o {output path}`
+
+## Linters
+Before commiting the code run:
+`black .`
+`flake8 flams`
+
+## Tests
+To run all tests:
+`python -m unittest discover`
+
+To run a specific module:
+`python -m unittest test.test_display`
 
 ## Push a commit
 First, create a new branch:
