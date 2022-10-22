@@ -1,23 +1,18 @@
 from pathlib import Path
 import unittest
+import csv
 
 from Bio.Blast import NCBIXML
 from flams.display import display_result
 
 
-EXAMPLE_BLAST_OUTPUT = Path("test/testfiles/acetylation.out")
-
-
-def _get_example_blast_output():
-    with EXAMPLE_BLAST_OUTPUT.open() as f:
-        blast_records = list(NCBIXML.parse(f))
-    return blast_records
-
+EXAMPLE_BLAST_OUTPUT = Path("testfiles/acetylation.out")
 
 class DisplayTestCase(unittest.TestCase):
     def test_display_simple(self):
-        blast_records = _get_example_blast_output()
-        display_result(blast_records)
-        # TODO(roshan) write some tests for your functions
-        # https://docs.python.org/3/library/unittest.html
-        self.assertTrue(1 == 1)
+        with EXAMPLE_BLAST_OUTPUT.open() as f:
+            blast_records = list(NCBIXML.parse(f))
+            display_result(blast_records)
+                    
+if __name__ == '__main__':
+    unittest.main()
