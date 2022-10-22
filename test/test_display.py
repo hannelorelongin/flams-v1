@@ -5,7 +5,7 @@ from Bio.Blast import NCBIXML
 from flams.display import display_result
 
 
-EXAMPLE_BLAST_OUTPUT = Path("testfiles/acetylation.out")
+EXAMPLE_BLAST_OUTPUT = Path(__file__).parent / "testfiles/acetylation.out"
 
 
 class DisplayTestCase(unittest.TestCase):

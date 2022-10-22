@@ -9,6 +9,4 @@ def display_result(blast_records):
         for blast_record in blast_records:
             for alignment in blast_record.alignments:
                 for hsp in alignment.hsps:
-                    tsv_writer.writerow(
-                        [alignment.title, alignment.length, hsp.expect]
-                    )
+                    tsv_writer.writerow([alignment.title, alignment.length, hsp.expect])
