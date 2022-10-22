@@ -1,7 +1,9 @@
 from pathlib import Path
 from Bio.Blast.Applications import NcbiblastpCommandline
+from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
 import subprocess
+import re
 
 FASTADB_LOCATION = "data/acetylation.faa"
 BLASTDB_LOCATION = "data/blast.db"
@@ -42,4 +44,56 @@ def run_blast(
     with open(BLAST_OUT) as handle:
         blast_records = list(NCBIXML.parse(handle))
 
-    return blast_records
+    # Create new Blast Record where we append filtered matches.
+    filtered = Blast()
+    # We will here assume that the input FASTA contains only one sequence (array is of length 1).
+    for a in blast_records[0].alignments:
+        # We will append matching High Scoring partners here, which will then be added to the 'filtered' BLAST frame
+        filtered_hsps = []
+        for hsp in a.hsps:
+            if hsp.expect < evalue:
+                # Get lysine modification position from alignment title.
+                # User input is: lysine_pos, lysine_range
+
+                # Parse PTM modification from the alignment title
+                # Example: PLMD-7244|P25665|304 Acetylation [Escherichia coli (strain K12)]
+                title_spl = re.split(r"\\||\s", a.title, maxsplit=4)
+                # title_spl[0] contains PLMD id
+                # title_spl[1] contains Uniprot ID
+                # title_spl[2] contains modification position
+                # title_spl[3] contains type of modification
+                # title_spl[4] contains name or organism.
+
+                mod_pos = int(title_spl[2])
+
+                # Check 1. mod_pos must be within the match of the subject
+                if not (mod_pos >= hsp.sbjct_start and mod_pos <= hsp.sbjct_end):
+                    continue
+
+                # Check 2. Our user queried position must be within the match of the query
+                query_pos = int(lysine_pos)
+                if not (query_pos >= hsp.query_start and query_pos <= hsp.query_end):
+                    continue
+
+                # Standardise the position of the found PTM to local alignment
+                mod_pos = mod_pos - (hsp.sbjct_start - 1)
+
+                # Standardise the position of the query to local alignment and set range
+                query_pos = int(lysine_pos) - (hsp.query_start - 1)
+                limit_low = query_pos - int(lysine_range)
+                limit_high = query_pos + int(lysine_range)
+
+                # Check 2. Check if mod_pos is within range of low and high
+                if mod_pos >= limit_low and mod_pos <= limit_high:
+                    # WEE! we have a match.
+                    filtered_hsps.append(hsp)
+
+        # If some HSPS matched, let's append that to the filtered BLAST frame for future processing.
+        if filtered_hsps:
+            new_alignment = Alignment()
+            new_alignment.title = a.title
+            new_alignment.hsps = filtered_hsps
+            filtered.alignments.append(new_alignment)
+
+    # Display results expects an array of BLAST records.
+    return [filtered]
