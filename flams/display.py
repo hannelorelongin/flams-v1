@@ -1,3 +1,6 @@
+import csv
+
+
 def display_result(blast_records):
     # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec129
     with open(r"D:\git\flams\output.tsv", "w") as out_file:
@@ -6,4 +9,6 @@ def display_result(blast_records):
         for blast_record in blast_records:
             for alignment in blast_record.alignments:
                 for hsp in alignment.hsps:
-                    tsv_writer.writerow([alignment.title, alignment.length, hsp.expect])
+                    tsv_writer.writerow(
+                        [alignment.title, alignment.length, hsp.expect]
+                    )

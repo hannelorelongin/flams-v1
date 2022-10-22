@@ -1,6 +1,5 @@
 from pathlib import Path
 import unittest
-import csv
 
 from Bio.Blast import NCBIXML
 from flams.display import display_result
