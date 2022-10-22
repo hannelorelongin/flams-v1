@@ -2,7 +2,7 @@ import csv
 
 
 def display_result(blast_records):
-    # d http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec129
+    # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec129
     with open(r"D:\git\flams\output.tsv", "w") as out_file:
         tsv_writer = csv.writer(out_file, delimiter="\t")
         tsv_writer.writerow(["ID", "length", "e-value"])
