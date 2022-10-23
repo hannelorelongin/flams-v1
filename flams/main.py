@@ -1,22 +1,37 @@
 from pathlib import Path
 import sys
+import requests
 
-from Bio import SeqIO
-from display import display_result
-from input import parse_args
-from run_blast import run_blast
+from flams.display import display_result
+from flams.input import parse_args
+from flams.run_blast import run_blast
 
 
-def read_fasta(file: Path):
-    record = SeqIO.read(file, "fasta")
-    return record
+DATA_PATH = Path(__file__).parents[1] / "data"
+
+
+def retrieve_protein_from_uniprot(uniprot_id) -> Path:
+    url = f"https://rest.uniprot.org/uniprotkb/{uniprot_id}.fasta"
+    r = requests.get(url)
+
+    filename = DATA_PATH / f"{uniprot_id}.fasta.tmp"
+    with filename.open("w+") as f:
+        f.write(r.text)
+
+    return filename
+
+
+def get_protein(args) -> Path:
+    if args.input:
+        return args.input
+    return retrieve_protein_from_uniprot(args.id)
 
 
 def main(args):
-    #protein_seq = read_fasta(Path(args.input))
+    protein_file = get_protein(args)
 
     result = run_blast(
-        args.input,
+        input=protein_file,
         lysine_pos=args.pos,
         lysine_range=args.range,
         num_threads=args.num_threads,
