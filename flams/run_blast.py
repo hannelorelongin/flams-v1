@@ -1,4 +1,7 @@
+from dataclasses import dataclass
 from pathlib import Path
+from typing import List
+
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
@@ -10,7 +13,32 @@ BLASTDB_LOCATION = "data/blast.db"
 BLAST_OUT = "data/temp.xml"
 
 
-def run_blast(input, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs):
+@dataclass
+class ModificationHeader:
+    plmd_id: str
+    uniprot_id: str
+    position: int
+    modification: str
+    species: str
+
+    @staticmethod
+    def parse(title: str) -> "ModificationHeader":
+        # Parse modification from the alignment title of structure:
+        # {PLMD id}|{Uniprot ID}|{modification position} {type of modification} [{species}]
+        # Example: PLMD-7244|P25665|304 Acetylation [Escherichia coli (strain K12)]
+        regex = (
+            r"(?P<plmd_id>\S+)\|"
+            r"(?P<uniprot_id>\S+)\|"
+            r"(?P<position>\d+) (?P<modification>[A-Za-z]+) \[(?P<species>.+)\]"
+        )
+        vars = re.match(regex, title).groupdict()
+        vars["position"] = int(vars["position"])
+        return ModificationHeader(**vars)
+
+
+def run_blast(
+    input, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs
+) -> List[Blast]:
     # First, we need to create a local BLAST DB if it does not exist.
     # we should move this to some user cache directory using e.g. https://pypi.org/project/appdirs/ later
 
@@ -45,37 +73,23 @@ def run_blast(input, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwa
     return [_filter_blast(i, lysine_pos, lysine_range, evalue) for i in blast_records]
 
 
-def _filter_blast(blast_record, lysine_pos, lysine_range, evalue):
+def _filter_blast(blast_record, lysine_pos, lysine_range, evalue) -> Blast:
     # Create new Blast Record where we append filtered matches.
     filtered = Blast()
-    # We will here assume that the input FASTA contains only one sequence (array is of length 1).
+
     for a in blast_record.alignments:
-        # We will append matching High Scoring partners here, which will then be added to the 'filtered' BLAST frame
+        # Parse FASTA title where Posttranslational modification info is stored
+        mod = ModificationHeader.parse(a.title)
+
+        # Append matching High Scoring partners here, which will then be added to the 'filtered' BLAST frame
         filtered_hsps = []
+
         for hsp in a.hsps:
-            if hsp.expect < evalue:
-
-                # Parse FASTA title so we can pick out the PTM position
-                title_spl = _parse_fasta_title(a.title)
-
-                mod_pos = int(title_spl[2])
-
-                if not _check_ptm_is_within_match(hsp, mod_pos):
-                    continue
-
-                query_pos = lysine_pos
-
-                if not _check_user_query_is_within_match(hsp, query_pos):
-                    continue
-
-                mod_pos, query_pos, limit_low, limit_high = _standardise_positions(
-                    hsp, mod_pos, query_pos, lysine_range
-                )
-
-                # Check 3. Check if mod_pos is within range of low and high
-                if limit_low <= mod_pos <= limit_high:
-                    # WEE! we have a match.
-                    filtered_hsps.append(hsp)
+            if hsp.expect < evalue and does_hsp_match_query(
+                mod, hsp, lysine_pos, lysine_range
+            ):
+                # WEE! we have a match.
+                filtered_hsps.append(hsp)
 
         # If some HSPS matched, let's append that to the filtered BLAST frame for future processing.
         if filtered_hsps:
@@ -84,38 +98,43 @@ def _filter_blast(blast_record, lysine_pos, lysine_range, evalue):
             new_alignment.hsps = filtered_hsps
             filtered.alignments.append(new_alignment)
 
-    # Display results expects an array of BLAST records.
     return filtered
 
 
-def _parse_fasta_title(title):
-    # Get lysine modification position from alignment title.
-    # User input is: lysine_pos, lysine_range
+def does_hsp_match_query(
+    modification: ModificationHeader, hsp, query_pos, query_range
+) -> bool:
+    if not _is_modification_within_match(hsp, modification.position):
+        return False
 
-    # Parse PTM modification from the alignment title
-    # Example: PLMD-7244|P25665|304 Acetylation [Escherichia coli (strain K12)]
-    title_spl = re.split(r"\||\s", title, maxsplit=4)
+    if not _is_user_query_within_match(hsp, query_pos):
+        return False
 
-    # title_spl[0] contains PLMD id
-    # title_spl[1] contains Uniprot ID
-    # title_spl[2] contains modification position
-    # title_spl[3] contains type of modification
-    # title_spl[4] contains name or organism.
-    return title_spl
+    return _is_modification_within_tolerated_range(
+        hsp, modification.position, query_pos, query_range
+    )
 
 
 # Check 1. mod_pos must be within the match of the subject
-def _check_ptm_is_within_match(hsp, mod_pos):
+def _is_modification_within_match(hsp, mod_pos) -> bool:
     return hsp.sbjct_start <= mod_pos <= hsp.sbjct_end
 
 
 # Check 2. Our user queried position must be within the match of the query
-def _check_user_query_is_within_match(hsp, query_pos):
+def _is_user_query_within_match(hsp, query_pos) -> bool:
     return hsp.query_start <= query_pos <= hsp.query_end
 
 
+# Check 3. Check if mod_pos is within range of low and high
+def _is_modification_within_tolerated_range(hsp, mod_pos, query_pos, query_range):
+    mod_pos, query_pos, limit_low, limit_high = _standardise_positions(
+        hsp, mod_pos, query_pos, query_range
+    )
+    return limit_low <= mod_pos <= limit_high
+
+
 def _standardise_positions(hsp, mod_pos, lysine_pos, lysine_range):
-    # Standardise the position of the found PTM to local alignment
+    # Standardise the position of the found modification to local alignment
     mod_pos = mod_pos - (hsp.sbjct_start - 1)
 
     # Standardise the position of the query to local alignment and set range
