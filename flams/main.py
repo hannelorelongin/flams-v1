@@ -32,8 +32,8 @@ def main(args):
 
     result = run_blast(
         input=protein_file,
-        lysine_pos=args.lysine_pos,
-        lysine_range=args.lysine_range,
+        lysine_pos=args.pos,
+        lysine_range=args.range,
         num_threads=args.num_threads,
     )
     display_result(result)

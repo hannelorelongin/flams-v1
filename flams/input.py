@@ -36,6 +36,7 @@ def create_args_parser():
     parser.add_argument(
         "--range",
         type=int,
+        default=0,
         help="Range in position where to search for Acetylation",
     )
 

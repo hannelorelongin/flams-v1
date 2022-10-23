@@ -63,7 +63,7 @@ def _filter_blast(blast_record, lysine_pos, lysine_range, evalue):
                 if not _check_ptm_is_within_match(hsp, mod_pos):
                     continue
 
-                query_pos = int(lysine_pos)
+                query_pos = lysine_pos
 
                 if not _check_user_query_is_within_match(hsp, query_pos):
                     continue
@@ -120,6 +120,7 @@ def _standardise_positions(hsp, mod_pos, lysine_pos, lysine_range):
 
     # Standardise the position of the query to local alignment and set range
     query_pos = lysine_pos - (hsp.query_start - 1)
-    limit_low = query_pos - int(lysine_range)
-    limit_high = query_pos + int(lysine_range)
+    limit_low = query_pos - lysine_range
+    limit_high = query_pos + lysine_range
+
     return mod_pos, query_pos, limit_low, limit_high
