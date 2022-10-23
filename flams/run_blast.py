@@ -105,16 +105,12 @@ def _parse_fasta_title(title):
 
 # Check 1. mod_pos must be within the match of the subject
 def _check_ptm_is_within_match(hsp, mod_pos):
-    if not (hsp.sbjct_start <= mod_pos <= hsp.sbjct_end):
-        return False
-    return True
+    return (hsp.sbjct_start <= mod_pos <= hsp.sbjct_end)
 
 
 # Check 2. Our user queried position must be within the match of the query
 def _check_user_query_is_within_match(hsp, query_pos):
-    if not (hsp.query_start <= query_pos <= hsp.query_end):
-        return False
-    return True
+    return (hsp.query_start <= query_pos <= hsp.query_end)
 
 
 def _standardise_positions(hsp, mod_pos, lysine_pos, lysine_range):

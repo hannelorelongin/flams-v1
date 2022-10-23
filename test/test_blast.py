@@ -1,30 +1,14 @@
 from pathlib import Path
 import unittest
-from flams.run_blast import run_blast
-
-TEST_FASTA = Path(__file__).parent / "testfiles/P57703.fasta"
+from flams.run_blast import _parse_fasta_title, _check_ptm_is_within_match, _check_user_query_is_within_match, _standardise_positions
 
 class DisplayTestCase(unittest.TestCase):
-    def test_blast_P57703(self):
-        out = run_blast(TEST_FASTA, 306, 2)
-        self.assertTrue(len(out[0].alignments) == 2)
-        # Collect uniprot IDs of matches
-        found_ids = set()
-        for a in out[0].alignments:
-            title = a.title.split("|")
-            found_ids.add(title[1])
+    def test_parse_title(self):
+        title = "PLMD-7244|P25665|304 Acetylation [Escherichia coli (strain K12)]"
+        spl = _parse_fasta_title(title)
+        self.assertTrue(spl[0] == "PLMD-7244")
+        self.assertTrue(spl[1] == "P25665")
+        self.assertTrue(spl[2] == "304")
+        self.assertTrue(spl[3] == "Acetylation")
+        self.assertTrue(spl[4] == "[Escherichia coli (strain K12)]")
 
-        self.assertTrue("P25665" in list(found_ids))
-        self.assertTrue("P05694" in list(found_ids))
-        self.assertTrue(len(found_ids) == 2)
-
-    def test_blast_none(self):
-        out = run_blast(TEST_FASTA, 300, 0)
-        self.assertTrue(len(out[0].alignments) == 0)
-        # Collect uniprot IDs of matches
-        found_ids = set()
-        for a in out[0].alignments:
-            title = a.title.split("|")
-            found_ids.add(title[1])
-        print(found_ids)
-        self.assertTrue(len(found_ids) == 0)
