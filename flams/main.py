@@ -14,7 +14,7 @@ def read_fasta(file: Path):
 
 def main(args):
     protein_seq = read_fasta(Path(args.input))
-    print(args)
+
     result = run_blast(
         args.input,
         lysine_pos=args.pos,
