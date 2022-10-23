@@ -13,7 +13,7 @@ def read_fasta(file: Path):
 
 
 def main(args):
-    protein_seq = read_fasta(Path(args.input))
+    #protein_seq = read_fasta(Path(args.input))
 
     result = run_blast(
         args.input,
