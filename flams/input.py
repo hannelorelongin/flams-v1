@@ -8,6 +8,7 @@ def parse_args(sys_args):
     args = parser.parse_args(sys_args)
     check_files_valid(args, parser)
     check_lysine(args, parser)
+    # TODO(annkamsk) check range
     return args
 
 

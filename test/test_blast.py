@@ -1,6 +1,6 @@
-from pathlib import Path
 import unittest
-from flams.run_blast import _parse_fasta_title, _check_ptm_is_within_match, _check_user_query_is_within_match, _standardise_positions
+from flams.run_blast import _parse_fasta_title
+
 
 class DisplayTestCase(unittest.TestCase):
     def test_parse_title(self):
@@ -11,4 +11,3 @@ class DisplayTestCase(unittest.TestCase):
         self.assertTrue(spl[2] == "304")
         self.assertTrue(spl[3] == "Acetylation")
         self.assertTrue(spl[4] == "[Escherichia coli (strain K12)]")
-
