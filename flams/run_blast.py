@@ -5,7 +5,9 @@ import flams.databases.setup
 import re
 
 
-def run_blast(input, modifications, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs):
+def run_blast(
+    input, modifications, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs
+):
     # For each modification, run blast and flatten results to an array
     results = []
     for m in modifications:
@@ -18,7 +20,7 @@ def run_blast(input, modifications, lysine_pos, lysine_range, evalue=0.01, num_t
 def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_threads=1):
     # Get BLASTDB path for selected modification + get a temporary path for output
     BLASTDB = flams.databases.setup.get_blastdb_for_modification(modification)
-    BLAST_OUT = f'{flams.databases.setup.get_data_dir()}/temp.xml'
+    BLAST_OUT = f"{flams.databases.setup.get_data_dir()}/temp.xml"
 
     # Run BLAST
     blast_exec = NcbiblastpCommandline(

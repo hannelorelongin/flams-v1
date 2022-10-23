@@ -9,26 +9,11 @@ from flams.utils import get_data_dir
 # Dbs is a list of tuples (module, label) where module is used to get a FASTA of the modifications using label
 # TODO Add more modifications from CPLM
 MODIFICATIONS = {
-    "acetylation": {
-        "version": 1.0,
-        "dbs": [(cplmv4, "Acetylation")]
-    },
-    "lactylation": {
-        "version": 1.0,
-        "dbs": [(cplmv4, "Lactylation")]
-    },
-    "formylation": {
-        "version": 1.0,
-        "dbs": [(cplmv4, "Formylation")]
-    },
-    "succinylation": {
-        "version": 1.0,
-        "dbs": [(cplmv4, "Succinylation")]
-    },
-    "hmgylation": {
-        "version": 1.0,
-        "dbs": [(cplmv4, "HMGylation")]
-    }
+    "acetylation": {"version": 1.0, "dbs": [(cplmv4, "Acetylation")]},
+    "lactylation": {"version": 1.0, "dbs": [(cplmv4, "Lactylation")]},
+    "formylation": {"version": 1.0, "dbs": [(cplmv4, "Formylation")]},
+    "succinylation": {"version": 1.0, "dbs": [(cplmv4, "Succinylation")]},
+    "hmgylation": {"version": 1.0, "dbs": [(cplmv4, "HMGylation")]},
 }
 
 
@@ -41,10 +26,11 @@ def update_db_for_modifications(modifications):
 # If not, download FASTAs and generate BLASTDB.
 def _check_if_db_up_to_date(modification):
     BLASTDB_PATH = get_blastdb_for_modification(modification)
-    if not Path(f'{BLASTDB_PATH}.pdb').exists():
-        fasta_location = f'{get_data_dir()}/{modification}.fasta'
+    if not Path(f"{BLASTDB_PATH}.pdb").exists():
+        fasta_location = f"{get_data_dir()}/{modification}.fasta"
 
-        if os.path.exists(fasta_location): os.remove(fasta_location)
+        if os.path.exists(fasta_location):
+            os.remove(fasta_location)
 
         _get_fasta_from_dbs(modification, fasta_location)
 
@@ -72,4 +58,4 @@ def _generate_blastdb(fasta_in, blastdb_out):
 
 def get_blastdb_for_modification(modification):
     version = MODIFICATIONS[modification]["version"]
-    return f'{get_data_dir()}/{modification}-{version}'
+    return f"{get_data_dir()}/{modification}-{version}"

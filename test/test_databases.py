@@ -19,4 +19,6 @@ class DisplayTestCase(unittest.TestCase):
         # Validate file is in FASTA format
         with open(TEST_OUTPUT_FASTA, "r") as handle:
             fasta = SeqIO.parse(handle, "fasta")
-            self.assertTrue(any(fasta)) # any(fasta) is false if it was not a fasta file
+            self.assertTrue(
+                any(fasta)
+            )  # any(fasta) is false if it was not a fasta file

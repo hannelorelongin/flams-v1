@@ -1,6 +1,7 @@
 from pathlib import Path
 import appdirs
 
+
 # This will get a platform-specific dir to store app data.
 # E.g. on Linux: ~/.local/share/<AppName>
 # Mac: '/Users/trentm/Library/Application Support/SuperApp'

@@ -11,13 +11,17 @@ URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
 
 def get_fasta(label, location):
     zip = urlopen(URL.format(label))
-    size_in_mb = int(zip.getheader('content-length')) / 1048576
-    print("Downloading CPMLv4 {0} Database, please wait. Size: {1:.1f} MB".format(label, size_in_mb))
+    size_in_mb = int(zip.getheader("content-length")) / 1048576
+    print(
+        "Downloading CPMLv4 {0} Database, please wait. Size: {1:.1f} MB".format(
+            label, size_in_mb
+        )
+    )
 
     myzip = ZipFile(BytesIO(zip.read()))
 
     # Extract the single txt file and return as UTF-8 string
-    plm = myzip.read(myzip.namelist()[0]).decode('UTF-8')
+    plm = myzip.read(myzip.namelist()[0]).decode("UTF-8")
 
     with open(location, "a") as out:
         SeqIO.write(_convert_plm_to_fasta(plm), out, "fasta")

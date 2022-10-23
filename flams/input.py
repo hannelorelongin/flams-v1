@@ -54,7 +54,7 @@ def create_args_parser():
     parser.add_argument(
         "-m",
         "--modification",
-        nargs='+',
+        nargs="+",
         default=["acetylation"],
         help="Number of threads to run BLAST with",
     )
@@ -98,9 +98,7 @@ def check_modifications(args, parser):
     if args.modification:
         for i in args.modification:
             if i not in db_setup.MODIFICATIONS:
-                parser.error(
-                    f"Invalid modification type {i}"
-                )
+                parser.error(f"Invalid modification type {i}")
 
 
 def _get_position_display_str(seq, pos):
