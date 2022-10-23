@@ -1,37 +1,29 @@
-from pathlib import Path
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
-import subprocess
+import flams.databases.setup
 import re
 
-FASTADB_LOCATION = "data/acetylation.faa"
-BLASTDB_LOCATION = "data/blast.db"
-BLAST_OUT = "data/temp.xml"
+
+def run_blast(input, modifications, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs):
+    # For each modification, run blast and flatten results to an array
+    results = []
+    for m in modifications:
+        result = _run_blast(input, m, lysine_pos, lysine_range, evalue, num_threads)
+        for r in result:
+            results.append(r)
+    return results
 
 
-def run_blast(input, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs):
-    # First, we need to create a local BLAST DB if it does not exist.
-    # we should move this to some user cache directory using e.g. https://pypi.org/project/appdirs/ later
-
-    if not Path(FASTADB_LOCATION).is_file():
-        raise FileNotFoundError("Acetylations FASTA file not found.")
-
-    if not Path(f"{BLASTDB_LOCATION}.pdb").is_file():
-        try:
-            subprocess.call(
-                f"makeblastdb -in data/acetylation.faa -dbtype prot -input_type fasta -parse_seqids -out {BLASTDB_LOCATION}",
-                shell=True,
-            )
-        except FileNotFoundError as e:
-            raise FileNotFoundError(
-                "You need to install BLAST and include it in system PATH."
-            ) from e
+def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_threads=1):
+    # Get BLASTDB path for selected modification + get a temporary path for output
+    BLASTDB = flams.databases.setup.get_blastdb_for_modification(modification)
+    BLAST_OUT = f'{flams.databases.setup.get_data_dir()}/temp.xml'
 
     # Run BLAST
     blast_exec = NcbiblastpCommandline(
         query=input,
-        db=BLASTDB_LOCATION,
+        db=BLASTDB,
         evalue=evalue,
         outfmt=5,
         out=BLAST_OUT,

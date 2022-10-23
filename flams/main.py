@@ -5,6 +5,7 @@ import requests
 from flams.display import display_result
 from flams.input import parse_args
 from flams.run_blast import run_blast
+from flams.databases.setup import update_db_for_modifications
 
 
 DATA_PATH = Path(__file__).parents[1] / "data"
@@ -28,14 +29,17 @@ def get_protein(args) -> Path:
 
 
 def main(args):
+    update_db_for_modifications(args.modification)
     protein_file = get_protein(args)
 
     result = run_blast(
         input=protein_file,
+        modifications=args.modification,
         lysine_pos=args.pos,
         lysine_range=args.range,
         num_threads=args.num_threads,
     )
+
     display_result(result)
 
 
