@@ -14,12 +14,11 @@ def read_fasta(file: Path):
 
 def main(args):
     protein_seq = read_fasta(Path(args.input))
-
+    print(args)
     result = run_blast(
-        protein_seq,
-        input=args.input,
-        lysine_pos=args.lysine_pos,
-        lysine_range=args.lysine_range,
+        args.input,
+        lysine_pos=args.pos,
+        lysine_range=args.range,
         num_threads=args.num_threads,
     )
     display_result(result)
