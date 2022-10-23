@@ -14,7 +14,7 @@ MODIFICATIONS = {
         "dbs": [(cplmv4, "Acetylation")]
     },
     "lactylation": {
-        "version": 1.1,
+        "version": 1.0,
         "dbs": [(cplmv4, "Lactylation")]
     },
     "formylation": {
