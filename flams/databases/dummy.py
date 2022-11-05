@@ -1,33 +1,17 @@
 import csv
-import requests
 from zipfile import ZipFile
-from io import BytesIO, StringIO
+from io import StringIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 from Bio import SeqIO
 
-# CPLM Database
-# Compendium of Protein Lysine Modifications, Version 4.0
-# Database information available at http://cplm.biocuckoo.cn/
-
-# Fallback to data files hosted by ourselves because the original CPLM host has issues
-# URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
-URL = "https://kasgel.fi/flams/dbs/CPLMv4/{0}.zip"
+# Dummy protein modifications database
+# Can be used to generate BLASTDB from local FASTA zip files.
 
 
 def get_fasta(descriptor, location):
-    # HTTP request with stream. This way, we get the size of the file first and can begin downloading it in chunks.
-    req = requests.get(URL.format(descriptor), stream=True)
-
-    # Raise an exception if HTTP request failed.
-    req.raise_for_status()
-
-    size_in_mb = int(req.headers.get("content-length")) / 1048576
-    print(
-        f"Downloading CPMLv4 {descriptor} Database, please wait. Size: {size_in_mb:.1f} MB"
-    )
-
-    with ZipFile(BytesIO(req.content)) as myzip:
+    # Read ZIP-compressed FASTA from path designated by descriptor and write to location
+    with ZipFile(descriptor, mode="r") as myzip:
         # Extract the single txt file and return as UTF-8 string
         plm = myzip.read(myzip.namelist()[0]).decode("UTF-8")
 

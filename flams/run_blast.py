@@ -19,7 +19,7 @@ def run_blast(
 
 def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_threads=1):
     # Get BLASTDB path for selected modification + get a temporary path for output
-    BLASTDB = flams.databases.setup.get_blastdb_for_modification(modification)
+    BLASTDB = flams.databases.setup.get_blastdb_path_for_modification(modification)
     BLAST_OUT = f"{flams.databases.setup.get_data_dir()}/temp.xml"
 
     # Run BLAST

@@ -51,12 +51,14 @@ def create_args_parser():
         metavar="output",
     )
 
+    # TODO add full list of possible values
     parser.add_argument(
         "-m",
         "--modification",
         nargs="+",
         default=["acetylation"],
-        help="Number of threads to run BLAST with",
+        help="List of modifications to search for at the given lysine position. Possible values: acetylation, "
+        "lactylation, formylation",
     )
 
     # BLAST settings
