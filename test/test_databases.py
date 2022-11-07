@@ -1,9 +1,9 @@
 from pathlib import Path
 import unittest
+import responses
 import glob
-import flams.databases.dummy
 import flams.databases.setup as db_setup
-from flams.databases.cplmv4 import get_fasta
+import flams.databases.cplmv4 as cplmv4
 from Bio import SeqIO
 
 TEST_OUTPUT_PATH = Path(__file__).parent / "testfiles"
@@ -23,9 +23,24 @@ class DatabaseTestCase(unittest.TestCase):
         for file in glob.glob(f"{blastdb_path}.*"):
             Path(file).unlink()
 
-    def test_download_cplmv4(self):
+    # This tests get_fasta and _convert_plm_to_fasta of the CPLMv4 module
+    # Executed by test_fasta_download_and_blastdb_generation
+    def download_cplmv4(self):
         self.assertFalse(TEST_OUTPUT_FASTA.exists())
-        get_fasta("HMGylation", TEST_OUTPUT_FASTA)
+
+        with responses.RequestsMock() as rsps:
+            with open(TEST_INPUT_HMGYLATION, "rb") as file:
+                file_content = file.read()
+                rsps.add(
+                    responses.GET,
+                    cplmv4.URL.format("HMGylation"),
+                    body=file_content,
+                    status=200,
+                    content_type="application/zip",
+                    headers={"content-length": str(len(file_content))},
+                )
+            cplmv4.get_fasta("HMGylation", TEST_OUTPUT_FASTA)
+
         self.assertTrue(TEST_OUTPUT_FASTA.exists())
 
         # Validate file is in FASTA format
@@ -34,17 +49,17 @@ class DatabaseTestCase(unittest.TestCase):
             # Assert that the HMGylation DB contains 126 entries.
             self.assertTrue(len(list(fasta)) == 126)
 
-    def test_blastdb_generation(self):
+    def test_fasta_download_and_blastdb_generation(self):
+        # First mock downloading of the database file.
+        self.download_cplmv4()
+
         # Assert blastdb for hmgylation-unittest does not exist.
         blastdb_path = db_setup.get_blastdb_path_for_modification(
             "hmgylation-unittest", 0.1
         )
         self.assertFalse(Path(f"{blastdb_path}.pdb").exists())
 
-        # Generate blastdb for hmgylation-unittest using test zip file.
-        db = db_setup.ModificationDatabase(flams.databases.dummy, TEST_INPUT_HMGYLATION)
-        mod = db_setup.ModificationType("hmgylation-unittest", 0.1, [db])
-        db_setup._generate_blastdb_if_not_up_to_date(mod)
+        db_setup._generate_blastdb(TEST_OUTPUT_FASTA, blastdb_path)
 
         # Assert blastdb for hmgylation-unittest exists.
         self.assertTrue(Path(f"{blastdb_path}.pdb").exists())
