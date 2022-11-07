@@ -21,7 +21,6 @@ def get_fasta(descriptor, location):
 
     # Raise an exception if HTTP request failed.
     req.raise_for_status()
-    print(req.headers)
 
     size_in_mb = int(req.headers.get("content-length")) / 1048576
     print(
