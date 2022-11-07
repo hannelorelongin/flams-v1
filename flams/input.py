@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 from Bio import SeqIO
+from flams.databases import setup as db_setup
 
 
 def parse_args(sys_args):
@@ -8,6 +9,7 @@ def parse_args(sys_args):
     args = parser.parse_args(sys_args)
     check_files_valid(args, parser)
     check_lysine(args, parser)
+    check_modifications(args, parser)
     # TODO(annkamsk) check range
     return args
 
@@ -49,6 +51,16 @@ def create_args_parser():
         metavar="output",
     )
 
+    # TODO add full list of possible values
+    parser.add_argument(
+        "-m",
+        "--modification",
+        nargs="+",
+        default=["acetylation"],
+        help="List of modifications to search for at the given lysine position. Possible values: acetylation, "
+        "lactylation, formylation",
+    )
+
     # BLAST settings
     parser.add_argument(
         "-t",
@@ -82,6 +94,13 @@ def check_lysine(args, parser):
         parser.error(
             f"Position {args.pos} does not point to Lysine: {_get_position_display_str(input_seq, position_idx)}"
         )
+
+
+def check_modifications(args, parser):
+    if args.modification:
+        for i in args.modification:
+            if i not in db_setup.MODIFICATIONS:
+                parser.error(f"Invalid modification type {i}")
 
 
 def _get_position_display_str(seq, pos):
