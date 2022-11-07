@@ -1,6 +1,4 @@
 from dataclasses import dataclass
-from pathlib import Path
-from typing import List
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
