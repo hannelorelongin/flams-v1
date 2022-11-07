@@ -16,7 +16,8 @@ def run_blast(
         for r in result:
             results.append(r)
     return results
-  
+
+
 @dataclass
 class ModificationHeader:
     plmd_id: str

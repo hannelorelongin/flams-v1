@@ -25,7 +25,7 @@ class DatabaseTestCase(unittest.TestCase):
 
     # This tests get_fasta and _convert_plm_to_fasta of the CPLMv4 module
     # Executed by test_fasta_download_and_blastdb_generation
-    def download_cplmv4(self):
+    def test_download_cplmv4_unzip_and_write(self):
         self.assertFalse(TEST_OUTPUT_FASTA.exists())
 
         with responses.RequestsMock() as rsps:
@@ -48,18 +48,3 @@ class DatabaseTestCase(unittest.TestCase):
             fasta = SeqIO.parse(handle, "fasta")
             # Assert that the HMGylation DB contains 126 entries.
             self.assertTrue(len(list(fasta)) == 126)
-
-    def test_fasta_download_and_blastdb_generation(self):
-        # First mock downloading of the database file.
-        self.download_cplmv4()
-
-        # Assert blastdb for hmgylation-unittest does not exist.
-        blastdb_path = db_setup.get_blastdb_path_for_modification(
-            "hmgylation-unittest", 0.1
-        )
-        self.assertFalse(Path(f"{blastdb_path}.pdb").exists())
-
-        db_setup._generate_blastdb(TEST_OUTPUT_FASTA, blastdb_path)
-
-        # Assert blastdb for hmgylation-unittest exists.
-        self.assertTrue(Path(f"{blastdb_path}.pdb").exists())
