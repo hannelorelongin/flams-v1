@@ -1,0 +1,3124 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.13.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>data/blast.db</BlastOutput_db>
+  <BlastOutput_query-ID>Query_1</BlastOutput_query-ID>
+  <BlastOutput_query-def>WP_003092811.1 MULTISPECIES: nucleoside-diphosphate kinase [Pseudomonas]</BlastOutput_query-def>
+  <BlastOutput_query-len>143</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>0.01</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_1</Iteration_query-ID>
+  <Iteration_query-def>WP_003092811.1 MULTISPECIES: nucleoside-diphosphate kinase [Pseudomonas]</Iteration_query-def>
+  <Iteration_query-len>143</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>PLMD-15428|Q02RW1|97</Hit_id>
+  <Hit_def>Acetylation [Pseudomonas aeruginosa (strain UCBPP-PA14)]</Hit_def>
+  <Hit_accession>PLMD-15428|Q02RW1|97</Hit_accession>
+  <Hit_len>143</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>289.271</Hsp_bit-score>
+      <Hsp_score>739</Hsp_score>
+      <Hsp_evalue>1.15267e-101</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>143</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>143</Hsp_identity>
+      <Hsp_positive>143</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>143</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_qseq>
+      <Hsp_hseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_hseq>
+      <Hsp_midline>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>PLMD-4209|P0A763|38</Hit_id>
+  <Hit_def>Acetylation [Escherichia coli (strain K12)]</Hit_def>
+  <Hit_accession>PLMD-4209|P0A763|38</Hit_accession>
+  <Hit_len>143</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>191.045</Hsp_bit-score>
+      <Hsp_score>484</Hsp_score>
+      <Hsp_evalue>8.12982e-63</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>143</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>89</Hsp_identity>
+      <Hsp_positive>110</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>143</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_qseq>
+      <Hsp_hseq>MAIERTFSIIKPNAVAKNVIGNIFARFEAAGFKIVGTKMLHLTVEQARGFYAEHDGKPFFDGLVEFMTSGPIVVSVLEGENAVQRHRDLLGATNPANALAGTLRADYADSLTENGTHGSDSVESAAREIAYFFGEGEVCPRTR</Hsp_hseq>
+      <Hsp_midline>MA++RT SIIKP+AV+KNVIG I  RFE AG ++V  KM+ L+  +A GFYAEH  +PFF  LV FMTSGP+VV VLEGE+A+ ++R+L+GAT+P  A AGT+RAD+A S+ EN  HGSDS  SAAREIAYFF   EVC R R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>PLMD-4209|P0A763|33</Hit_id>
+  <Hit_def>Acetylation [Escherichia coli (strain K12)]</Hit_def>
+  <Hit_accession>PLMD-4209|P0A763|33</Hit_accession>
+  <Hit_len>143</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>191.045</Hsp_bit-score>
+      <Hsp_score>484</Hsp_score>
+      <Hsp_evalue>8.12982e-63</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>143</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>89</Hsp_identity>
+      <Hsp_positive>110</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>143</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_qseq>
+      <Hsp_hseq>MAIERTFSIIKPNAVAKNVIGNIFARFEAAGFKIVGTKMLHLTVEQARGFYAEHDGKPFFDGLVEFMTSGPIVVSVLEGENAVQRHRDLLGATNPANALAGTLRADYADSLTENGTHGSDSVESAAREIAYFFGEGEVCPRTR</Hsp_hseq>
+      <Hsp_midline>MA++RT SIIKP+AV+KNVIG I  RFE AG ++V  KM+ L+  +A GFYAEH  +PFF  LV FMTSGP+VV VLEGE+A+ ++R+L+GAT+P  A AGT+RAD+A S+ EN  HGSDS  SAAREIAYFF   EVC R R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>PLMD-4209|P0A763|17</Hit_id>
+  <Hit_def>Acetylation [Escherichia coli (strain K12)]</Hit_def>
+  <Hit_accession>PLMD-4209|P0A763|17</Hit_accession>
+  <Hit_len>143</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>191.045</Hsp_bit-score>
+      <Hsp_score>484</Hsp_score>
+      <Hsp_evalue>8.12982e-63</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>143</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>89</Hsp_identity>
+      <Hsp_positive>110</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>143</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_qseq>
+      <Hsp_hseq>MAIERTFSIIKPNAVAKNVIGNIFARFEAAGFKIVGTKMLHLTVEQARGFYAEHDGKPFFDGLVEFMTSGPIVVSVLEGENAVQRHRDLLGATNPANALAGTLRADYADSLTENGTHGSDSVESAAREIAYFFGEGEVCPRTR</Hsp_hseq>
+      <Hsp_midline>MA++RT SIIKP+AV+KNVIG I  RFE AG ++V  KM+ L+  +A GFYAEH  +PFF  LV FMTSGP+VV VLEGE+A+ ++R+L+GAT+P  A AGT+RAD+A S+ EN  HGSDS  SAAREIAYFF   EVC R R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>PLMD-4209|P0A763|11</Hit_id>
+  <Hit_def>Acetylation [Escherichia coli (strain K12)]</Hit_def>
+  <Hit_accession>PLMD-4209|P0A763|11</Hit_accession>
+  <Hit_len>143</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>191.045</Hsp_bit-score>
+      <Hsp_score>484</Hsp_score>
+      <Hsp_evalue>8.12982e-63</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>143</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>89</Hsp_identity>
+      <Hsp_positive>110</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>143</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCERIR</Hsp_qseq>
+      <Hsp_hseq>MAIERTFSIIKPNAVAKNVIGNIFARFEAAGFKIVGTKMLHLTVEQARGFYAEHDGKPFFDGLVEFMTSGPIVVSVLEGENAVQRHRDLLGATNPANALAGTLRADYADSLTENGTHGSDSVESAAREIAYFFGEGEVCPRTR</Hsp_hseq>
+      <Hsp_midline>MA++RT SIIKP+AV+KNVIG I  RFE AG ++V  KM+ L+  +A GFYAEH  +PFF  LV FMTSGP+VV VLEGE+A+ ++R+L+GAT+P  A AGT+RAD+A S+ EN  HGSDS  SAAREIAYFF   EVC R R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>PLMD-24999|Q6N5C3|97</Hit_id>
+  <Hit_def>Acetylation [Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)]</Hit_def>
+  <Hit_accession>PLMD-24999|Q6N5C3|97</Hit_accession>
+  <Hit_len>140</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>166.392</Hsp_bit-score>
+      <Hsp_score>420</Hsp_score>
+      <Hsp_evalue>4.77158e-53</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>139</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>102</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>MAIERTFSILKPDATERNITGAINALIEKAGLRIVAQKRIRMTRDQAETFYAVHKERPFFGELVDFMISGPVVVQVLEGEGAIAKYRDVMGATDPSKAADGTIRKLHAKSIGENSVHGSDAAETAKIEIAQFFSGNEIV</Hsp_hseq>
+      <Hsp_midline>MA++RT SI+KPDA  +N+ G I    EKAGLR+VA K ++++  +A  FYA HKERPFF +LV FM SGPVVVQVLEGE AIAK R++MGATDP KA  GTIR   A SI EN+VHGSD+  +A  EIA FF+  E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>PLMD-24999|Q6N5C3|29</Hit_id>
+  <Hit_def>Acetylation [Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)]</Hit_def>
+  <Hit_accession>PLMD-24999|Q6N5C3|29</Hit_accession>
+  <Hit_len>140</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>166.392</Hsp_bit-score>
+      <Hsp_score>420</Hsp_score>
+      <Hsp_evalue>4.77158e-53</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>139</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>102</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>MAIERTFSILKPDATERNITGAINALIEKAGLRIVAQKRIRMTRDQAETFYAVHKERPFFGELVDFMISGPVVVQVLEGEGAIAKYRDVMGATDPSKAADGTIRKLHAKSIGENSVHGSDAAETAKIEIAQFFSGNEIV</Hsp_hseq>
+      <Hsp_midline>MA++RT SI+KPDA  +N+ G I    EKAGLR+VA K ++++  +A  FYA HKERPFF +LV FM SGPVVVQVLEGE AIAK R++MGATDP KA  GTIR   A SI EN+VHGSD+  +A  EIA FF+  E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>PLMD-22413|Q5KXU2|125</Hit_id>
+  <Hit_def>Acetylation [Geobacillus kaustophilus (strain HTA426)]</Hit_def>
+  <Hit_accession>PLMD-22413|Q5KXU2|125</Hit_accession>
+  <Hit_len>149</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>159.458</Hsp_bit-score>
+      <Hsp_score>402</Hsp_score>
+      <Hsp_evalue>3.56414e-50</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>138</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>72</Hsp_identity>
+      <Hsp_positive>98</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRNLIGEIVARFEKKGFQLVGAKLMQVSRELAEQHYAEHKERPFFGELVDFITSGPVFAMVWEGENVIAAARQMMGKTNPQEAAPGTIRGDFGLTVGKNVIHGSDSPQSAKREISLFFKEEELV</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V +N+IGEI+ RFEK G ++V AK++Q+S   A   YAEHKERPFF +LV F+TSGPV   V EGE+ IA  R++MG T+P++A  GTIR DF +++ +N +HGSDS  SA REI+ FF   E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>PLMD-22413|Q5KXU2|10</Hit_id>
+  <Hit_def>Acetylation [Geobacillus kaustophilus (strain HTA426)]</Hit_def>
+  <Hit_accession>PLMD-22413|Q5KXU2|10</Hit_accession>
+  <Hit_len>149</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>159.458</Hsp_bit-score>
+      <Hsp_score>402</Hsp_score>
+      <Hsp_evalue>3.56414e-50</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>138</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>72</Hsp_identity>
+      <Hsp_positive>98</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRNLIGEIVARFEKKGFQLVGAKLMQVSRELAEQHYAEHKERPFFGELVDFITSGPVFAMVWEGENVIAAARQMMGKTNPQEAAPGTIRGDFGLTVGKNVIHGSDSPQSAKREISLFFKEEELV</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V +N+IGEI+ RFEK G ++V AK++Q+S   A   YAEHKERPFF +LV F+TSGPV   V EGE+ IA  R++MG T+P++A  GTIR DF +++ +N +HGSDS  SA REI+ FF   E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>PLMD-22860|Q5SLV5|55</Hit_id>
+  <Hit_def>Acetylation [Thermus thermophilus (strain HB8 / ATCC 27634 / DSM 579)]</Hit_def>
+  <Hit_accession>PLMD-22860|Q5SLV5|55</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>155.221</Hsp_bit-score>
+      <Hsp_score>391</Hsp_score>
+      <Hsp_evalue>8.86041e-49</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>137</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>73</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>MERTFVMIKPDGVRRGLVGEILARFERKGFRIAALKLMQISQELAERHYAEHREKPFFPGLVRFITSGPVVAMVLEGPGVVAEVRKMMGATHPKDALPGTIRGDFATTIDENVIHGSATLEDAQREIALFFRPEELL</Hsp_hseq>
+      <Hsp_midline>++RT  +IKPD V + ++GEIL RFE+ G R+ A K++Q+S+  A   YAEH+E+PFF  LV F+TSGPVV  VLEG   +A+ R++MGAT PK A  GTIR DFA +IDEN +HGS +   A REIA FF   E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>PLMD-52327|S6FHJ1|3</Hit_id>
+  <Hit_def>Acetylation [Bacillus velezensis UCMB5033]</Hit_def>
+  <Hit_accession>PLMD-52327|S6FHJ1|3</Hit_accession>
+  <Hit_len>148</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>149.058</Hsp_bit-score>
+      <Hsp_score>375</Hsp_score>
+      <Hsp_evalue>3.95634e-46</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>137</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>67</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>MEKTFIMVKPDGVQRQLIGEILSRFERKGLQLAGAKLMQVSEQMAENHYAEHKGKPFFGELVEFITSGPVFAMVWEGENVVEITRQLIGKTNPKDALPGTIRGDYGMFVGKNIIHGSDSLESAEREIHIFFKQEELV</Hsp_hseq>
+      <Hsp_midline>+++T  ++KPD V + +IGEIL+RFE+ GL++  AK++Q+SE+ A   YAEHK +PFF +LV F+TSGPV   V EGE+ +   R+L+G T+PK A  GTIR D+ + + +N +HGSDS  SA REI  FF   E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>PLMD-52327|S6FHJ1|111</Hit_id>
+  <Hit_def>Acetylation [Bacillus velezensis UCMB5033]</Hit_def>
+  <Hit_accession>PLMD-52327|S6FHJ1|111</Hit_accession>
+  <Hit_len>148</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>149.058</Hsp_bit-score>
+      <Hsp_score>375</Hsp_score>
+      <Hsp_evalue>3.95634e-46</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>137</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>67</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>MEKTFIMVKPDGVQRQLIGEILSRFERKGLQLAGAKLMQVSEQMAENHYAEHKGKPFFGELVEFITSGPVFAMVWEGENVVEITRQLIGKTNPKDALPGTIRGDYGMFVGKNIIHGSDSLESAEREIHIFFKQEELV</Hsp_hseq>
+      <Hsp_midline>+++T  ++KPD V + +IGEIL+RFE+ GL++  AK++Q+SE+ A   YAEHK +PFF +LV F+TSGPV   V EGE+ +   R+L+G T+PK A  GTIR D+ + + +N +HGSDS  SA REI  FF   E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>PLMD-7880|P31103|95</Hit_id>
+  <Hit_def>Acetylation [Bacillus subtilis (strain 168)]</Hit_def>
+  <Hit_accession>PLMD-7880|P31103|95</Hit_accession>
+  <Hit_len>149</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>144.05</Hsp_bit-score>
+      <Hsp_score>362</Hsp_score>
+      <Hsp_evalue>3.83817e-44</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>138</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>97</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>MEKTFIMVKPDGVQRQLIGDILSRFERKGLQLAGAKLMRVTEQMAEKHYAEHQGKPFFGELVEFITSGPVFAMVWEGENVIEVTRQLIGKTNPKEALPGTIRGDYGMFVGKNIIHGSDSLESAEREINIFFKNEELV</Hsp_hseq>
+      <Hsp_midline>+++T  ++KPD V + +IG+IL+RFE+ GL++  AK+++++E+ A   YAEH+ +PFF +LV F+TSGPV   V EGE+ I   R+L+G T+PK+A  GTIR D+ + + +N +HGSDS  SA REI  FF   E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>PLMD-44084|B1MMX9|97</Hit_id>
+  <Hit_def>Acetylation [Mycobacterium abscessus (strain ATCC 19977 / DSM 44196 / CIP 104536 / JCM 13569 / NCTC 13031 / TMC 1543)]</Hit_def>
+  <Hit_accession>PLMD-44084|B1MMX9|97</Hit_accession>
+  <Hit_len>136</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>139.043</Hsp_bit-score>
+      <Hsp_score>349</Hsp_score>
+      <Hsp_evalue>1.97556e-42</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>135</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>135</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>69</Hsp_identity>
+      <Hsp_positive>91</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>133</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDP-KKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAA</Hsp_qseq>
+      <Hsp_hseq>ERTLVLIKPDGVRRGLVGEVLNRIERKGLTLAALELKNVDDATARAHYAEHAEKPFFGSLLEFITSGPLVAAVLEGPRAIAAFRQIAGGTDPVEKAATGSIRGDFALETQENLVHGSDSPESAAREIALWFPA</Hsp_hseq>
+      <Hsp_midline>+RTL +IKPD V + ++GE+L R E+ GL + A ++  + +  A   YAEH E+PFF  L+ F+TSGP+V  VLEG  AIA  R++ G TDP +KA  G+IR DFA+   EN VHGSDS  SAAREIA +F A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>PLMD-17114|Q13232|29</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-17114|Q13232|29</Hit_accession>
+  <Hit_len>169</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>139.813</Hsp_bit-score>
+      <Hsp_score>351</Hsp_score>
+      <Hsp_evalue>2.95453e-42</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>156</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>67</Hsp_identity>
+      <Hsp_positive>91</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>ALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>AHERTFLAVKPDGVQRRLVGEIVRRFERKGFKLVALKLVQASEELLREHYAELRERPFYGRLVKYMASGPVVAMVWQGLDVVRTSRALIGATNPADAPPGTIRGDFCIEVGKNLIHGSDSVESARREIALWFRADEL</Hsp_hseq>
+      <Hsp_midline>A +RT   +KPD V + ++GEI+ RFE+ G ++VA K+VQ SE      YAE +ERPF+  LV +M SGPVV  V +G D +  +R L+GAT+P  A  GTIR DF + + +N +HGSDS  SA REIA +F A E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>PLMD-26667|Q7XC37|29</Hit_id>
+  <Hit_def>Acetylation [Oryza sativa subsp. japonica]</Hit_def>
+  <Hit_accession>PLMD-26667|Q7XC37|29</Hit_accession>
+  <Hit_len>151</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.494</Hsp_bit-score>
+      <Hsp_score>332</Hsp_score>
+      <Hsp_evalue>1.16329e-39</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>62</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>133</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>MALEQTFIMIKPDGVQRGLIGEVIGRFEKKGFYLKAMKLINVEKSFAEKHYADLSSKPFFGGLVEYIVSGPVVAMVWEGKQVVSTGRKLVGATNPLAAEPGTIRGDFAVDIGRNVIHGSDSVENARKEIALWF</Hsp_hseq>
+      <Hsp_midline>MAL++T  +IKPD V + +IGE++ RFEK G  + A K++ + +  A   YA+   +PFF  LV ++ SGPVV  V EG+  ++  R+L+GAT+P  A+ GTIR DFAV I  N +HGSDS  +A +EIA +F</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>PLMD-6774|P22392|49</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-6774|P22392|49</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.109</Hsp_bit-score>
+      <Hsp_score>331</Hsp_score>
+      <Hsp_evalue>1.79394e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>86</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFKPEELVD</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>PLMD-6774|P22392|39</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-6774|P22392|39</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.109</Hsp_bit-score>
+      <Hsp_score>331</Hsp_score>
+      <Hsp_evalue>1.79394e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>86</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFKPEELVD</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>PLMD-6774|P22392|135</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-6774|P22392|135</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.109</Hsp_bit-score>
+      <Hsp_score>331</Hsp_score>
+      <Hsp_evalue>1.79394e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>86</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFKPEELVD</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>PLMD-6774|P22392|128</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-6774|P22392|128</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.109</Hsp_bit-score>
+      <Hsp_score>331</Hsp_score>
+      <Hsp_evalue>1.79394e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>86</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFKPEELVD</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>PLMD-51391|I1HFQ1|134</Hit_id>
+  <Hit_def>Acetylation [Brachypodium distachyon]</Hit_def>
+  <Hit_accession>PLMD-51391|I1HFQ1|134</Hit_accession>
+  <Hit_len>232</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>134.806</Hsp_bit-score>
+      <Hsp_score>338</Hsp_score>
+      <Hsp_evalue>1.96665e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>82</Hsp_hit-from>
+      <Hsp_hit-to>217</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIVSRFERKGFKLVAIKLVVPSKEFAQKHYHDLKERPFFSGLCDFLSSGPVLAMVWEGEGVIKYGRKLIGATDPQKSEPGTIRGDLAVVVGRNIIHGSDGPETAKDEIALWFQPKEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++VA K+V  S+  A   Y + KERPFF  L  F++SGPV+  V EGE  I   R+L+GATDP+K++ GTIR D AV +  N +HGSD   +A  EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>PLMD-51391|I1HFQ1|128</Hit_id>
+  <Hit_def>Acetylation [Brachypodium distachyon]</Hit_def>
+  <Hit_accession>PLMD-51391|I1HFQ1|128</Hit_accession>
+  <Hit_len>232</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>134.806</Hsp_bit-score>
+      <Hsp_score>338</Hsp_score>
+      <Hsp_evalue>1.96665e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>82</Hsp_hit-from>
+      <Hsp_hit-to>217</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIVSRFERKGFKLVAIKLVVPSKEFAQKHYHDLKERPFFSGLCDFLSSGPVLAMVWEGEGVIKYGRKLIGATDPQKSEPGTIRGDLAVVVGRNIIHGSDGPETAKDEIALWFQPKEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++VA K+V  S+  A   Y + KERPFF  L  F++SGPV+  V EGE  I   R+L+GATDP+K++ GTIR D AV +  N +HGSD   +A  EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>PLMD-51391|I1HFQ1|123</Hit_id>
+  <Hit_def>Acetylation [Brachypodium distachyon]</Hit_def>
+  <Hit_accession>PLMD-51391|I1HFQ1|123</Hit_accession>
+  <Hit_len>232</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>134.806</Hsp_bit-score>
+      <Hsp_score>338</Hsp_score>
+      <Hsp_evalue>1.96665e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>82</Hsp_hit-from>
+      <Hsp_hit-to>217</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIVSRFERKGFKLVAIKLVVPSKEFAQKHYHDLKERPFFSGLCDFLSSGPVLAMVWEGEGVIKYGRKLIGATDPQKSEPGTIRGDLAVVVGRNIIHGSDGPETAKDEIALWFQPKEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++VA K+V  S+  A   Y + KERPFF  L  F++SGPV+  V EGE  I   R+L+GATDP+K++ GTIR D AV +  N +HGSD   +A  EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>PLMD-6412|P19804|56</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|56</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>PLMD-6412|P19804|49</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|49</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>PLMD-6412|P19804|39</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|39</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>PLMD-6412|P19804|31</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|31</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>PLMD-6412|P19804|135</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|135</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>PLMD-6412|P19804|128</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|128</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>PLMD-6412|P19804|12</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|12</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>PLMD-6412|P19804|100</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-6412|P19804|100</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>3.30372e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>PLMD-8667|P36010|82</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|82</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>PLMD-8667|P36010|64</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|64</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>PLMD-8667|P36010|59</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|59</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>PLMD-8667|P36010|47</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|47</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>PLMD-8667|P36010|40</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|40</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>PLMD-8667|P36010|137</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|137</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>PLMD-8667|P36010|13</Hit_id>
+  <Hit_def>Acetylation [Saccharomyces cerevisiae (strain ATCC 204508 / S288c)]</Hit_def>
+  <Hit_accession>PLMD-8667|P36010|13</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.67276e-39</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAVKPDGVQRGLVSQILSRFEKKGYKLVAIKLVKADDKLLEQHYAEHVGKPFFPKMVSFMKSGPILATVWEGKDVVRQGRTILGATNPLGSAPGTIRGDFGIDLGRNVCHGSDSVDSAEREINLWFKKEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   +KPD V + ++ +IL+RFEK G ++VA K+V+  ++     YAEH  +PFF  +VSFM SGP++  V EG+D + + R ++GAT+P  +  GTIR DF + +  N  HGSDS  SA REI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>PLMD-15195|Q01768|56</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-15195|Q01768|56</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>5.51521e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIHLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>PLMD-15195|Q01768|49</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-15195|Q01768|49</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>5.51521e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIHLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>PLMD-15195|Q01768|39</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-15195|Q01768|39</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>5.51521e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIHLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>PLMD-15195|Q01768|135</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-15195|Q01768|135</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>5.51521e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIHLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>PLMD-15195|Q01768|128</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-15195|Q01768|128</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>5.51521e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>LERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVAMKFLRASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIHLWFKPEELID</Hsp_hseq>
+      <Hsp_midline>L+RT   IKPD V + ++GEI+ RFE+ G R+VA K ++ SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>PLMD-16488|Q0IMS5|121</Hit_id>
+  <Hit_def>Acetylation [Oryza sativa subsp. japonica]</Hit_def>
+  <Hit_accession>PLMD-16488|Q0IMS5|121</Hit_accession>
+  <Hit_len>220</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.265</Hsp_bit-score>
+      <Hsp_score>334</Hsp_score>
+      <Hsp_evalue>5.77388e-39</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>71</Hsp_hit-from>
+      <Hsp_hit-to>209</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>ALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>SVEQSYIMIKPDGVQRGLVGEIISRFEKKGFVLKGLKLFQCPKDLAQEHYKDLKEKPFFPGLIEYITSGPVVCMAWEGNGVVASARKLIGATNPLQAEPGTIRGDLAVQTGRNVVHGSDSPDNGKREIALWFKEGELCE</Hsp_hseq>
+      <Hsp_midline>+++++  +IKPD V + ++GEI++RFEK G  +   K+ Q  +  A   Y + KE+PFF  L+ ++TSGPVV    EG   +A  R+L+GAT+P +A+ GTIR D AV    N VHGSDS  +  REIA +F   E+CE</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>PLMD-16488|Q0IMS5|104</Hit_id>
+  <Hit_def>Acetylation [Oryza sativa subsp. japonica]</Hit_def>
+  <Hit_accession>PLMD-16488|Q0IMS5|104</Hit_accession>
+  <Hit_len>220</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>133.265</Hsp_bit-score>
+      <Hsp_score>334</Hsp_score>
+      <Hsp_evalue>5.77388e-39</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>71</Hsp_hit-from>
+      <Hsp_hit-to>209</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>ALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>SVEQSYIMIKPDGVQRGLVGEIISRFEKKGFVLKGLKLFQCPKDLAQEHYKDLKEKPFFPGLIEYITSGPVVCMAWEGNGVVASARKLIGATNPLQAEPGTIRGDLAVQTGRNVVHGSDSPDNGKREIALWFKEGELCE</Hsp_hseq>
+      <Hsp_midline>+++++  +IKPD V + ++GEI++RFEK G  +   K+ Q  +  A   Y + KE+PFF  L+ ++TSGPVV    EG   +A  R+L+GAT+P +A+ GTIR D AV    N VHGSDS  +  REIA +F   E+CE</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>PLMD-42178|A0A1D5S6C0|150</Hit_id>
+  <Hit_def>Acetylation [Triticum aestivum]</Hit_def>
+  <Hit_accession>PLMD-42178|A0A1D5S6C0|150</Hit_accession>
+  <Hit_len>248</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>134.035</Hsp_bit-score>
+      <Hsp_score>336</Hsp_score>
+      <Hsp_evalue>6.02233e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>98</Hsp_hit-from>
+      <Hsp_hit-to>233</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIVSRFERKGYKLVAIKLVVPSKQFAEKHYHDLKERPFFNGLCDFLSSGPVLAMVWEGEGVIKYGRKLIGATDPSKSEPGTIRGDLAVVVGRNIIHGSDGPETAKDEIALWFQPKEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++VA K+V  S++ A   Y + KERPFF  L  F++SGPV+  V EGE  I   R+L+GATDP K++ GTIR D AV +  N +HGSD   +A  EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>PLMD-42178|A0A1D5S6C0|144</Hit_id>
+  <Hit_def>Acetylation [Triticum aestivum]</Hit_def>
+  <Hit_accession>PLMD-42178|A0A1D5S6C0|144</Hit_accession>
+  <Hit_len>248</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>134.035</Hsp_bit-score>
+      <Hsp_score>336</Hsp_score>
+      <Hsp_evalue>6.02233e-39</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>98</Hsp_hit-from>
+      <Hsp_hit-to>233</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIVSRFERKGYKLVAIKLVVPSKQFAEKHYHDLKERPFFNGLCDFLSSGPVLAMVWEGEGVIKYGRKLIGATDPSKSEPGTIRGDLAVVVGRNIIHGSDGPETAKDEIALWFQPKEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++VA K+V  S++ A   Y + KERPFF  L  F++SGPV+  V EGE  I   R+L+GATDP K++ GTIR D AV +  N +HGSD   +A  EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>PLMD-42853|A4F9J8|97</Hit_id>
+  <Hit_def>Acetylation [Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)]</Hit_def>
+  <Hit_accession>PLMD-42853|A4F9J8|97</Hit_accession>
+  <Hit_len>136</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.798</Hsp_bit-score>
+      <Hsp_score>325</Hsp_score>
+      <Hsp_evalue>1.08953e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>62</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>131</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDP-KKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>ERTLVLVKPDGVERGLVGEVIGRIERKGLKLVALELRQVEQQLAEQHYAEHDGKPFFGSLLEFITSGPVVAAVVEGPRAISAFRQLAGGTDPVDKAAPGSIRGDYGLEVQYNLVHGSDSAESAEREIKLWF</Hsp_hseq>
+      <Hsp_midline>+RTL ++KPD V + ++GE++ R E+ GL++VA ++ Q+ ++ A   YAEH  +PFF  L+ F+TSGPVV  V+EG  AI+  R+L G TDP  KA  G+IR D+ + +  N VHGSDS  SA REI  +F</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>PLMD-5862|P15532|85</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|85</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>PLMD-5862|P15532|56</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|56</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>51</Hit_num>
+  <Hit_id>PLMD-5862|P15532|49</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|49</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>52</Hit_num>
+  <Hit_id>PLMD-5862|P15532|39</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|39</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>53</Hit_num>
+  <Hit_id>PLMD-5862|P15532|31</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|31</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>54</Hit_num>
+  <Hit_id>PLMD-5862|P15532|26</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|26</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>55</Hit_num>
+  <Hit_id>PLMD-5862|P15532|128</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|128</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>56</Hit_num>
+  <Hit_id>PLMD-5862|P15532|124</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|124</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>57</Hit_num>
+  <Hit_id>PLMD-5862|P15532|12</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|12</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>58</Hit_num>
+  <Hit_id>PLMD-5862|P15532|100</Hit_id>
+  <Hit_def>Acetylation [Mus musculus]</Hit_def>
+  <Hit_accession>PLMD-5862|P15532|100</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>1.17022e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFLQASEDLLKEHYTDLKDRPFFTGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLWFQPEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>59</Hit_num>
+  <Hit_id>PLMD-1302|O49203|96</Hit_id>
+  <Hit_def>Acetylation [Arabidopsis thaliana]</Hit_def>
+  <Hit_accession>PLMD-1302|O49203|96</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.83145e-38</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>223</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIISRFERKGFKLVGIKVIVPSKDFAQKHYHDLKERPFFNGLCDFLSSGPVIAMVWEGDGVIRYGRKLIGATDPQKSEPGTIRGDLAVTVGRNIIHGSDGPETAKDEISLWFKPQEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++V  K++  S+  A   Y + KERPFF  L  F++SGPV+  V EG+  I   R+L+GATDP+K++ GTIR D AV++  N +HGSD   +A  EI+ +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>60</Hit_num>
+  <Hit_id>PLMD-1302|O49203|182</Hit_id>
+  <Hit_def>Acetylation [Arabidopsis thaliana]</Hit_def>
+  <Hit_accession>PLMD-1302|O49203|182</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.83145e-38</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>223</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIISRFERKGFKLVGIKVIVPSKDFAQKHYHDLKERPFFNGLCDFLSSGPVIAMVWEGDGVIRYGRKLIGATDPQKSEPGTIRGDLAVTVGRNIIHGSDGPETAKDEISLWFKPQEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++V  K++  S+  A   Y + KERPFF  L  F++SGPV+  V EG+  I   R+L+GATDP+K++ GTIR D AV++  N +HGSD   +A  EI+ +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>61</Hit_num>
+  <Hit_id>PLMD-1302|O49203|173</Hit_id>
+  <Hit_def>Acetylation [Arabidopsis thaliana]</Hit_def>
+  <Hit_accession>PLMD-1302|O49203|173</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.83145e-38</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>223</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIISRFERKGFKLVGIKVIVPSKDFAQKHYHDLKERPFFNGLCDFLSSGPVIAMVWEGDGVIRYGRKLIGATDPQKSEPGTIRGDLAVTVGRNIIHGSDGPETAKDEISLWFKPQEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++V  K++  S+  A   Y + KERPFF  L  F++SGPV+  V EG+  I   R+L+GATDP+K++ GTIR D AV++  N +HGSD   +A  EI+ +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>62</Hit_num>
+  <Hit_id>PLMD-1302|O49203|140</Hit_id>
+  <Hit_def>Acetylation [Arabidopsis thaliana]</Hit_def>
+  <Hit_accession>PLMD-1302|O49203|140</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.83145e-38</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>223</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIISRFERKGFKLVGIKVIVPSKDFAQKHYHDLKERPFFNGLCDFLSSGPVIAMVWEGDGVIRYGRKLIGATDPQKSEPGTIRGDLAVTVGRNIIHGSDGPETAKDEISLWFKPQEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++V  K++  S+  A   Y + KERPFF  L  F++SGPV+  V EG+  I   R+L+GATDP+K++ GTIR D AV++  N +HGSD   +A  EI+ +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>63</Hit_num>
+  <Hit_id>PLMD-1302|O49203|129</Hit_id>
+  <Hit_def>Acetylation [Arabidopsis thaliana]</Hit_def>
+  <Hit_accession>PLMD-1302|O49203|129</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>3.83145e-38</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>223</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>MERTFIAIKPDGVQRGLISEIISRFERKGFKLVGIKVIVPSKDFAQKHYHDLKERPFFNGLCDFLSSGPVIAMVWEGDGVIRYGRKLIGATDPQKSEPGTIRGDLAVTVGRNIIHGSDGPETAKDEISLWFKPQEL</Hsp_hseq>
+      <Hsp_midline>++RT   IKPD V + +I EI++RFE+ G ++V  K++  S+  A   Y + KERPFF  L  F++SGPV+  V EG+  I   R+L+GATDP+K++ GTIR D AV++  N +HGSD   +A  EI+ +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>64</Hit_num>
+  <Hit_id>PLMD-15913|Q05982|56</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-15913|Q05982|56</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.028</Hsp_bit-score>
+      <Hsp_score>323</Hsp_score>
+      <Hsp_evalue>3.88173e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFIQASEDLLKEHYIDLKDRPFFSGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEISLWFQPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>65</Hit_num>
+  <Hit_id>PLMD-15913|Q05982|49</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-15913|Q05982|49</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.028</Hsp_bit-score>
+      <Hsp_score>323</Hsp_score>
+      <Hsp_evalue>3.88173e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFIQASEDLLKEHYIDLKDRPFFSGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEISLWFQPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+ +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>66</Hit_num>
+  <Hit_id>PLMD-31176|Q8NN43|56</Hit_id>
+  <Hit_def>Acetylation [Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / LMG 3730 / NCIMB 10025)]</Hit_def>
+  <Hit_accession>PLMD-31176|Q8NN43|56</Hit_accession>
+  <Hit_len>136</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>128.257</Hsp_bit-score>
+      <Hsp_score>321</Hsp_score>
+      <Hsp_evalue>3.90606e-38</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>65</Hsp_identity>
+      <Hsp_positive>92</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>132</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSERE-AGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDP-KKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>ERTLILIKPDGVTNGHVGEIIARIERKGLKLAALDL-RVADRETAEKHYEEHADKPFFGELVEFITSAPLIAGIVEGERAIDAWRQLAGGTDPVAKATPGTIRGDFALTVGENVVHGSDSPESAEREISIWF</Hsp_hseq>
+      <Hsp_midline>+RTL +IKPD V+   +GEI+ R E+ GL++ A  + ++++RE A   Y EH ++PFF +LV F+TS P++  ++EGE AI   R+L G TDP  KA  GTIR DFA+++ EN VHGSDS  SA REI+ +F</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>67</Hit_num>
+  <Hit_id>PLMD-19823|Q5AG68|134</Hit_id>
+  <Hit_def>Acetylation [Candida albicans (strain SC5314 / ATCC MYA-2876)]</Hit_def>
+  <Hit_accession>PLMD-19823|Q5AG68|134</Hit_accession>
+  <Hit_len>151</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.872</Hsp_bit-score>
+      <Hsp_score>320</Hsp_score>
+      <Hsp_evalue>8.44409e-38</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>140</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>MSDERTFIAIKPDGVQRGLISSILGRFEQRGFKLVGIKLVQPTESLLRTHYEDLQSKPFFPSLLSYMLSGPVLATVWEGKDVVKQGRAILGATNPLQSAPGTIRGDFAIDMGRNVCHGSDSVESANKEIDLWFKKEELVE</Hsp_hseq>
+      <Hsp_midline>M+ +RT   IKPD V + +I  IL RFE+ G ++V  K+VQ +E      Y + + +PFF  L+S+M SGPV+  V EG+D + + R ++GAT+P ++  GTIR DFA+ +  N  HGSDS  SA +EI  +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>68</Hit_num>
+  <Hit_id>PLMD-19823|Q5AG68|11</Hit_id>
+  <Hit_def>Acetylation [Candida albicans (strain SC5314 / ATCC MYA-2876)]</Hit_def>
+  <Hit_accession>PLMD-19823|Q5AG68|11</Hit_accession>
+  <Hit_len>151</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.872</Hsp_bit-score>
+      <Hsp_score>320</Hsp_score>
+      <Hsp_evalue>8.44409e-38</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>140</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>MSDERTFIAIKPDGVQRGLISSILGRFEQRGFKLVGIKLVQPTESLLRTHYEDLQSKPFFPSLLSYMLSGPVLATVWEGKDVVKQGRAILGATNPLQSAPGTIRGDFAIDMGRNVCHGSDSVESANKEIDLWFKKEELVE</Hsp_hseq>
+      <Hsp_midline>M+ +RT   IKPD V + +I  IL RFE+ G ++V  K+VQ +E      Y + + +PFF  L+S+M SGPV+  V EG+D + + R ++GAT+P ++  GTIR DFA+ +  N  HGSDS  SA +EI  +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>69</Hit_num>
+  <Hit_id>PLMD-51601|I1IHQ1|118</Hit_id>
+  <Hit_def>Acetylation [Brachypodium distachyon]</Hit_def>
+  <Hit_accession>PLMD-51601|I1IHQ1|118</Hit_accession>
+  <Hit_len>217</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.798</Hsp_bit-score>
+      <Hsp_score>325</Hsp_score>
+      <Hsp_evalue>9.82488e-38</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>69</Hsp_hit-from>
+      <Hsp_hit-to>206</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>VEQSYIMIKPDGVQRGLVGEIISRFEKKGFLLKGLKLFQCPKELAQEHYKDLKERPFFPKLIDYITSGPVICMAWEGDGVVASARKLIGATNPLQAEPGTIRGDLAVQTGRNVVHGSDSPDNGKREIALWFKEGELAQ</Hsp_hseq>
+      <Hsp_midline>++++  +IKPD V + ++GEI++RFEK G  +   K+ Q  +  A   Y + KERPFF  L+ ++TSGPV+    EG+  +A  R+L+GAT+P +A+ GTIR D AV    N VHGSDS  +  REIA +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>70</Hit_num>
+  <Hit_id>PLMD-5861|P15531|85</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-5861|P15531|85</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.487</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.20585e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFMQASEDLLKEHYVDLKDRPFFAGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFHPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>71</Hit_num>
+  <Hit_id>PLMD-5861|P15531|56</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-5861|P15531|56</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.487</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.20585e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFMQASEDLLKEHYVDLKDRPFFAGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFHPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>72</Hit_num>
+  <Hit_id>PLMD-5861|P15531|49</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-5861|P15531|49</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.487</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.20585e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFMQASEDLLKEHYVDLKDRPFFAGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFHPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>73</Hit_num>
+  <Hit_id>PLMD-5861|P15531|31</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-5861|P15531|31</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.487</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.20585e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFMQASEDLLKEHYVDLKDRPFFAGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFHPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>74</Hit_num>
+  <Hit_id>PLMD-5861|P15531|26</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-5861|P15531|26</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.487</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.20585e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFMQASEDLLKEHYVDLKDRPFFAGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFHPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>75</Hit_num>
+  <Hit_id>PLMD-5861|P15531|12</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-5861|P15531|12</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.487</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.20585e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLVGEIIKRFEQKGFRLVGLKFMQASEDLLKEHYVDLKDRPFFAGLVKYMHSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESAEKEIGLWFHPEELVD</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++GEI+ RFE+ G R+V  K +Q SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI  +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>76</Hit_num>
+  <Hit_id>PLMD-12986|P70010|101</Hit_id>
+  <Hit_def>Acetylation [Xenopus laevis]</Hit_def>
+  <Hit_accession>PLMD-12986|P70010|101</Hit_accession>
+  <Hit_len>154</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>125.946</Hsp_bit-score>
+      <Hsp_score>315</Hsp_score>
+      <Hsp_evalue>6.69753e-37</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>58</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ERTFIAIKPDGVQRGLMGDIIKRFEQKGFRLVAMKFQQASQDLLRQHYIDLKDRPFYPGLVEYMSSGPVLAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVESANKEIALWFKDEELVE</Hsp_hseq>
+      <Hsp_midline>+RT   IKPD V + ++G+I+ RFE+ G R+VA K  Q S+      Y + K+RPF+  LV +M+SGPV+  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EIA +F   E+ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>77</Hit_num>
+  <Hit_id>PLMD-3920|P08879|51</Hit_id>
+  <Hit_def>Acetylation [Drosophila melanogaster]</Hit_def>
+  <Hit_accession>PLMD-3920|P08879|51</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.405</Hsp_bit-score>
+      <Hsp_score>311</Hsp_score>
+      <Hsp_evalue>2.25202e-36</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>56</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRGLVGKIIERFEQKGFKLVALKFTWASKELLEKHYADLSARPFFPGLVNYMNSGPVVPMVWEGLNVVKTGRQMLGATNPADSLPGTIRGDFCIQVGRNIIHGSDAVESAEKEIALWFNEKEL</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V + ++G+I+ RFE+ G ++VA K    S+      YA+   RPFF  LV++M SGPVV  V EG + +   R+++GAT+P  +  GTIR DF + +  N +HGSD+  SA +EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>78</Hit_num>
+  <Hit_id>PLMD-3920|P08879|46</Hit_id>
+  <Hit_def>Acetylation [Drosophila melanogaster]</Hit_def>
+  <Hit_accession>PLMD-3920|P08879|46</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.405</Hsp_bit-score>
+      <Hsp_score>311</Hsp_score>
+      <Hsp_evalue>2.25202e-36</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>56</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRGLVGKIIERFEQKGFKLVALKFTWASKELLEKHYADLSARPFFPGLVNYMNSGPVVPMVWEGLNVVKTGRQMLGATNPADSLPGTIRGDFCIQVGRNIIHGSDAVESAEKEIALWFNEKEL</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V + ++G+I+ RFE+ G ++VA K    S+      YA+   RPFF  LV++M SGPVV  V EG + +   R+++GAT+P  +  GTIR DF + +  N +HGSD+  SA +EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>79</Hit_num>
+  <Hit_id>PLMD-3920|P08879|35</Hit_id>
+  <Hit_def>Acetylation [Drosophila melanogaster]</Hit_def>
+  <Hit_accession>PLMD-3920|P08879|35</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.405</Hsp_bit-score>
+      <Hsp_score>311</Hsp_score>
+      <Hsp_evalue>2.25202e-36</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>56</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRGLVGKIIERFEQKGFKLVALKFTWASKELLEKHYADLSARPFFPGLVNYMNSGPVVPMVWEGLNVVKTGRQMLGATNPADSLPGTIRGDFCIQVGRNIIHGSDAVESAEKEIALWFNEKEL</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V + ++G+I+ RFE+ G ++VA K    S+      YA+   RPFF  LV++M SGPVV  V EG + +   R+++GAT+P  +  GTIR DF + +  N +HGSD+  SA +EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>80</Hit_num>
+  <Hit_id>PLMD-3920|P08879|24</Hit_id>
+  <Hit_def>Acetylation [Drosophila melanogaster]</Hit_def>
+  <Hit_accession>PLMD-3920|P08879|24</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.405</Hsp_bit-score>
+      <Hsp_score>311</Hsp_score>
+      <Hsp_evalue>2.25202e-36</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>56</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRGLVGKIIERFEQKGFKLVALKFTWASKELLEKHYADLSARPFFPGLVNYMNSGPVVPMVWEGLNVVKTGRQMLGATNPADSLPGTIRGDFCIQVGRNIIHGSDAVESAEKEIALWFNEKEL</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V + ++G+I+ RFE+ G ++VA K    S+      YA+   RPFF  LV++M SGPVV  V EG + +   R+++GAT+P  +  GTIR DF + +  N +HGSD+  SA +EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>81</Hit_num>
+  <Hit_id>PLMD-3920|P08879|13</Hit_id>
+  <Hit_def>Acetylation [Drosophila melanogaster]</Hit_def>
+  <Hit_accession>PLMD-3920|P08879|13</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.405</Hsp_bit-score>
+      <Hsp_score>311</Hsp_score>
+      <Hsp_evalue>2.25202e-36</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>56</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>ERTFIMVKPDGVQRGLVGKIIERFEQKGFKLVALKFTWASKELLEKHYADLSARPFFPGLVNYMNSGPVVPMVWEGLNVVKTGRQMLGATNPADSLPGTIRGDFCIQVGRNIIHGSDAVESAEKEIALWFNEKEL</Hsp_hseq>
+      <Hsp_midline>+RT  ++KPD V + ++G+I+ RFE+ G ++VA K    S+      YA+   RPFF  LV++M SGPVV  V EG + +   R+++GAT+P  +  GTIR DF + +  N +HGSD+  SA +EIA +F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>82</Hit_num>
+  <Hit_id>PLMD-43167|A6QT38|58</Hit_id>
+  <Hit_def>Acetylation [Ajellomyces capsulatus (strain NAm1 / WU24)]</Hit_def>
+  <Hit_accession>PLMD-43167|A6QT38|58</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.02</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>2.74976e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>ALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ASEQTFIAIKPDGVQRGLVGPIISRFESRGYKLAAIKLVTPSKEHLEKHYEDLSSKPFFKGLVTYMLSGPICAMVWEGRDAVKTGRAILGATNPLASAPGTIRGDFAIDVGRNVCHGSDSVENAKKEIALWFKPEELVQ</Hsp_hseq>
+      <Hsp_midline>A ++T   IKPD V + ++G I++RFE  G ++ A K+V  S+      Y +   +PFFK LV++M SGP+   V EG DA+   R ++GAT+P  +  GTIR DFA+ +  N  HGSDS  +A +EIA +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>83</Hit_num>
+  <Hit_id>PLMD-43167|A6QT38|50</Hit_id>
+  <Hit_def>Acetylation [Ajellomyces capsulatus (strain NAm1 / WU24)]</Hit_def>
+  <Hit_accession>PLMD-43167|A6QT38|50</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.02</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>2.74976e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>ALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ASEQTFIAIKPDGVQRGLVGPIISRFESRGYKLAAIKLVTPSKEHLEKHYEDLSSKPFFKGLVTYMLSGPICAMVWEGRDAVKTGRAILGATNPLASAPGTIRGDFAIDVGRNVCHGSDSVENAKKEIALWFKPEELVQ</Hsp_hseq>
+      <Hsp_midline>A ++T   IKPD V + ++G I++RFE  G ++ A K+V  S+      Y +   +PFFK LV++M SGP+   V EG DA+   R ++GAT+P  +  GTIR DFA+ +  N  HGSDS  +A +EIA +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>84</Hit_num>
+  <Hit_id>PLMD-43167|A6QT38|45</Hit_id>
+  <Hit_def>Acetylation [Ajellomyces capsulatus (strain NAm1 / WU24)]</Hit_def>
+  <Hit_accession>PLMD-43167|A6QT38|45</Hit_accession>
+  <Hit_len>152</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>124.02</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>2.74976e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>ALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVCE</Hsp_qseq>
+      <Hsp_hseq>ASEQTFIAIKPDGVQRGLVGPIISRFESRGYKLAAIKLVTPSKEHLEKHYEDLSSKPFFKGLVTYMLSGPICAMVWEGRDAVKTGRAILGATNPLASAPGTIRGDFAIDVGRNVCHGSDSVENAKKEIALWFKPEELVQ</Hsp_hseq>
+      <Hsp_midline>A ++T   IKPD V + ++G I++RFE  G ++ A K+V  S+      Y +   +PFFK LV++M SGP+   V EG DA+   R ++GAT+P  +  GTIR DFA+ +  N  HGSDS  +A +EIA +F   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>85</Hit_num>
+  <Hit_id>PLMD-42174|A0A1D5RUP2|34</Hit_id>
+  <Hit_def>Acetylation [Triticum aestivum]</Hit_def>
+  <Hit_accession>PLMD-42174|A0A1D5RUP2|34</Hit_accession>
+  <Hit_len>150</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>123.635</Hsp_bit-score>
+      <Hsp_score>309</Hsp_score>
+      <Hsp_evalue>4.05511e-36</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>132</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>130</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>EQTFIMIKPDGVQRGLIGEVISRFEKKGFYLKGLKLQNVEKSFAEQHYSDLSSKPFFAGLVEYIVSGPVVAMVWEGKSVVATGRKIIGATNPLASEPGTIRGDFAVDIGRNVIHGSDSVESARKEIALWF</Hsp_hseq>
+      <Hsp_midline>++T  +IKPD V + +IGE+++RFEK G  +   K+  + +  A   Y++   +PFF  LV ++ SGPVV  V EG+  +A  R+++GAT+P  ++ GTIR DFAV I  N +HGSDS  SA +EIA +F</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>86</Hit_num>
+  <Hit_id>PLMD-16166|Q07661|27</Hit_id>
+  <Hit_def>Acetylation [Oryza sativa subsp. japonica]</Hit_def>
+  <Hit_accession>PLMD-16166|Q07661|27</Hit_accession>
+  <Hit_len>149</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>122.865</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>8.72421e-36</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>131</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>56</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>131</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>MEQSFIMIKPDGVQRGLIGDIISRFEKKGFYLRGMKFMNVERSFAQQHYADLSDKPFFPGLVEYIISGPVVAMVWEGKDVVATGRRIIGATRPWEAAPGTIRADYAVEVGRNVIHGSDSVDNGKKEIALWF</Hsp_hseq>
+      <Hsp_midline>++++  +IKPD V + +IG+I++RFEK G  +   K + +    A   YA+  ++PFF  LV ++ SGPVV  V EG+D +A  R ++GAT P +A  GTIRAD+AV +  N +HGSDS  +  +EIA +F</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>87</Hit_num>
+  <Hit_id>PLMD-122|O00746|91</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-122|O00746|91</Hit_accession>
+  <Hit_len>187</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>120.939</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>1.16887e-34</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>38</Hsp_hit-from>
+      <Hsp_hit-to>172</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>54</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>ERTLVAVKPDGVQRRLVGDVIQRFERRGFTLVGMKMLQAPESVLAEHYQDLRRKPFYPALIRYMSSGPVVAMVWEGYNVVRASRAMIGHTDSAEAAPGTIRGDFSVHISRNVIHASDSVEGAQREIQLWFQSSEL</Hsp_hseq>
+      <Hsp_midline>+RTL  +KPD V + ++G+++ RFE+ G  +V  KM+Q  E      Y + + +PF+  L+ +M+SGPVV  V EG + +  +R ++G TD  +A  GTIR DF+V I  N +H SDS   A REI  +F ++E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>88</Hit_num>
+  <Hit_id>PLMD-1555|O60361|85</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-1555|O60361|85</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>2.90005e-31</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>124</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>73</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>VIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>LVGKIIKRFEQKGFRLVAMKFLPASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLRFKPEEL</Hsp_hseq>
+      <Hsp_midline>++G+I+ RFE+ G R+VA K +  SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+  F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>89</Hit_num>
+  <Hit_id>PLMD-1555|O60361|70</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-1555|O60361|70</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>2.90005e-31</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>124</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>73</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>VIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>LVGKIIKRFEQKGFRLVAMKFLPASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLRFKPEEL</Hsp_hseq>
+      <Hsp_midline>++G+I+ RFE+ G R+VA K +  SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+  F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>90</Hit_num>
+  <Hit_id>PLMD-1555|O60361|41</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-1555|O60361|41</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>2.90005e-31</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>124</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>73</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>VIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>LVGKIIKRFEQKGFRLVAMKFLPASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLRFKPEEL</Hsp_hseq>
+      <Hsp_midline>++G+I+ RFE+ G R+VA K +  SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+  F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>91</Hit_num>
+  <Hit_id>PLMD-1555|O60361|34</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-1555|O60361|34</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>2.90005e-31</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>124</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>73</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>VIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>LVGKIIKRFEQKGFRLVAMKFLPASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLRFKPEEL</Hsp_hseq>
+      <Hsp_midline>++G+I+ RFE+ G R+VA K +  SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+  F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>92</Hit_num>
+  <Hit_id>PLMD-1555|O60361|16</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-1555|O60361|16</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>2.90005e-31</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>124</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>73</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>VIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>LVGKIIKRFEQKGFRLVAMKFLPASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLRFKPEEL</Hsp_hseq>
+      <Hsp_midline>++G+I+ RFE+ G R+VA K +  SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+  F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>93</Hit_num>
+  <Hit_id>PLMD-1555|O60361|109</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-1555|O60361|109</Hit_accession>
+  <Hit_len>137</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>2.90005e-31</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>124</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>73</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>VIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEV</Hsp_qseq>
+      <Hsp_hseq>LVGKIIKRFEQKGFRLVAMKFLPASEEHLKQHYIDLKDRPFFPGLVKYMNSGPVVAMVWEGLNVVKTGRVMLGETNPADSKPGTIRGDFCIQVGRNIIHGSDSVKSAEKEISLRFKPEEL</Hsp_hseq>
+      <Hsp_midline>++G+I+ RFE+ G R+VA K +  SE      Y + K+RPFF  LV +M SGPVV  V EG + +   R ++G T+P  +  GTIR DF + +  N +HGSDS  SA +EI+  F   E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>94</Hit_num>
+  <Hit_id>PLMD-39955|Q9Y5B8|51</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-39955|Q9Y5B8|51</Hit_accession>
+  <Hit_len>376</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>109.768</Hsp_bit-score>
+      <Hsp_score>273</Hsp_score>
+      <Hsp_evalue>1.53647e-28</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>92</Hsp_hit-from>
+      <Hsp_hit-to>228</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>58</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDP--KKADAG-TIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>EKTLALIKPDAISK--AGEIIEIINKAGFTITKLKMMMLSRKEALDFHVDHQSRPFFNELIQFITTGPIIAMEILRDDAICEWKRLLGPANSGVARTDASESIRALFGTDGIRNAAHGPDSFASAAREMELFFPSSGGC</Hsp_hseq>
+      <Hsp_midline>++TL++IKPDA+SK   GEI+    KAG  +   KM+ LS +EA  F+ +H+ RPFF +L+ F+T+GP++   +  +DAI + + L+G  +    + DA  +IRA F      NA HG DS ASAARE+  FF ++  C</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>73.9442</Hsp_bit-score>
+      <Hsp_score>180</Hsp_score>
+      <Hsp_evalue>1.60097e-15</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>240</Hsp_hit-from>
+      <Hsp_hit-to>371</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>45</Hsp_identity>
+      <Hsp_positive>66</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>132</Hsp_align-len>
+      <Hsp_qseq>TLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPF-FKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKA---DAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>TCCIVKPHAVSEGLLGKILMAIRDAGFEISAMQMFNMDRVNVEEFYEVYKGVVTEYHDMVTEMYSGPCVAMEIQQNNATKTFREFCGPADPEIARHLRPGTLRAIFGKTKIQNAVHCTDLPEDGLLEVQYFF</Hsp_hseq>
+      <Hsp_midline>T  I+KP AVS+ ++G+IL     AG  + A +M  +       FY  +K     + D+V+ M SGP V   ++  +A    RE  G  DP+ A     GT+RA F  +  +NAVH +D       E+ YFF</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>95</Hit_num>
+  <Hit_id>PLMD-39955|Q9Y5B8|173</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-39955|Q9Y5B8|173</Hit_accession>
+  <Hit_len>376</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>109.768</Hsp_bit-score>
+      <Hsp_score>273</Hsp_score>
+      <Hsp_evalue>1.53647e-28</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>92</Hsp_hit-from>
+      <Hsp_hit-to>228</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>58</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDP--KKADAG-TIRADFAVSIDENAVHGSDSEASAAREIAYFFAATEVC</Hsp_qseq>
+      <Hsp_hseq>EKTLALIKPDAISK--AGEIIEIINKAGFTITKLKMMMLSRKEALDFHVDHQSRPFFNELIQFITTGPIIAMEILRDDAICEWKRLLGPANSGVARTDASESIRALFGTDGIRNAAHGPDSFASAAREMELFFPSSGGC</Hsp_hseq>
+      <Hsp_midline>++TL++IKPDA+SK   GEI+    KAG  +   KM+ LS +EA  F+ +H+ RPFF +L+ F+T+GP++   +  +DAI + + L+G  +    + DA  +IRA F      NA HG DS ASAARE+  FF ++  C</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>73.9442</Hsp_bit-score>
+      <Hsp_score>180</Hsp_score>
+      <Hsp_evalue>1.60097e-15</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>240</Hsp_hit-from>
+      <Hsp_hit-to>371</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>45</Hsp_identity>
+      <Hsp_positive>66</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>132</Hsp_align-len>
+      <Hsp_qseq>TLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPF-FKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKA---DAGTIRADFAVSIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>TCCIVKPHAVSEGLLGKILMAIRDAGFEISAMQMFNMDRVNVEEFYEVYKGVVTEYHDMVTEMYSGPCVAMEIQQNNATKTFREFCGPADPEIARHLRPGTLRAIFGKTKIQNAVHCTDLPEDGLLEVQYFF</Hsp_hseq>
+      <Hsp_midline>T  I+KP AVS+ ++G+IL     AG  + A +M  +       FY  +K     + D+V+ M SGP V   ++  +A    RE  G  DP+ A     GT+RA F  +  +NAVH +D       E+ YFF</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>96</Hit_num>
+  <Hit_id>PLMD-25640|Q6TXF6|275</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-25640|Q6TXF6|275</Hit_accession>
+  <Hit_len>867</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>100.138</Hsp_bit-score>
+      <Hsp_score>248</Hsp_score>
+      <Hsp_evalue>1.52431e-24</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>116</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>148</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>45</Hsp_identity>
+      <Hsp_positive>71</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>113</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAV</Hsp_qseq>
+      <Hsp_hseq>ERTLVAVKPDGVQRRLVGTVIHRFERRGFKLVGMKMLQAPESILAEHYRDLQRKPFYPALISYMSSGPVVAMVWEGHNVVHISRAMIGHTDSTEAAPGTIRGDFSVHISRDKV</Hsp_hseq>
+      <Hsp_midline>+RTL  +KPD V + ++G ++ RFE+ G ++V  KM+Q  E      Y + + +PF+  L+S+M+SGPVV  V EG + +  +R ++G TD  +A  GTIR DF+V I  + V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>97</Hit_num>
+  <Hit_id>PLMD-25640|Q6TXF6|220</Hit_id>
+  <Hit_def>Acetylation [Rattus norvegicus]</Hit_def>
+  <Hit_accession>PLMD-25640|Q6TXF6|220</Hit_accession>
+  <Hit_len>867</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>100.138</Hsp_bit-score>
+      <Hsp_score>248</Hsp_score>
+      <Hsp_evalue>1.52431e-24</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>116</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>148</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>45</Hsp_identity>
+      <Hsp_positive>71</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>113</Hsp_align-len>
+      <Hsp_qseq>QRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKADAGTIRADFAVSIDENAV</Hsp_qseq>
+      <Hsp_hseq>ERTLVAVKPDGVQRRLVGTVIHRFERRGFKLVGMKMLQAPESILAEHYRDLQRKPFYPALISYMSSGPVVAMVWEGHNVVHISRAMIGHTDSTEAAPGTIRGDFSVHISRDKV</Hsp_hseq>
+      <Hsp_midline>+RTL  +KPD V + ++G ++ RFE+ G ++V  KM+Q  E      Y + + +PF+  L+S+M+SGPVV  V EG + +  +R ++G TD  +A  GTIR DF+V I  + V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>98</Hit_num>
+  <Hit_id>PLMD-12012|P56597|61</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-12012|P56597|61</Hit_accession>
+  <Hit_len>212</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>81.6481</Hsp_bit-score>
+      <Hsp_score>200</Hsp_score>
+      <Hsp_evalue>3.76798e-19</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>12</Hsp_hit-from>
+      <Hsp_hit-to>144</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>47</Hsp_identity>
+      <Hsp_positive>77</Hsp_positive>
+      <Hsp_gaps>7</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNV-IGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDP---KKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>VEKTLAIIKPDIVDKEEEIQDIILR---SGFTIVQRRKLRLSPEQCSNFYVEKYGKMFFPNLTAYMSSGPLVAMILARHKAISYWLELLGPNNSLVAKETHPDSLRAIYGTDDLRNALHGSNDFAAAEREIRFMFP</Hsp_hseq>
+      <Hsp_midline>+++TL+IIKPD V K   I +I+ R   +G  +V  + ++LS  +   FY E   + FF +L ++M+SGP+V  +L    AI+   EL+G  +    K+    ++RA +      NA+HGS+  A+A REI + F </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>99</Hit_num>
+  <Hit_id>PLMD-30599|Q8N427|356</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-30599|Q8N427|356</Hit_accession>
+  <Hit_len>588</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.7886</Hsp_bit-score>
+      <Hsp_score>177</Hsp_score>
+      <Hsp_evalue>5.65327e-15</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>129</Hsp_query-to>
+      <Hsp_hit-from>450</Hsp_hit-from>
+      <Hsp_hit-to>577</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>47</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>130</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKA---DAGTIRADFAVSIDENAVHGSDSEASAAREI</Hsp_qseq>
+      <Hsp_hseq>LQSTLGLIKPHATSEQR-EQILKIVKEAGFDLTQVKKMFLTPEQIEKIYPKVTGKDFYKDLLEMLSVGPSMVMILTKWNAVAEWRRLMGPTDPEEAKLLSPDSIRAQFGISKLKNIVHGA-SNAYEAKEV</Hsp_hseq>
+      <Hsp_midline>LQ TL +IKP A S+    +IL   ++AG  +   K + L+  +    Y +   + F+KDL+  ++ GP +V +L   +A+A+ R LMG TDP++A      +IRA F +S  +N VHG+ S A  A+E+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>61.2326</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>7.08571e-11</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>313</Hsp_hit-from>
+      <Hsp_hit-to>448</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>77</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKAD---AGTIRADFAV-SIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>MKLEKTLALLRPNLFHERK-DDVLRIIKDEDFKILEQRQVVLSEKEAQALCKEYENEDYFNKLIENMTSGPSLALVLLRDNGLQYWKQLLGPRTVEEAIEYFPESLCAQFAMDSLPVNQLYGSDSLETAEREIQHFF</Hsp_hseq>
+      <Hsp_midline>M L++TL++++P+   +    ++L   +    +++  + V LSE+EA     E++   +F  L+  MTSGP +  VL  ++ +   ++L+G    ++A      ++ A FA+ S+  N ++GSDS  +A REI +FF</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>3</Hsp_num>
+      <Hsp_bit-score>46.2098</Hsp_bit-score>
+      <Hsp_score>108</Hsp_score>
+      <Hsp_evalue>1.08323e-05</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>70</Hsp_query-to>
+      <Hsp_hit-from>156</Hsp_hit-from>
+      <Hsp_hit-to>220</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>25</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>65</Hsp_align-len>
+      <Hsp_qseq>TLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSG</Hsp_qseq>
+      <Hsp_hseq>SIAIIKPDAVISKKVLEIKRKITKAGFIIEAEHKTVLTEEQVVNFYSRIADQCDFEEFVSFMTSG</Hsp_hseq>
+      <Hsp_midline>+++IIKPDAV    + EI  +  KAG  + A     L+E +   FY+   ++  F++ VSFMTSG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>100</Hit_num>
+  <Hit_id>PLMD-30599|Q8N427|308</Hit_id>
+  <Hit_def>Acetylation [Homo sapiens]</Hit_def>
+  <Hit_accession>PLMD-30599|Q8N427|308</Hit_accession>
+  <Hit_len>588</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.7886</Hsp_bit-score>
+      <Hsp_score>177</Hsp_score>
+      <Hsp_evalue>5.65327e-15</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>129</Hsp_query-to>
+      <Hsp_hit-from>450</Hsp_hit-from>
+      <Hsp_hit-to>577</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>47</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>130</Hsp_align-len>
+      <Hsp_qseq>LQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKA---DAGTIRADFAVSIDENAVHGSDSEASAAREI</Hsp_qseq>
+      <Hsp_hseq>LQSTLGLIKPHATSEQR-EQILKIVKEAGFDLTQVKKMFLTPEQIEKIYPKVTGKDFYKDLLEMLSVGPSMVMILTKWNAVAEWRRLMGPTDPEEAKLLSPDSIRAQFGISKLKNIVHGA-SNAYEAKEV</Hsp_hseq>
+      <Hsp_midline>LQ TL +IKP A S+    +IL   ++AG  +   K + L+  +    Y +   + F+KDL+  ++ GP +V +L   +A+A+ R LMG TDP++A      +IRA F +S  +N VHG+ S A  A+E+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>61.2326</Hsp_bit-score>
+      <Hsp_score>147</Hsp_score>
+      <Hsp_evalue>7.08571e-11</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>313</Hsp_hit-from>
+      <Hsp_hit-to>448</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>77</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>137</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGPVVVQVLEGEDAIAKNRELMGATDPKKAD---AGTIRADFAV-SIDENAVHGSDSEASAAREIAYFF</Hsp_qseq>
+      <Hsp_hseq>MKLEKTLALLRPNLFHERK-DDVLRIIKDEDFKILEQRQVVLSEKEAQALCKEYENEDYFNKLIENMTSGPSLALVLLRDNGLQYWKQLLGPRTVEEAIEYFPESLCAQFAMDSLPVNQLYGSDSLETAEREIQHFF</Hsp_hseq>
+      <Hsp_midline>M L++TL++++P+   +    ++L   +    +++  + V LSE+EA     E++   +F  L+  MTSGP +  VL  ++ +   ++L+G    ++A      ++ A FA+ S+  N ++GSDS  +A REI +FF</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>3</Hsp_num>
+      <Hsp_bit-score>46.2098</Hsp_bit-score>
+      <Hsp_score>108</Hsp_score>
+      <Hsp_evalue>1.08323e-05</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>70</Hsp_query-to>
+      <Hsp_hit-from>156</Hsp_hit-from>
+      <Hsp_hit-to>220</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>25</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>65</Hsp_align-len>
+      <Hsp_qseq>TLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSG</Hsp_qseq>
+      <Hsp_hseq>SIAIIKPDAVISKKVLEIKRKITKAGFIIEAEHKTVLTEEQVVNFYSRIADQCDFEEFVSFMTSG</Hsp_hseq>
+      <Hsp_midline>+++IIKPDAV    + EI  +  KAG  + A     L+E +   FY+   ++  F++ VSFMTSG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>101</Hit_num>
+  <Hit_id>PLMD-45183|C6KSQ4|628</Hit_id>
+  <Hit_def>Acetylation [Plasmodium falciparum (isolate 3D7)]</Hit_def>
+  <Hit_accession>PLMD-45183|C6KSQ4|628</Hit_accession>
+  <Hit_len>1828</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.5744e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>69</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGP-VVVQVLEGEDAIAKNRELMGAT----DPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>ICLERTFIILKPDVVEMNKMNAIVNDILNFDLLIVAIKRGVLSVERAKKLYSDLVDKPYYNDLIDFMTSSKGIVCLLIEGPNCIRRAHILCGPSFSLVDFEHMPNYCLKKKYGTNQMKNAVHISKDD-NVEKEIDLFFG</Hsp_hseq>
+      <Hsp_midline>+ L+RT  I+KPD V  N +  I+       L +VA K   LS   A   Y++  ++P++ DL+ FMTS   +V  ++EG + I +   L G +    D +      ++  +  +  +NAVH S  + +  +EI  FF </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>102</Hit_num>
+  <Hit_id>PLMD-45183|C6KSQ4|622</Hit_id>
+  <Hit_def>Acetylation [Plasmodium falciparum (isolate 3D7)]</Hit_def>
+  <Hit_accession>PLMD-45183|C6KSQ4|622</Hit_accession>
+  <Hit_len>1828</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.5744e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>69</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGP-VVVQVLEGEDAIAKNRELMGAT----DPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>ICLERTFIILKPDVVEMNKMNAIVNDILNFDLLIVAIKRGVLSVERAKKLYSDLVDKPYYNDLIDFMTSSKGIVCLLIEGPNCIRRAHILCGPSFSLVDFEHMPNYCLKKKYGTNQMKNAVHISKDD-NVEKEIDLFFG</Hsp_hseq>
+      <Hsp_midline>+ L+RT  I+KPD V  N +  I+       L +VA K   LS   A   Y++  ++P++ DL+ FMTS   +V  ++EG + I +   L G +    D +      ++  +  +  +NAVH S  + +  +EI  FF </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>103</Hit_num>
+  <Hit_id>PLMD-45183|C6KSQ4|621</Hit_id>
+  <Hit_def>Acetylation [Plasmodium falciparum (isolate 3D7)]</Hit_def>
+  <Hit_accession>PLMD-45183|C6KSQ4|621</Hit_accession>
+  <Hit_len>1828</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.5744e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>69</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGP-VVVQVLEGEDAIAKNRELMGAT----DPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>ICLERTFIILKPDVVEMNKMNAIVNDILNFDLLIVAIKRGVLSVERAKKLYSDLVDKPYYNDLIDFMTSSKGIVCLLIEGPNCIRRAHILCGPSFSLVDFEHMPNYCLKKKYGTNQMKNAVHISKDD-NVEKEIDLFFG</Hsp_hseq>
+      <Hsp_midline>+ L+RT  I+KPD V  N +  I+       L +VA K   LS   A   Y++  ++P++ DL+ FMTS   +V  ++EG + I +   L G +    D +      ++  +  +  +NAVH S  + +  +EI  FF </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>104</Hit_num>
+  <Hit_id>PLMD-45183|C6KSQ4|595</Hit_id>
+  <Hit_def>Acetylation [Plasmodium falciparum (isolate 3D7)]</Hit_def>
+  <Hit_accession>PLMD-45183|C6KSQ4|595</Hit_accession>
+  <Hit_len>1828</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.5744e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>69</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGP-VVVQVLEGEDAIAKNRELMGAT----DPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>ICLERTFIILKPDVVEMNKMNAIVNDILNFDLLIVAIKRGVLSVERAKKLYSDLVDKPYYNDLIDFMTSSKGIVCLLIEGPNCIRRAHILCGPSFSLVDFEHMPNYCLKKKYGTNQMKNAVHISKDD-NVEKEIDLFFG</Hsp_hseq>
+      <Hsp_midline>+ L+RT  I+KPD V  N +  I+       L +VA K   LS   A   Y++  ++P++ DL+ FMTS   +V  ++EG + I +   L G +    D +      ++  +  +  +NAVH S  + +  +EI  FF </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>105</Hit_num>
+  <Hit_id>PLMD-45183|C6KSQ4|437</Hit_id>
+  <Hit_def>Acetylation [Plasmodium falciparum (isolate 3D7)]</Hit_def>
+  <Hit_accession>PLMD-45183|C6KSQ4|437</Hit_accession>
+  <Hit_len>1828</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.5744e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>69</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGP-VVVQVLEGEDAIAKNRELMGAT----DPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>ICLERTFIILKPDVVEMNKMNAIVNDILNFDLLIVAIKRGVLSVERAKKLYSDLVDKPYYNDLIDFMTSSKGIVCLLIEGPNCIRRAHILCGPSFSLVDFEHMPNYCLKKKYGTNQMKNAVHISKDD-NVEKEIDLFFG</Hsp_hseq>
+      <Hsp_midline>+ L+RT  I+KPD V  N +  I+       L +VA K   LS   A   Y++  ++P++ DL+ FMTS   +V  ++EG + I +   L G +    D +      ++  +  +  +NAVH S  + +  +EI  FF </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>106</Hit_num>
+  <Hit_id>PLMD-45183|C6KSQ4|436</Hit_id>
+  <Hit_def>Acetylation [Plasmodium falciparum (isolate 3D7)]</Hit_def>
+  <Hit_accession>PLMD-45183|C6KSQ4|436</Hit_accession>
+  <Hit_len>1828</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.5744e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>69</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>139</Hsp_align-len>
+      <Hsp_qseq>MALQRTLSIIKPDAVSKNVIGEILTRFEKAGLRVVAAKMVQLSEREAGGFYAEHKERPFFKDLVSFMTSGP-VVVQVLEGEDAIAKNRELMGAT----DPKKADAGTIRADFAVSIDENAVHGSDSEASAAREIAYFFA</Hsp_qseq>
+      <Hsp_hseq>ICLERTFIILKPDVVEMNKMNAIVNDILNFDLLIVAIKRGVLSVERAKKLYSDLVDKPYYNDLIDFMTSSKGIVCLLIEGPNCIRRAHILCGPSFSLVDFEHMPNYCLKKKYGTNQMKNAVHISKDD-NVEKEIDLFFG</Hsp_hseq>
+      <Hsp_midline>+ L+RT  I+KPD V  N +  I+       L +VA K   LS   A   Y++  ++P++ DL+ FMTS   +V  ++EG + I +   L G +    D +      ++  +  +  +NAVH S  + +  +EI  FF </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>111254</Statistics_db-num>
+      <Statistics_db-len>88783539</Statistics_db-len>
+      <Statistics_hsp-len>102</Statistics_hsp-len>
+      <Statistics_eff-space>3174860871</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
+
