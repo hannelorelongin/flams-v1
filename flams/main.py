@@ -40,9 +40,7 @@ def main(args):
         num_threads=args.num_threads,
     )
 
-    display_result(
-        output_filename =args.output,
-        blast_records = result)
+    display_result(output_filename=args.output, blast_records=result)
 
 
 if __name__ == "__main__":

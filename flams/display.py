@@ -1,7 +1,7 @@
 import csv
 
 
-def display_result(output_filename,blast_records):
+def display_result(output_filename, blast_records):
     # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec129
     with open(output_filename, "w") as out_file:
         tsv_writer = csv.writer(out_file, delimiter="\t")
