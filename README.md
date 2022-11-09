@@ -2,6 +2,9 @@
 
 Requirements:
 * python >= 3.10
+* BLAST: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+
+# Usage
 
 ## Setup
 Download the project:
@@ -16,7 +19,10 @@ Install dependencies:
 `pip install -r requirements.txt`
 
 ## Run
-`python flams/main.py {input fasta file} -o {output path}`
+`python -m flams.main --in {input fasta file} N`
+where N is position of lysine
+
+# Development
 
 ## Linters
 Before commiting the code run:
@@ -41,9 +47,6 @@ You'll be moved automatically to that branch.
 `git push`  
 
 To merge the code from the branch to the main branch, you need to create a pull request (can be done through the web interface).
-
-
-# Dev notes
 
 ## Creating local BLAST database
 Manual: http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec125

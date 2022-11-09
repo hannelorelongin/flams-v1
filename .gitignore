@@ -1,5 +1,9 @@
 venv/
 data/acetylation.faa.*
+data/*.tmp
+data/blast*
+data/temp.xml
 __pycache__/
 .pytest_cache/
+.mypy_cache/
 .DS_Store
