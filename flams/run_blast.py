@@ -7,7 +7,13 @@ import re
 
 
 def run_blast(
-    input, modifications, lysine_pos, lysine_range, evalue=0.01, num_threads=1, **kwargs
+    input,
+    modifications,
+    lysine_pos,
+    lysine_range=0,
+    evalue=0.01,
+    num_threads=1,
+    **kwargs,
 ):
     # For each modification, run blast and flatten results to an array
     results = []

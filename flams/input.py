@@ -76,24 +76,33 @@ def check_files_valid(args, parser):
     if not args.input.exists():
         parser.error(f"Input file {args.input} does not exist.")
 
-    try:
-        SeqIO.read(args.input, "fasta")
-    except Exception:
+    if not is_valid_fasta_file(args.input):
         parser.error(f"Input file {args.input} is not a valid fasta file.")
 
     if args.output and args.output.is_dir():
         parser.error(f"Provided output: {args.output} is a directory.")
 
 
-def check_lysine(args, parser):
-    # user provides position in 1-based indexing system
-    position_idx = args.pos - 1
-    input_seq = SeqIO.read(args.input, "fasta").seq
+def is_valid_fasta_file(path: Path):
+    try:
+        SeqIO.read(path, "fasta")
+        return True
+    except Exception:
+        return False
 
-    if input_seq[position_idx] != "K":
+
+def check_lysine(args, parser):
+    if not is_position_lysine(args.pos, args.input):
         parser.error(
-            f"Position {args.pos} does not point to Lysine: {_get_position_display_str(input_seq, position_idx)}"
+            f"Position {args.pos} does not point to Lysine: {_get_position_display_str(args.pos, args.input)}"
         )
+
+
+def is_position_lysine(position: int, input: Path) -> bool:
+    # user provides position in 1-based indexing system
+    position_idx = position - 1
+    input_seq = SeqIO.read(input, "fasta").seq
+    return input_seq[position_idx] == "K"
 
 
 def check_modifications(args, parser):
@@ -103,13 +112,18 @@ def check_modifications(args, parser):
                 parser.error(f"Invalid modification type {i}")
 
 
-def _get_position_display_str(seq, pos):
-    # Display fragment of sequence around chosen position
-    lower = max(0, pos - 3)
-    upper = min(len(seq), pos + 3)
+def _get_position_display_str(position: int, input: Path) -> str:
+    """
+    Display fragment of sequence around chosen position
+    """
+    # user provides position in 1-based indexing system
+    pos_idx = position - 1
+    seq = SeqIO.read(input, "fasta").seq
+    lower = max(0, pos_idx - 3)
+    upper = min(len(seq), pos_idx + 3)
     prefix = "..." if lower > 0 else ""
     sufix = "..." if upper < len(seq) - 1 else ""
-    pos_idx = len(prefix) + (pos - lower)
+    pos_idx = len(prefix) + (pos_idx - lower)
     seq_row = f"{prefix}{seq[lower:upper]}{sufix}"
     pointer_row = " " * pos_idx + "^"
     return "".join(["\n", seq_row, "\n", pointer_row])

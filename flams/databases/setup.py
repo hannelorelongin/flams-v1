@@ -1,6 +1,7 @@
 from pathlib import Path
 import subprocess
 import os
+from typing import Any, List
 from flams.databases import cplmv4
 from flams.utils import get_data_dir
 from dataclasses import dataclass
@@ -8,7 +9,7 @@ from dataclasses import dataclass
 
 @dataclass
 class ModificationDatabase:
-    module: any
+    module: Any
     descriptor: str
 
 
@@ -16,7 +17,7 @@ class ModificationDatabase:
 class ModificationType:
     type: str
     version: float
-    dbs: list[ModificationDatabase]
+    dbs: List[ModificationDatabase]
 
 
 # Here we store a dict of modifications that can be queried for.
@@ -43,7 +44,7 @@ MODIFICATIONS = {
 
 
 # modifications: is a list of modification names (strings) from user input
-def update_db_for_modifications(list_of_mods_to_check: list[str]):
+def update_db_for_modifications(list_of_mods_to_check: List[str]):
     for m in list_of_mods_to_check:
         _generate_blastdb_if_not_up_to_date(MODIFICATIONS[m])
 
