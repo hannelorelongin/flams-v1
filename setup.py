@@ -7,4 +7,9 @@ setup(
     packages=find_packages(
         include=["flams*"],
     ),
+    install_requires=[
+        "appdirs",
+        "biopython",
+        "requests",
+    ],
 )
