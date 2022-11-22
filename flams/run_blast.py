@@ -2,8 +2,10 @@ from dataclasses import dataclass
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
+from flams.utils import get_data_dir
 import flams.databases.setup
 import re
+import os
 
 
 def run_blast(
@@ -48,9 +50,12 @@ class ModificationHeader:
 
 
 def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_threads=1):
-    # Get BLASTDB path for selected modification + get a temporary path for output
+    # Get BLASTDB name for selected modification + get a temporary path for output
     BLASTDB = flams.databases.setup.get_blastdb_path_for_modification(modification)
-    BLAST_OUT = f"{flams.databases.setup.get_data_dir()}/temp.xml"
+    BLAST_OUT = "temp.xml"
+
+    # Adjust working directory conditions and convert input file into absolute path
+    input = _adjust_working_directory(input)
 
     # Run BLAST
     blast_exec = NcbiblastpCommandline(
@@ -67,6 +72,15 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
         blast_records = list(NCBIXML.parse(handle))
 
     return [_filter_blast(i, lysine_pos, lysine_range, evalue) for i in blast_records]
+
+
+# BlastpCommandline does not like whitespaces in paths, which the database may contain on especially Mac OS.
+# Therefore, we will change our working directory to that of the data dir before running Blast.
+# Before doing this, we need to convert the relative path to the input file into an absolute path.
+def _adjust_working_directory(input: str):
+    input = os.path.abspath(input)
+    os.chdir(get_data_dir())
+    return input
 
 
 def _filter_blast(blast_record, lysine_pos, lysine_range, evalue) -> Blast:
