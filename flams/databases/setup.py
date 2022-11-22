@@ -54,7 +54,7 @@ def update_db_for_modifications(list_of_mods_to_check: List[str]):
 def _generate_blastdb_if_not_up_to_date(modification: ModificationType):
     data_dir = get_data_dir()
 
-    BLASTDB_PATH = get_blastdb_path_for_modification(
+    BLASTDB_PATH = get_blastdb_name_for_modification(
         modification.type, modification.version
     )
 
@@ -83,7 +83,7 @@ def _generate_blastdb(data_dir, modification: ModificationType):
     try:
         # We presume that the FASTA is stored in a file {modification.type}.fasta inside the data_dir.
         # We will write the local BLASTDB to out_path
-        out_db_name = get_blastdb_path_for_modification(modification.type, modification.version)
+        out_db_name = get_blastdb_name_for_modification(modification.type, modification.version)
         subprocess.call(
             f'cd "{data_dir}" && makeblastdb -in {modification.type}.fasta -dbtype prot -input_type fasta -parse_seqids'
             f' -out {out_db_name}',
@@ -95,8 +95,8 @@ def _generate_blastdb(data_dir, modification: ModificationType):
         ) from e
 
 
-# Gets the path to where the local BLASTDB for a given modification should be located.
-def get_blastdb_path_for_modification(modification: str, version=None):
+# Gets the name of the local BLASTDB for a given modification.
+def get_blastdb_name_for_modification(modification: str, version=None):
     # If version was not specified, get the current
     if not version:
         version = MODIFICATIONS[modification].version
