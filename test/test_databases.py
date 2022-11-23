@@ -17,7 +17,7 @@ class DatabaseTestCase(unittest.TestCase):
         for file in TEST_OUTPUT_PATH.glob("*.tmp"):
             file.unlink()
 
-        blastdb_path = db_setup.get_blastdb_path_for_modification(
+        blastdb_path = db_setup.get_blastdb_name_for_modification(
             "hmgylation-unittest", 0.1
         )
         for file in glob.glob(f"{blastdb_path}.*"):
