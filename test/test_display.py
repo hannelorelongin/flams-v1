@@ -28,15 +28,21 @@ class DisplayTestCase(unittest.TestCase):
                 "The Uniprot Id is not correct in the example output file",
             )
             self.assertEqual(
-                int(row2[2]), 87, "The lysine location is not correctly displayed"
-            )
-            self.assertEqual(
                 row2[1],
                 "Escherichia coli (strain K12)",
                 "The name of the species is not displayed correctly",
             )
             self.assertEqual(
-                row2[3],
+                row2[2],
+                "Acetylation",
+                "The lysine modification is not displayed correctly",
+            )
+            self.assertEqual(
+                int(row2[3]), 87, "The lysine location is not correctly displayed"
+            )
+
+            self.assertEqual(
+                row2[4],
                 "82-ARHQNKDGSVD-93",
                 "The lysine window is not correctly displayed",
             )
