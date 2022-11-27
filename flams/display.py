@@ -6,7 +6,13 @@ def display_result(output_filename, blast_records):
     with open(output_filename, "w") as out_file:
         tsv_writer = csv.writer(out_file, delimiter="\t")
         tsv_writer.writerow(
-            ["Uniprot ID", "Species", "Lysine location", "Lysine Window"]
+            [
+                "Uniprot ID",
+                "Species",
+                "Modification",
+                "Lysine location",
+                "Lysine Window",
+            ]
         )
         for blast_record in blast_records:
             for alignment in blast_record.alignments:
@@ -14,7 +20,7 @@ def display_result(output_filename, blast_records):
                     pubmedID = (alignment.title).split("|")  # from title pubmed_Id
                     Species = pubmedID[2].split("[")  # isolates species name
                     lysine = Species[0]
-                    lysine_no = lysine.split()
+                    lysine_no = lysine.split()  # gets lysine modification
                     Species_name = Species[1].split("]")
                     lysine_location = int(
                         lysine_no[0]
@@ -34,5 +40,11 @@ def display_result(output_filename, blast_records):
                         start + "-" + lysine_window + "-" + end
                     )  # displaying the exact window location within the sequence (gaps are not counted)
                     tsv_writer.writerow(
-                        [pubmedID[1], Species_name[0], lysine_location, window]
+                        [
+                            pubmedID[1],
+                            Species_name[0],
+                            lysine_no[1],
+                            lysine_location,
+                            window,
+                        ]
                     )
