@@ -52,15 +52,17 @@ def update_db_for_modifications(list_of_mods_to_check: List[str]):
 # Check if data dir contains a BLASTDB with name {modification}-{version}
 # If not, download FASTAs and generate BLASTDB.
 def _generate_blastdb_if_not_up_to_date(modification: ModificationType):
-    BLASTDB_PATH = get_blastdb_path_for_modification(
+    data_dir = get_data_dir()
+
+    BLASTDB_PATH = get_blastdb_name_for_modification(
         modification.type, modification.version
     )
 
     # If an up-to-date BLASTDB for the given modification already exists, do nothing.
-    if Path(f"{BLASTDB_PATH}.pdb").exists():
+    if Path(f"{data_dir}/{BLASTDB_PATH}.pdb").exists():
         return
 
-    fasta_location = f"{get_data_dir()}/{modification.type}.fasta"
+    fasta_location = f"{data_dir}/{modification.type}.fasta"
 
     if os.path.exists(fasta_location):
         os.remove(fasta_location)
@@ -68,7 +70,7 @@ def _generate_blastdb_if_not_up_to_date(modification: ModificationType):
     _get_fasta_from_dbs(modification, fasta_location)
 
     # Generate local BLASTDB from FASTA in fasta_location
-    _generate_blastdb(fasta_location, BLASTDB_PATH)
+    _generate_blastdb(data_dir, modification)
 
 
 def _get_fasta_from_dbs(modification: ModificationType, fasta_location):
@@ -76,11 +78,15 @@ def _get_fasta_from_dbs(modification: ModificationType, fasta_location):
         db.module.get_fasta(db.descriptor, fasta_location)
 
 
-def _generate_blastdb(fasta_in, blastdb_out):
+def _generate_blastdb(data_dir, modification: ModificationType):
     # Generate local BLASTDB
     try:
+        # We presume that the FASTA is stored in a file {modification.type}.fasta inside the data_dir.
+        # We will write the local BLASTDB to out_path
+        out_db_name = get_blastdb_name_for_modification(modification.type, modification.version)
         subprocess.call(
-            f"makeblastdb -in {fasta_in} -dbtype prot -input_type fasta -parse_seqids -out {blastdb_out}",
+            f'cd "{data_dir}" && makeblastdb -in {modification.type}.fasta -dbtype prot -input_type fasta -parse_seqids'
+            f' -out {out_db_name}',
             shell=True,
         )
     except FileNotFoundError as e:
@@ -89,10 +95,10 @@ def _generate_blastdb(fasta_in, blastdb_out):
         ) from e
 
 
-# Gets the path to where the local BLASTDB for a given modification should be located.
-def get_blastdb_path_for_modification(modification: str, version=None):
+# Gets the name of the local BLASTDB for a given modification.
+def get_blastdb_name_for_modification(modification: str, version=None):
     # If version was not specified, get the current
     if not version:
         version = MODIFICATIONS[modification].version
 
-    return f"{get_data_dir()}/{modification}-{version}"
+    return f"{modification}-{version}"
