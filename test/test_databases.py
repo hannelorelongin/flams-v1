@@ -1,8 +1,9 @@
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 import responses
 import glob
-import flams.databases.setup as db_setup
+from flams.databases.setup import get_blastdb_name_for_modification, update_db_for_modifications
 import flams.databases.cplmv4 as cplmv4
 from Bio import SeqIO
 
@@ -17,10 +18,10 @@ class DatabaseTestCase(unittest.TestCase):
         for file in TEST_OUTPUT_PATH.glob("*.tmp"):
             file.unlink()
 
-        blastdb_path = db_setup.get_blastdb_name_for_modification(
+        blastdb_name = get_blastdb_name_for_modification(
             "hmgylation-unittest", 0.1
         )
-        for file in glob.glob(f"{blastdb_path}.*"):
+        for file in glob.glob(f"{blastdb_name}.*"):
             Path(file).unlink()
 
     # This tests get_fasta and _convert_plm_to_fasta of the CPLMv4 module
@@ -48,3 +49,15 @@ class DatabaseTestCase(unittest.TestCase):
             fasta = SeqIO.parse(handle, "fasta")
             # Assert that the HMGylation DB contains 126 entries.
             self.assertTrue(len(list(fasta)) == 126)
+
+    @patch("flams.databases.setup._generate_blastdb", return_value=None)
+    @patch("flams.databases.setup._get_fasta_from_dbs", return_value=None)
+    @patch("flams.databases.setup.get_data_dir", return_value=TEST_OUTPUT_PATH)
+    def test_dont_download_fasta_if_already_exists(self, get_data_dir, get_fasta, generate_blastdb):
+        self.assertTrue((TEST_OUTPUT_PATH / "hmgylation-1.0.fasta").exists())
+
+        update_db_for_modifications(["hmgylation"])
+
+        get_fasta.assert_not_called()
+
+
