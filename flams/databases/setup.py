@@ -31,7 +31,7 @@ MODIFICATIONS = {
         "lactylation", 1.0, [ModificationDatabase(cplmv4, "Lactylation")]
     ),
     "formylation": ModificationType(
-        "formulation", 1.0, [ModificationDatabase(cplmv4, "Formylation")]
+        "formylation", 1.0, [ModificationDatabase(cplmv4, "Formylation")]
     ),
     "succinylation": ModificationType(
         "succinylation", 1.0, [ModificationDatabase(cplmv4, "Succinylation")]
