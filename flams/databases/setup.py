@@ -81,7 +81,7 @@ def _generate_blastdb(data_dir, modification: ModificationType):
             modification.type, modification.version
         )
         subprocess.call(
-            f'cd "{data_dir}" && makeblastdb -in {modification.type}.fasta -dbtype prot -input_type fasta -parse_seqids'
+            f'cd "{data_dir}" && makeblastdb -in {modification.type}-{modification.version}.fasta -dbtype prot -input_type fasta -parse_seqids'
             f" -out {out_db_name}",
             shell=True,
         )
