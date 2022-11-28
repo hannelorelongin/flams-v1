@@ -45,10 +45,14 @@ class ParserTestCase(unittest.TestCase):
 class ParseArgsTestCase(unittest.TestCase):
     def test_simple(self):
         parse_args(["--in", str(TEST_INPUT), "11", "--out", str(TEST_OUTPUT)])
+        parse_args(["--id", "P57703", "19", "--range", "3", "-o", "file.out", "-t", "3"])
 
     def test_checks_input_exists(self):
         with self.assertRaises(SystemExit):
             parse_args(["--in", "file.fa", "11"])
+
+        with self.assertRaises(SystemExit):
+            parse_args(["--id", "hahahah", "11"])
 
     def test_checks_input_fasta(self):
         with self.assertRaises(SystemExit):
@@ -68,3 +72,6 @@ class ParseArgsTestCase(unittest.TestCase):
     def test_checks_lysine_valid(self):
         with self.assertRaises(SystemExit):
             parse_args(["--in", str(TEST_INPUT), "2", "--out", str(TEST_OUTPUT)])
+        
+        with self.assertRaises(SystemExit):
+            parse_args(["--id", "P57703", "18", "--out", str(TEST_OUTPUT)])

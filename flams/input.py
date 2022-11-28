@@ -1,17 +1,18 @@
 import argparse
 from pathlib import Path
+from typing import Tuple
 from Bio import SeqIO
 from flams.databases import setup as db_setup
+import requests
+
+DATA_PATH = Path(__file__).parents[1] / "data"
 
 
-def parse_args(sys_args):
+def parse_args(sys_args) -> Tuple[argparse.Namespace, Path]:
     parser = create_args_parser()
     args = parser.parse_args(sys_args)
-    check_files_valid(args, parser)
-    check_lysine(args, parser)
-    check_modifications(args, parser)
-    # TODO(annkamsk) check range
-    return args
+    protein_file = validate_input(args, parser)
+    return args, protein_file
 
 
 def create_args_parser():
@@ -72,12 +73,24 @@ def create_args_parser():
     return parser
 
 
-def check_files_valid(args, parser):
-    if not args.input.exists():
-        parser.error(f"Input file {args.input} does not exist.")
+def validate_input(args, parser) -> Path:
+    check_files_valid(args, parser)
 
-    if not is_valid_fasta_file(args.input):
-        parser.error(f"Input file {args.input} is not a valid fasta file.")
+    protein_file = get_protein_file(args, parser)
+
+    check_lysine(protein_file, args.pos, parser)
+    check_modifications(args, parser)
+    # TODO(annkamsk) check range
+    return protein_file
+
+
+def check_files_valid(args, parser):
+    if args.input:
+        if not args.input.exists():
+            parser.error(f"Input file {args.input} does not exist.")
+
+        if not is_valid_fasta_file(args.input):
+            parser.error(f"Input file {args.input} is not a valid fasta file.")
 
     if args.output and args.output.is_dir():
         parser.error(f"Provided output: {args.output} is a directory.")
@@ -91,10 +104,33 @@ def is_valid_fasta_file(path: Path):
         return False
 
 
-def check_lysine(args, parser):
-    if not is_position_lysine(args.pos, args.input):
+def get_protein_file(args, parser) -> Path:
+    if args.input:
+        return args.input
+
+    try:
+        return retrieve_protein_from_uniprot(args.id)
+    except requests.HTTPError:
+        parser.error(f"Non-existing uniprot ID: {args.id}.")
+
+
+def retrieve_protein_from_uniprot(uniprot_id) -> Path:
+    url = f"https://rest.uniprot.org/uniprotkb/{uniprot_id}.fasta"
+    r = requests.get(url)
+
+    r.raise_for_status()
+
+    filename = DATA_PATH / f"{uniprot_id}.fasta.tmp"
+    with filename.open("w+") as f:
+        f.write(r.text)
+
+    return filename
+
+
+def check_lysine(protein_file, pos, parser):
+    if not is_position_lysine(pos, protein_file):
         parser.error(
-            f"Position {args.pos} does not point to Lysine: {_get_position_display_str(args.pos, args.input)}"
+            f"Position {pos} does not point to Lysine: {_get_position_display_str(pos, protein_file)}"
         )
 
 
