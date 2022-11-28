@@ -8,19 +8,42 @@ Requirements:
 
 ## Setup
 Download the project:
+
 `git clone git@github.com:annkamsk/flams.git`
+
 `cd flams`
 
 Create virtual environment and activate it:
+
 `python -m venv venv/`
+
 `source venv/bin/activate`
 
 Install dependencies:
+
 `pip install -r requirements.txt`
 
 ## Run
-`python -m flams.main --in {input fasta file} N`
-where N is position of lysine
+`python -m flams.main [-h] (--in INPUT | --id id) [--range RANGE] [-o output] [-m MODIFICATION [MODIFICATION ...]] [-t NUM_THREADS] pos`
+
+Required arguments:
+* `MODIFICATION` is one of: acetylation, lactylation, formylation, succinylation, hmgylation
+* one of:
+  * `INPUT` is a path to fasta file with the queried protein (has to contain only 1 protein)
+  * `id` is a uniprot ID of the queried protein
+* `pos` is a position of lysine in the queried protein sequence where you look for modifications
+
+Optional arguments:
+* `RANGE` (default: 0) is an number of positions before and after `pos` to also search for modifications
+* `NUM_THREADS` (default: 1) is a BLAST parameter
+* `output` (default: out.tsv) is path to a csv file where the result will be saved
+
+Example:
+
+`python -m flams.main --in P57703.fa --range 5 -o results.tsv -m acetylation succinylation 308`
+
+`python -m flams.main --id P57703 -m lactylation 19`
+
 
 # Development
 
