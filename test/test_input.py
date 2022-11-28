@@ -1,12 +1,16 @@
 from pathlib import Path
 import unittest
-from flams.input import parse_args
+from Bio import SeqIO
+from flams.input import parse_args, retrieve_protein_from_uniprot
 
 from flams.input import create_args_parser
 
 
 TEST_INPUT = Path(__file__).parent / "testfiles/sequence.fasta"
 TEST_OUTPUT = Path(__file__).parent / "testfiles/out.csv"
+
+DATA_PATH = Path(__file__).parents[1] / "data"
+
 
 
 class ParserTestCase(unittest.TestCase):
@@ -45,10 +49,14 @@ class ParserTestCase(unittest.TestCase):
 class ParseArgsTestCase(unittest.TestCase):
     def test_simple(self):
         parse_args(["--in", str(TEST_INPUT), "11", "--out", str(TEST_OUTPUT)])
+        parse_args(["--id", "P57703", "19", "--range", "3", "-o", "file.out", "-t", "3"])
 
     def test_checks_input_exists(self):
         with self.assertRaises(SystemExit):
             parse_args(["--in", "file.fa", "11"])
+
+        with self.assertRaises(SystemExit):
+            parse_args(["--id", "hahahah", "11"])
 
     def test_checks_input_fasta(self):
         with self.assertRaises(SystemExit):
@@ -68,3 +76,28 @@ class ParseArgsTestCase(unittest.TestCase):
     def test_checks_lysine_valid(self):
         with self.assertRaises(SystemExit):
             parse_args(["--in", str(TEST_INPUT), "2", "--out", str(TEST_OUTPUT)])
+        
+        with self.assertRaises(SystemExit):
+            parse_args(["--id", "P57703", "18", "--out", str(TEST_OUTPUT)])
+
+
+class GetProteinTestCase(unittest.TestCase):
+    def tearDown(self) -> None:
+        for file in DATA_PATH.glob("*.tmp"):
+            file.unlink()
+
+    def test_retrieve_from_uniprot(self):
+        # given
+        protein_id = "P57703"
+        expected_filename = DATA_PATH / f"{protein_id}.fasta.tmp"
+        self.assertFalse(expected_filename.exists())
+
+        # when
+        filename = retrieve_protein_from_uniprot("P57703")
+
+        # then
+        self.assertEqual(filename, expected_filename)
+        self.assertTrue(expected_filename.exists())
+        with filename.open() as f:
+            seq = SeqIO.read(f, "fasta")
+        self.assertEqual(seq.id, "sp|P57703|METE_PSEAE")
