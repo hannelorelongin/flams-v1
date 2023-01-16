@@ -1,7 +1,10 @@
 # Find Lysine Acetylation Modification Sites (working name)
 
 Requirements:
+	## tested v.3.10.8 - should test all from 3.10-3.11
 * python >= 3.10
+	## BLAST needs to be installed as executable from site, not through conda, tested working with BLAST 2.13.0
+	## Make sure BLAST is installed and added to path for users --> add a check dependency script in tool
 * BLAST: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
 # Usage
@@ -14,7 +17,7 @@ Download the project:
 `cd flams`
 
 Create virtual environment and activate it:
-
+	##Also works when you create a conda environment for it
 `python -m venv venv/`
 
 `source venv/bin/activate`
