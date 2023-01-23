@@ -1,32 +1,67 @@
-# Find Lysine Acetylation Modification Sites (working name)
+# FLAMS: Find Lysine Acetylation Modification Sites (working name)
 
-Requirements:
-	## tested v.3.10.8 - should test all from 3.10-3.11
-* python >= 3.10
-	## BLAST needs to be installed as executable from site, not through conda, tested working with BLAST 2.13.0
-	## Make sure BLAST is installed and added to path for users --> add a check dependency script in tool
-* BLAST: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+A bioinformatics tool to analyze the conservation of lysine modifications,
+by means of a position-based search against the CPLM database v.4.
 
-# Usage
+# Table of contents
 
-## Setup
+1.  [Introduction](#introduction)
+2.  [System requirements](#system-requirements)
+    1.  [General dependencies](#general-dependencies)
+    2.  [Third-party tools](#third-party-tools)
+    3.  [Installation](#installation)
+    4.  [Command line options]()
+    5.  [Usage](#usage)
+    6.  [Output]()
+3.  [Contact]()
+4.  [References]()
+
+## Introduction
+
+TBD
+
+## System requirements
+
+Linux 64-bit (and OS X?) supported.
+
+### General dependencies
+
+* Python3 (>=3.10)
+* shutil
+* BioPython
+* TBD
+
+### Third-party dependencies
+
+* [BLAST+ v.13](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+
+### Installation
+
+The recommended installation takes place in a dedicated conda environment,
+which can be created as follows:
+
+`conda create -n flamsEnv`
+
+In this environment, the correct Python environment can be set up,
+and other dependencies can be installed through pip:
+
+`conda activate flamsEnv`
+
+`conda install -c conda-forge python=3.10`
+
+`pip install -r requirements.txt`
+
+
+### Usage
+
 Download the project:
 
 `git clone git@github.com:annkamsk/flams.git`
 
 `cd flams`
 
-Create virtual environment and activate it:
-	##Also works when you create a conda environment for it
-`python -m venv venv/`
+Run the tool:
 
-`source venv/bin/activate`
-
-Install dependencies:
-
-`pip install -r requirements.txt`
-
-## Run
 `python -m flams.main [-h] (--in INPUT | --id id) [--range RANGE] [-o output] [-m MODIFICATION [MODIFICATION ...]] [-t NUM_THREADS] pos`
 
 Required arguments:
@@ -47,6 +82,7 @@ Example:
 
 `python -m flams.main --id P57703 19 -m lactylation`
 
+----------------------------------------------------------------------------------------------
 
 # Development
 
@@ -65,8 +101,8 @@ To run a specific module:
 ## Push a commit
 First, create a new branch:
 `git checkout -b <new-branch>`
-<new-branch> should be a short (1-3 words) hyphen-separated name vaguely related to what you've been working on (eg. `input-read` etc). Don't stress too much about it. 
-You'll be moved automatically to that branch. 
+<new-branch> should be a short (1-3 words) hyphen-separated name vaguely related to what you've been working on (eg. `input-read` etc). Don't stress too much about it.
+You'll be moved automatically to that branch.
 
 `git add .`  
 `git commit -m "{Short description of change}"`  
