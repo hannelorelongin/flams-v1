@@ -11,6 +11,8 @@ from Bio import SeqIO
 # Database information available at http://cplm.biocuckoo.cn/
 
 # Fallback to data files hosted by ourselves because the original CPLM host has issues
+# Attempted on Windows laptop on 24/01/2023 and could not be recreated,
+# so switched again to cplm download link - will consider own hosting though
 URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
 # URL_working = "https://kasgel.fi/flams/dbs/CPLMv4/{0}.zip"
 
