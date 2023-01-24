@@ -11,8 +11,10 @@ from Bio import SeqIO
 # Database information available at http://cplm.biocuckoo.cn/
 
 # Fallback to data files hosted by ourselves because the original CPLM host has issues
-# URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
-URL = "https://kasgel.fi/flams/dbs/CPLMv4/{0}.zip"
+URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
+# URL_working = "https://kasgel.fi/flams/dbs/CPLMv4/{0}.zip"
+
+## Testing if we can switch back to using CPLM download links
 
 
 def get_fasta(descriptor, location):

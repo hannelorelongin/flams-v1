@@ -39,6 +39,75 @@ MODIFICATIONS = {
     "hmgylation": ModificationType(
         "hmgylation", 1.0, [ModificationDatabase(cplmv4, "HMGylation")]
     ),
+    "ubiquitination": ModificationType(
+        "ubiquitination", 1.0, [ModificationDatabase(cplmv4, "Ubiquitination")]
+    ),
+    "sumoylation": ModificationType(
+        "sumoylation", 1.0, [ModificationDatabase(cplmv4, "Sumoylation")]
+    ),
+    "pupylation": ModificationType(
+        "pupylation", 1.0, [ModificationDatabase(cplmv4, "Pupylation")]
+    ),
+    "neddylation": ModificationType(
+        "neddylation", 1.0, [ModificationDatabase(cplmv4, "Neddylation")]
+    ),
+    "crotonylation": ModificationType(
+        "crotonylation", 1.0, [ModificationDatabase(cplmv4, "Crotonylation")]
+    ),
+    "malonylation": ModificationType(
+        "malonylation", 1.0, [ModificationDatabase(cplmv4, "Malonylation")]
+    ),
+    "2-hydroxyisobutyrylation": ModificationType(
+        "2-hydroxyisobutyrylation", 1.0, [ModificationDatabase(cplmv4, "2-Hydroxyisobutyrylation")]
+    ),
+    "butyrylation": ModificationType(
+        "butyrylation", 1.0, [ModificationDatabase(cplmv4, "Butyrylation")]
+    ),
+    "propionylation": ModificationType(
+        "propionylation", 1.0, [ModificationDatabase(cplmv4, "Propionylation")]
+    ),
+    "glutarylation": ModificationType(
+        "glutarylation", 1.0, [ModificationDatabase(cplmv4, "Glutarylation")]
+    ),
+    "benzoylation": ModificationType(
+        "benzoylation", 1.0, [ModificationDatabase(cplmv4, "Benzoylation")]
+    ),
+    "mgcylation": ModificationType(
+        "mgcylation", 1.0, [ModificationDatabase(cplmv4, "MGcylation")]
+    ),
+    "mgylation": ModificationType(
+        "mgylation", 1.0, [ModificationDatabase(cplmv4, "MGylation")]
+    ),
+    "methylation": ModificationType(
+        "methylation", 1.0, [ModificationDatabase(cplmv4, "Methylation")]
+    ),
+    "glycation": ModificationType(
+        "glycation", 1.0, [ModificationDatabase(cplmv4, "Glycation")]
+    ),
+    "hydroxylation": ModificationType(
+        "hydroxylation", 1.0, [ModificationDatabase(cplmv4, "Hydroxylation")]
+    ),
+    "phosphoglycerylation": ModificationType(
+        "phosphoglycerylation", 1.0, [ModificationDatabase(cplmv4, "Phosphoglycerylation")]
+    ),
+    "carboxymethylation": ModificationType(
+        "carboxymethylation", 1.0, [ModificationDatabase(cplmv4, "Carboxymethylation")]
+    ),
+    "lipoylation": ModificationType(
+        "lipoylation", 1.0, [ModificationDatabase(cplmv4, "Lipoylation")]
+    ),
+    "carboxylation": ModificationType(
+        "carboxylation", 1.0, [ModificationDatabase(cplmv4, "Carboxylation")]
+    ),
+    "dietylphosphorylation": ModificationType(
+        "dietylphosphorylation", 1.0, [ModificationDatabase(cplmv4, "Dietylphosphorylation")]
+    ),
+    "biotinylation": ModificationType(
+        "biotinylation", 1.0, [ModificationDatabase(cplmv4, "Biotinylation")]
+    ),
+    "carboxyethylation": ModificationType(
+        "carboxyethylation", 1.0, [ModificationDatabase(cplmv4, "Carboxyethylation")]
+    ),
 }
 
 
