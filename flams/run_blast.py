@@ -43,7 +43,7 @@ class ModificationHeader:
         regex = (
             r"(?P<plmd_id>\S+)\|"
             r"(?P<uniprot_id>\S+)\|"
-            r"(?P<position>\d+) (?P<modification>[A-Za-z]+) \[(?P<species>.+)\]"
+            r"(?P<position>\d+) (?P<modification>[A-Za-z1-9-]+) \[(?P<species>.+)\]"
         )
         vars = re.match(regex, title).groupdict()
         vars["position"] = int(vars["position"])
