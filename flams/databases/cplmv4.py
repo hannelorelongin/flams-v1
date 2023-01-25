@@ -34,6 +34,8 @@ def get_fasta(descriptor, location):
     with ZipFile(BytesIO(req.content)) as myzip:
         # Extract the single txt file and return as UTF-8 string
         plm = myzip.read(myzip.namelist()[0]).decode("UTF-8")
+        if descriptor == "β-Hydroxybutyrylation":
+            plm = plm.replace('β','beta')
 
     with open(location, "a") as out:
         SeqIO.write(_convert_plm_to_fasta(plm), out, "fasta")

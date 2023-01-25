@@ -108,6 +108,9 @@ MODIFICATIONS = {
     "carboxyethylation": ModificationType(
         "carboxyethylation", 1.0, [ModificationDatabase(cplmv4, "Carboxyethylation")]
     ),
+    "beta-hydroxybutyrylation": ModificationType(
+        "beta-hydroxybutyrylation", 1.0, [ModificationDatabase(cplmv4, "β-Hydroxybutyrylation")]
+    ),
 }
 
 
