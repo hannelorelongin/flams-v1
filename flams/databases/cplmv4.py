@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+@author: kasgel, hannelorelongin
+"""
+
 import csv
 import requests
 from zipfile import ZipFile

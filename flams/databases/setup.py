@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+@author: kasgel, hannelorelongin, annkamsk
+"""
+
 from pathlib import Path
 import subprocess
 from typing import Any, List
