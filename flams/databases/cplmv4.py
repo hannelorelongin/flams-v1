@@ -12,20 +12,26 @@ from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 from Bio import SeqIO
 
-# CPLM Database
-# Compendium of Protein Lysine Modifications, Version 4.0
-# Database information available at http://cplm.biocuckoo.cn/
+""" cplmv4
+This script downloads the different contents of the CPLM database, and transforms them into a fasta format.
+Script developed to work with CPLM database version 4.
+"""
 
-# Fallback to data files hosted by ourselves because the original CPLM host has issues
-# Attempted on Windows laptop on 24/01/2023 and could not be recreated,
-# so switched again to cplm download link - will consider own hosting though
 URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
-# URL_working = "https://kasgel.fi/flams/dbs/CPLMv4/{0}.zip"
-
-## Testing if we can switch back to using CPLM download links
-
 
 def get_fasta(descriptor, location):
+    """
+    This function downloads the entries of the CPLM database for a specific modification (according to $descriptor),
+    and saves it as a fasta format in $location.
+
+    Parameters
+    ----------
+    descriptor: str
+        Description of a specific modification
+    location: str
+        Output file
+
+    """
     # HTTP request with stream. This way, we get the size of the file first and can begin downloading it in chunks.
     req = requests.get(URL.format(descriptor), stream=True)
 
@@ -40,6 +46,7 @@ def get_fasta(descriptor, location):
     with ZipFile(BytesIO(req.content)) as myzip:
         # Extract the single txt file and return as UTF-8 string
         plm = myzip.read(myzip.namelist()[0]).decode("UTF-8")
+        # SeqIO can not write greek letter beta, immediately change this
         if descriptor == "β-Hydroxybutyrylation":
             plm = plm.replace('β','beta')
 
@@ -48,6 +55,16 @@ def get_fasta(descriptor, location):
 
 
 def _convert_plm_to_fasta(plm):
+    """
+    This function converts the string containing all entries of the CPLM database for a specific modification to a fasta format.
+    It stores relevant data on the entries in the sequence records.
+
+    Parameters
+    ----------
+    plm: str
+        Content of the text file detailing all entries of the CPLM database for a specific modification
+
+    """
     recs = []
     reader = csv.reader(StringIO(plm), delimiter="\t")
     for row in reader:
