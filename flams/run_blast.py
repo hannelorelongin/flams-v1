@@ -152,7 +152,7 @@ def _findKs_in_alignedHit(hsp, lysine_position, lysine_range):
     rangeK = []
     for i in range(-lysine_range, lysine_range + 1):
         ##need to check that we do not try to access an index out of range for this subject
-        if lysine_position - hsp.query_start + i <= len(hsp.sbjct) - 1:
+        if (lysine_position - hsp.query_start + i <= len(hsp.sbjct) - 1) and (lysine_position - hsp.query_start + i >= 0):
             if hsp.sbjct[lysine_position - hsp.query_start + i] == "K":
                 rangeK.append(i)
     return rangeK
