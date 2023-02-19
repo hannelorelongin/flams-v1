@@ -1,4 +1,4 @@
-# FLAMS: Find Lysine Acylation and other Modification Sites
+# FLAMS: Find Lysine Acylation & other Modification Sites
 
 A command-line tool to analyze the conservation of lysine modifications, by means of a position-based search against the CPLM database v.4.
 
