@@ -88,8 +88,9 @@ def _adjust_working_directory(input: Path):
     return input
 
 
-def _filter_blast(blast_record, lysine_pos, lysine_range, evalue) -> Blast:
+def _filter_blast(blast_record, lysine_position, lysine_range, evalue) -> Blast:
     # Create new Blast Record where we append filtered matches.
+
     filtered = Blast()
 
     for a in blast_record.alignments:
@@ -97,64 +98,69 @@ def _filter_blast(blast_record, lysine_pos, lysine_range, evalue) -> Blast:
         mod = ModificationHeader.parse(a.title)
 
         # Append matching High Scoring partners here, which will then be added to the 'filtered' BLAST frame
-        filtered_hsps = []
+        filter1_hsps = [] ## Filter1: filters out all hsps which do not contain the modification (both in query and hit)
+        filter2_hsps = [] ## Filter2: filters out hsps that do not contain CONSERVED modification
 
         for hsp in a.hsps:
-            if hsp.expect < evalue and does_hsp_match_query(
-                mod, hsp, lysine_pos, lysine_range
-            ):
+            if hsp.expect < evalue and _is_modHit_in_alignment(hsp, mod.position) and _is_modQuery_in_alignment(hsp, lysine_position):
                 # WEE! we have a match.
-                filtered_hsps.append(hsp)
+                filter1_hsps.append(hsp)
+
+        for hsp in filter1_hsps:
+            # To assess whether a hsp contains a conserved modification, we need to
+            # (1) find the location of the query modification in the aligned query
+            if hsp.query.find('-') == -1:
+            # (2) find out if the aligned position (+- range) in the hit is a lysine
+                if len(_findKs_in_alignedHit(hsp, lysine_position, lysine_range)) != 0:
+            # (3) if this aligned position is a lysine, was this the lysine carrying the modification
+                    _add_conservedModK_to_listConsHsp(hsp, lysine_position, lysine_range, mod, filter2_hsps)
+            # (1) find the location of the query modification in the aligned query
+            elif (hsp.query_start + hsp.query.find('-') + 1) > lysine_position:
+            # (2) find out if the aligned position (+- range) in the hit is a lysine
+                if len(_findKs_in_alignedHit(hsp, lysine_position, lysine_range)) != 0:
+            # (3) if this aligned position is a lysine, was this the lysine carrying the modification
+                    _add_conservedModK_to_listConsHsp(hsp, lysine_position, lysine_range, mod, filter2_hsps)
+            # (1) find the location of the query modification in the aligned query
+            else:
+            #    should adapt lysine position here to match number of gaps before
+                countGapBefore = hsp.query[0:lysine_position+1].count("-")
+                newSeq = hsp.query[0:lysine_position+1].replace("-","") + hsp.query[lysine_position+1:len(hsp.query)]
+                while newSeq[0:lysine_position+1].find('-') != -1:
+                    newSeq = newSeq[0:lysine_position+1].replace("-","") + newSeq[lysine_position+1:len(newSeq)]
+                    countGapBefore += 1
+            # (2) find out if the aligned position (+- range) in the hit is a lysine
+                if len(_findKs_in_alignedHit(hsp, lysine_position + countGapBefore, lysine_range))  != 0:
+            # (3) if this aligned position is a lysine, was this the lysine carrying the modification
+                    _add_conservedModK_to_listConsHsp(hsp, lysine_position + countGapBefore, lysine_range, mod, filter2_hsps)
 
         # If some HSPS matched, let's append that to the filtered BLAST frame for future processing.
-        if filtered_hsps:
+        if filter2_hsps:
             new_alignment = Alignment()
             new_alignment.title = a.title
-            new_alignment.hsps = filtered_hsps
+            new_alignment.hsps = filter2_hsps
             filtered.alignments.append(new_alignment)
 
     return filtered
 
-
-def does_hsp_match_query(
-    modification: ModificationHeader, hsp, query_pos, query_range
-) -> bool:
-    if not _is_modification_within_match(hsp, modification.position):
-        return False
-
-    if not _is_user_query_within_match(hsp, query_pos):
-        return False
-
-    return _is_modification_within_tolerated_range(
-        hsp, modification.position, query_pos, query_range
-    )
-
-
-# Check 1. mod_pos must be within the match of the subject
-def _is_modification_within_match(hsp, mod_pos) -> bool:
+def _is_modHit_in_alignment(hsp, mod_pos) -> bool:
     return hsp.sbjct_start <= mod_pos <= hsp.sbjct_end
 
-
-# Check 2. Our user queried position must be within the match of the query
-def _is_user_query_within_match(hsp, query_pos) -> bool:
+def _is_modQuery_in_alignment(hsp, query_pos) -> bool:
     return hsp.query_start <= query_pos <= hsp.query_end
 
+def _findKs_in_alignedHit(hsp, lysine_position, lysine_range):
+    rangeK = []
+    for i in range(-lysine_range, lysine_range + 1):
+        ##need to check that we do not try to access an index out of range for this subject
+        if lysine_position - hsp.query_start + i <= len(hsp.sbjct) - 1:
+            if hsp.sbjct[lysine_position - hsp.query_start + i] == "K":
+                rangeK.append(i)
+    return rangeK
 
-# Check 3. Check if mod_pos is within range of low and high
-def _is_modification_within_tolerated_range(hsp, mod_pos, query_pos, query_range):
-    mod_pos, query_pos, limit_low, limit_high = _standardise_positions(
-        hsp, mod_pos, query_pos, query_range
-    )
-    return limit_low <= mod_pos <= limit_high
-
-
-def _standardise_positions(hsp, mod_pos, lysine_pos, lysine_range):
-    # Standardise the position of the found modification to local alignment
-    mod_pos = mod_pos - (hsp.sbjct_start - 1)
-
-    # Standardise the position of the query to local alignment and set range
-    query_pos = lysine_pos - (hsp.query_start - 1)
-    limit_low = query_pos - lysine_range
-    limit_high = query_pos + lysine_range
-
-    return mod_pos, query_pos, limit_low, limit_high
+def _add_conservedModK_to_listConsHsp(hsp, lysine_pos, lysine_range, modification, listHsp):
+    for i in _findKs_in_alignedHit(hsp, lysine_pos, lysine_range):
+        indexKhit = lysine_pos - hsp.query_start + i
+        numGapUntilK = hsp.sbjct[0:lysine_pos - hsp.query_start + i].count('-')
+        coordKOriginalSubject = indexKhit - numGapUntilK + hsp.sbjct_start
+        if modification.position == coordKOriginalSubject:
+            listHsp.append(hsp)
