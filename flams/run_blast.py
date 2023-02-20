@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+@author: kasgel, hannelorelongin, annkamsk
+"""
+
 from dataclasses import dataclass
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
@@ -20,6 +26,7 @@ def run_blast(
 ):
     # For each modification, run blast and flatten results to an array
     results = []
+    input = input.absolute()
     for m in modifications:
         result = _run_blast(input, m, lysine_pos, lysine_range, evalue, num_threads)
         for r in result:
@@ -56,7 +63,7 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
     BLAST_OUT = "temp.xml"
 
     # Adjust working directory conditions and convert input file into absolute path
-    input = _adjust_working_directory(input)
+    os.chdir(get_data_dir())
 
     # Run BLAST
     blast_exec = NcbiblastpCommandline(
@@ -73,19 +80,6 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
         blast_records = list(NCBIXML.parse(handle))
 
     return [_filter_blast(i, lysine_pos, lysine_range, evalue) for i in blast_records]
-
-
-def _adjust_working_directory(input: Path):
-    """
-    # BlastpCommandline does not like whitespaces in paths, which the database may contain on especially Mac OS.
-    # Therefore, we will change our working directory to that of the data dir before running Blast.
-    # Before doing this, we need to convert the relative path to the input file into an absolute path.
-    :param input: relative path to query FASTA file
-    :return: absolute path to query FASTA file
-    """
-    input = input.absolute()
-    os.chdir(get_data_dir())
-    return input
 
 
 def _filter_blast(blast_record, lysine_position, lysine_range, evalue) -> Blast:
