@@ -83,9 +83,9 @@ Optional arguments:
 
 Example:
 
-`python -m flams.main --in P57703.fa --range 5 -o results.tsv 308 -m acetylation succinylation`
+`python -m flams.main --in P57703.fa --range 5 -o results.tsv 306 -m acetylation succinylation`
 
-`python -m flams.main --id P57703 19 -m lactylation`
+`python -m flams.main --id P57703 738 -m acetylation propionylation`
 
 ## Output
 
