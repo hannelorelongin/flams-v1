@@ -27,7 +27,7 @@ The tool takes as input a protein sequence and the position of a lysine. This re
 
 ## System requirements
 
-Linux 64-bit (and OS X?) supported. Windows users are advised to run the tool through Anaconda.
+Linux 64-bit supported. Windows users are advised to run the tool through Anaconda.
 
 ### General dependencies
 
