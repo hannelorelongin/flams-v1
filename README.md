@@ -27,7 +27,7 @@ The tool takes as input a protein sequence and the position of a lysine. This re
 
 ## System requirements
 
-Linux 64-bit supported. Windows users are advised to run the tool through Anaconda.
+Linux 64-bit and Mac OS supported. Windows users are advised to run the tool through [Anaconda](https://www.anaconda.com/products/distribution).
 
 ### General dependencies
 
@@ -61,7 +61,7 @@ Please make sure that BLAST is installed locally, and available in the PATH.
 
 Download the project:
 
-`git clone git@github.com:annkamsk/flams.git`
+`git@github.com:hannelorelongin/flams-v1.git`
 
 `cd flams`
 
