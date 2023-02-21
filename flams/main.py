@@ -13,20 +13,39 @@ from flams.input import parse_args
 from flams.run_blast import run_blast
 from flams.databases.setup import update_db_for_modifications
 
+""" FLAMS
+FLAMS is a tool that looks for conservation of modifications on lysine residues
+by first looking for similar proteins in the Compendium of Protein Lysine Modification Sites (CPLM v.4, Zhang, W. et al. Nucleic Acids Research. 2021, 44 (5): 243–250.),
+and then extracting those proteins that contain a modified lysine at the queried position.
+The aim of this analysis is to easily identify conserved lysine modifications,
+to aid in identifying functional lysine modification sites and the comparison of the results of PTM identification studies across species.
+
+The tool takes as input a protein sequence and the position of a lysine.
+"""
+
 
 DATA_PATH = Path(__file__).parents[1] / "data"
 
 def is_available(program):
-    """Verify if third party dependency program is available on the PATH"""
+    """
+    This function verifies the installation of third-party dependencies and prints out the result to users.
+
+    Parameters
+    ----------
+    program: program
+        Third-party dependeny program.
+
+    """
 
     if shutil.which(program) is not None:
-        print(program + " installed: OK")
+        print("Checking third-party depencies. Installation of ", program, " : OK")
     else:
-        print(program + " installed: Not available on the path.. exiting FLAMS.")
+        print("Checking third-party depencies. Installation of ", program, " failed verification: it is not available on the path.. exiting FLAMS.")
         sys.exit()
 
 def main(args, protein_file):
-
+    """ Main function of FLAMS
+    """
     is_available('blastp')
 
     update_db_for_modifications(args.modification)
@@ -43,6 +62,8 @@ def main(args, protein_file):
     )
 
     display_result(output_filename=output_file, blast_records=result)
+
+    print("Succesfully ran FLAMS, you can find your results at: ", output_file)
 
 
 if __name__ == "__main__":

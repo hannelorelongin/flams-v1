@@ -14,6 +14,10 @@ import flams.databases.setup
 import re
 import os
 
+""" run_blast
+This script deals contains all functions necessary to search through the proteins stored in the CPLM database, with BLAST,
+and retrieve those that contain conserved lysine modifications.
+"""
 
 def run_blast(
     input,
@@ -24,7 +28,27 @@ def run_blast(
     num_threads=1,
     **kwargs,
 ):
-    # For each modification, run blast and flatten results to an array
+    """
+    This function runs the blast search and the following filter steps for each modification.
+    Ultimately, it only returns conserved (within range) protein modifications for similar proteins.
+    It flattens the results to an array.
+
+    Parameters
+    ----------
+    input: fasta
+        Name of application, i.e., flams
+    modifications: str
+        Space-seperated list of modifications (which are keys to any of the ModificationType's stored in the MODIFICATIONS dictionary)
+    lysine_pos: int
+        Position of lysine in query that is under investigation for conservation
+    lysine_range: int (default: 0)
+        Error margin for conservation of lysine_pos
+    evalue: float (default: 0.01)
+        BLAST parameter, e-value for BLAST run
+    num_threads: int (default: 1)
+        BLAST parameter, number of threads that can be used by BLAST
+
+    """
     results = []
     input = input.absolute()
     for m in modifications:
@@ -36,6 +60,23 @@ def run_blast(
 
 @dataclass
 class ModificationHeader:
+    """
+    This dataclass consists of the different components contained in the header of each modification entry, and a function to parse it.
+
+    Parameters
+    ----------
+    plmd_id: str
+        PLMD ID for each modification
+    uniprot_id: str
+        UniProt ID for protein containing the modification
+    position: int
+        Position at which the modification was detected
+    modification: str
+        Post-translational modification found at $position in protein with $uniprot_id
+    species: str
+        Species that encodes the protein containing the modification
+
+    """
     plmd_id: str
     uniprot_id: str
     position: int
@@ -44,9 +85,7 @@ class ModificationHeader:
 
     @staticmethod
     def parse(title: str) -> "ModificationHeader":
-        # Parse modification from the alignment title of structure:
-        # {PLMD id}|{Uniprot ID}|{modification position} {type of modification} [{species}]
-        # Example: PLMD-7244|P25665|304 Acetylation [Escherichia coli (strain K12)]
+
         regex = (
             r"(?P<plmd_id>\S+)\|"
             r"(?P<uniprot_id>\S+)\|"
@@ -58,11 +97,31 @@ class ModificationHeader:
 
 
 def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_threads=1):
+    """
+    This function runs the blast search and the following filter steps for 1 modification.
+    Ultimately, it only returns conserved (within range) protein modifications for similar proteins.
+
+    Parameters
+    ----------
+    input: fasta
+        Fasta file of protein being queried
+    modification: str
+        Modification for which you search (which is the key to any of the ModificationType's stored in the MODIFICATIONS dictionary)
+    lysine_pos: int
+        Position of lysine in query that is under investigation for conservation
+    lysine_range: int
+        Error margin for conservation of lysine_pos
+    evalue: float
+        BLAST parameter, e-value for BLAST run
+    num_threads: int (default: 1)
+        BLAST parameter, number of threads that can be used by BLAST
+
+    """
     # Get BLASTDB name for selected modification + get a temporary path for output
     BLASTDB = flams.databases.setup.get_blastdb_name_for_modification(modification)
     BLAST_OUT = "temp.xml"
 
-    # Adjust working directory conditions and convert input file into absolute path
+    # Adjust working directory conditions
     os.chdir(get_data_dir())
 
     # Run BLAST
@@ -83,12 +142,32 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
 
 
 def _filter_blast(blast_record, lysine_position, lysine_range, evalue) -> Blast:
+    """
+    This function filters the BLAST results.
+    First, it filters out any BLAST results where the alignment does not contain:
+    - the queried lysine_pos (in the protein query)
+    - the modification position (in the aligned protein)
+    Then, it filters out results where the queried modified lysine does not align with the modified lysine in the aligned protein.
+    Ultimately, it only returns a BLAST record containing conserved (within range) protein modifications for similar proteins.
+
+    Parameters
+    ----------
+    blast_record: Blast
+        Blast record containg all similar proteins to the queried one, that are in the specific modification database
+    lysine_pos: int
+        Position of lysine in query that is under investigation for conservation
+    lysine_range: int
+        Error margin for conservation of lysine_pos
+    evalue: float
+        BLAST parameter, e-value for BLAST run
+
+    """
     # Create new Blast Record where we append filtered matches.
 
     filtered = Blast()
 
     for a in blast_record.alignments:
-        # Parse FASTA title where Posttranslational modification info is stored
+        # Parse FASTA title where post-translational modification info is stored
         mod = ModificationHeader.parse(a.title)
 
         # Append matching High Scoring partners here, which will then be added to the 'filtered' BLAST frame
@@ -137,12 +216,48 @@ def _filter_blast(blast_record, lysine_position, lysine_range, evalue) -> Blast:
     return filtered
 
 def _is_modHit_in_alignment(hsp, mod_pos) -> bool:
+    """
+    This function asserts that the aligned hit does contain its modification in the aligned portion of the protein.
+
+    Parameters
+    ----------
+    hsp: hsp
+        High Scoring partners, contains information on the alignment between the query protein and one of the aligned entries of the modification database
+    mod_pos: int
+        Position of lysine in the aligned protein that is known to be modified
+
+    """
     return hsp.sbjct_start <= mod_pos <= hsp.sbjct_end
 
 def _is_modQuery_in_alignment(hsp, query_pos) -> bool:
+    """
+    This function asserts that the aligned portion of the query protein contains the modification being queried.
+
+    Parameters
+    ----------
+    hsp: hsp
+        High Scoring partners, contains information on the alignment between the query protein and one of the aligned entries of the modification database
+    query_pos: int
+        Position of lysine in query that is under investigation for conservation
+
+    """
     return hsp.query_start <= query_pos <= hsp.query_end
 
 def _findKs_in_alignedHit(hsp, lysine_position, lysine_range):
+    """
+    This function finds the relative positions of Ks in the neighbourhood of the position of the residue aligned to the lysine being queried.
+    It returns a list of relative positions, all within the lysine_range.
+
+    Parameters
+    ----------
+    hsp: hsp
+        High Scoring partners, contains information on the alignment between the query protein and one of the aligned entries of the modification database
+    lysine_pos: int
+        Position of lysine in query that is under investigation for conservation
+    lysine_range: int
+        Error margin for conservation of lysine_pos
+
+    """
     rangeK = []
     for i in range(-lysine_range, lysine_range + 1):
         ##need to check that we do not try to access an index out of range for this subject
@@ -152,6 +267,23 @@ def _findKs_in_alignedHit(hsp, lysine_position, lysine_range):
     return rangeK
 
 def _add_conservedModK_to_listConsHsp(hsp, lysine_pos, lysine_range, modification, listHsp):
+    """
+    This function adds the hsps of modification database entries with conserved modified lysines to a list, namely the listHsp.
+
+    Parameters
+    ----------
+    hsp: hsp
+        High Scoring partners, contains information on the alignment between the query protein and one of the aligned entries of the modification database
+    lysine_pos: int
+        Position of lysine in query that is under investigation for conservation
+    lysine_range: int
+        Error margin for conservation of lysine_pos
+    modification: ModificationHeader
+        Modification for which you search
+    listHsp: list
+        List that will be used to append hsps of modification database entries with conserved modified lysines to
+
+    """
     for i in _findKs_in_alignedHit(hsp, lysine_pos, lysine_range):
         indexKhit = lysine_pos - hsp.query_start + i
         numGapUntilK = hsp.sbjct[0:lysine_pos - hsp.query_start + i].count('-')
