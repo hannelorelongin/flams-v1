@@ -6,6 +6,7 @@
 
 import csv
 import requests
+import logging
 from zipfile import ZipFile
 from io import BytesIO, StringIO
 from Bio.SeqRecord import SeqRecord
@@ -39,9 +40,8 @@ def get_fasta(descriptor, location):
     req.raise_for_status()
 
     size_in_mb = int(req.headers.get("content-length")) / 1048576
-    print(
-        f"Downloading CPMLv4 {descriptor} Database, please wait. Size: {size_in_mb:.1f} MB"
-    )
+
+    logging.info(f"Downloading CPMLv4 {descriptor} Database, please wait. Size: {size_in_mb:.1f} MB")
 
     with ZipFile(BytesIO(req.content)) as myzip:
         # Extract the single txt file and return as UTF-8 string
@@ -52,6 +52,8 @@ def get_fasta(descriptor, location):
 
     with open(location, "a") as out:
         SeqIO.write(_convert_plm_to_fasta(plm), out, "fasta")
+
+    logging.info(f"Converted and stored CPMLv4 {descriptor} Database entries as FASTA entries for the local {descriptor} BLAST database format.")
 
 
 def _convert_plm_to_fasta(plm):

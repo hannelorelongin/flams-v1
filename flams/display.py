@@ -5,6 +5,7 @@
 """
 
 import csv
+import logging
 
 """ setup
 This script deals with returning the results of FLAMS to the user in a tsv file.
@@ -22,6 +23,7 @@ def display_result(output_filename, blast_records):
         Array containing BLAST records that met search criteria of FLAMS run.
 
     """
+    logging.info(f"Writing .tsv output file with all conserved lysine modifications.")
     with open(output_filename, "w") as out_file:
         tsv_writer = csv.writer(out_file, delimiter="\t")
         tsv_writer.writerow(

@@ -4,15 +4,18 @@
 @author: kasgel, hannelorelongin, annkamsk
 """
 
+import flams.databases.setup
+import re
+import os
+import logging
+
 from dataclasses import dataclass
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
 from flams.utils import get_data_dir
 from pathlib import Path
-import flams.databases.setup
-import re
-import os
+
 
 """ run_blast
 This script deals contains all functions necessary to search through the proteins stored in the CPLM database, with BLAST,
@@ -124,6 +127,7 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
     # Adjust working directory conditions
     os.chdir(get_data_dir())
 
+    logging.info(f"Running BLAST search for {input} against local {modification} BLAST database.")
     # Run BLAST
     blast_exec = NcbiblastpCommandline(
         query=input,
@@ -138,6 +142,7 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
     with open(BLAST_OUT) as handle:
         blast_records = list(NCBIXML.parse(handle))
 
+    logging.info(f"Filtering results of BLAST search for {input} against local {modification} BLAST database.")
     return [_filter_blast(i, lysine_pos, lysine_range, evalue) for i in blast_records]
 
 
@@ -163,7 +168,6 @@ def _filter_blast(blast_record, lysine_position, lysine_range, evalue) -> Blast:
 
     """
     # Create new Blast Record where we append filtered matches.
-
     filtered = Blast()
 
     for a in blast_record.alignments:

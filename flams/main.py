@@ -7,6 +7,7 @@
 from pathlib import Path
 import sys
 import shutil
+import logging
 
 from flams.display import display_result
 from flams.input import parse_args
@@ -38,14 +39,23 @@ def is_available(program):
     """
 
     if shutil.which(program) is not None:
-        print("Checking third-party depencies. Installation of ", program, " : OK")
+        logging.info("Checking third-party depencies. Installation of " + program + " : OK.")
     else:
-        print("Checking third-party depencies. Installation of ", program, " failed verification: it is not available on the path.. exiting FLAMS.")
+        logging.error("Checking third-party depencies. Installation of " + program + " failed verification: it is not available on the path.. exiting FLAMS.")
         sys.exit()
 
 def main(args, protein_file):
     """ Main function of FLAMS
     """
+
+    logging.basicConfig(
+        level = logging.INFO,
+        format = '[%(asctime)s] %(levelname)s: %(message)s',
+        datefmt = '%d/%m %H:%M:%S',
+        force=True
+    )
+    logging.info("Welcome to FLAMS v.1.")
+
     is_available('blastp')
 
     update_db_for_modifications(args.modification)
@@ -63,7 +73,7 @@ def main(args, protein_file):
 
     display_result(output_filename=output_file, blast_records=result)
 
-    print("Succesfully ran FLAMS, you can find your results at: ", output_file)
+    logging.info("Succesfully ran FLAMS! You can find your results at: " + str(output_file))
 
 
 if __name__ == "__main__":

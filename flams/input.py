@@ -5,6 +5,8 @@
 """
 
 import argparse
+import logging
+import sys
 
 from pathlib import Path
 from typing import Tuple
@@ -76,7 +78,6 @@ def create_args_parser():
         metavar="output",
     )
 
-    # TODO add full list of possible values
     parser.add_argument(
         "-m",
         "--modification",
@@ -131,13 +132,16 @@ def check_files_valid(args, parser):
     """
     if args.input:
         if not args.input.exists():
-            parser.error(f"Input file {args.input} does not exist.")
+            logging.error(f"Input file {args.input} does not exist. Please provide the correct path to the input file. Exiting FLAMS...")
+            sys.exit()
 
         if not is_valid_fasta_file(args.input):
-            parser.error(f"Input file {args.input} is not a valid fasta file.")
+            logging.error(f"Input file {args.input} is not a valid FASTA file. Exiting FLAMS...")
+            sys.exit()
 
     if args.output and args.output.is_dir():
-        parser.error(f"Provided output: {args.output} is a directory.")
+        logging.error(f"Provided output: {args.output} is a directory name, not a file name. Please provide an output filename instead. Exiting FLAMS...")
+        sys.exit()
 
 
 def is_valid_fasta_file(path: Path):
@@ -177,7 +181,8 @@ def get_protein_file(args, parser) -> Path:
     try:
         return retrieve_protein_from_uniprot(args.id)
     except requests.HTTPError:
-        parser.error(f"Non-existing uniprot ID: {args.id}.")
+        logging.error("Non-existing UniProt ID. Please provide a valid UniProt ID. Exiting FLAMS...")
+        sys.exit()
 
 
 def retrieve_protein_from_uniprot(uniprot_id) -> Path:
@@ -191,6 +196,7 @@ def retrieve_protein_from_uniprot(uniprot_id) -> Path:
 
     """
     url = f"https://rest.uniprot.org/uniprotkb/{uniprot_id}.fasta"
+    logging.info(f"Retrieving FASTA file for Uniprot ID {uniprot_id} at {url}")
     r = requests.get(url)
 
     r.raise_for_status()
@@ -199,6 +205,7 @@ def retrieve_protein_from_uniprot(uniprot_id) -> Path:
     with filename.open("w+") as f:
         f.write(r.text)
 
+    logging.info(f"Stored FASTA file for Uniprot ID {uniprot_id} at {filename}")
     return filename
 
 
@@ -218,10 +225,11 @@ def check_lysine(protein_file, pos, parser):
 
     """
     if not is_position_lysine(pos, protein_file):
-        parser.error(
-            f"Position {pos} does not point to Lysine: {_get_position_display_str(pos, protein_file)}"
+        logging.error(
+            f"Position {pos} does not point to lysine: {_get_position_display_str(pos, protein_file)} "
         )
-
+        logging.error("Please provide a position that corresponds to a lysine.")
+        sys.exit()
 
 def is_position_lysine(position: int, input: Path) -> bool:
     """
@@ -257,8 +265,8 @@ def check_modifications(args, parser):
     if args.modification:
         for i in args.modification:
             if i not in db_setup.MODIFICATIONS:
-                parser.error(f"Invalid modification type {i}")
-
+                logging.error(f"Invalid modification type {i}. Please choose a modification from the list specified in the docs. ")
+                sys.exit()
 
 def _get_position_display_str(position: int, input: Path) -> str:
     """
