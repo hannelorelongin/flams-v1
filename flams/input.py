@@ -224,11 +224,15 @@ def check_lysine(protein_file, pos, parser):
         Argument parser
 
     """
-    if not is_position_lysine(pos, protein_file):
-        logging.error(
-            f"Position {pos} does not point to lysine: {_get_position_display_str(pos, protein_file)} "
-        )
-        logging.error("Please provide a position that corresponds to a lysine.")
+    try:
+        if not is_position_lysine(pos, protein_file):
+            logging.error(
+                f"Position {pos} does not point to lysine: {_get_position_display_str(pos, protein_file)} "
+                )
+            logging.error("Please provide a position that corresponds to a lysine.")
+            sys.exit()
+    except IndexError as e:
+        logging.error(f"{e}. Please provide a lysine position smaller than the size of your protein.")
         sys.exit()
 
 def is_position_lysine(position: int, input: Path) -> bool:
