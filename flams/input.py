@@ -18,7 +18,7 @@ import requests
 This script deals with parsing the input and checking the validity of all provided arguments.
 """
 
-DATA_PATH = Path(__file__).parents[1] / "data"
+DATA_PATH = Path(__file__).parent / "data"
 
 
 def parse_args(sys_args) -> Tuple[argparse.Namespace, Path]:

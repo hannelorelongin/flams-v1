@@ -24,8 +24,7 @@ to aid in identifying functional lysine modification sites and the comparison of
 The tool takes as input a protein sequence and the position of a lysine.
 """
 
-
-DATA_PATH = Path(__file__).parents[1] / "data"
+DATA_PATH = Path(__file__).parent / "data"
 
 def is_available(program):
     """
