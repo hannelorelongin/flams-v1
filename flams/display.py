@@ -38,8 +38,8 @@ def display_result(output_filename, blast_records):
         for blast_record in blast_records:
             for alignment in blast_record.alignments:
                 for hsp in alignment.hsps:
-                    pubmedID = (alignment.title).split("|")  # from title pubmed_Id
-                    Species = pubmedID[2].split("[")  # isolates species name
+                    uniprotID = (alignment.title).split("|")  # from title 
+                    Species = uniprotID[2].split("[")  # isolates species name
                     lysine = Species[0]
                     lysine_no = lysine.split()  # gets lysine modification
                     Species_name = Species[1].split("]")
@@ -62,7 +62,7 @@ def display_result(output_filename, blast_records):
                     )  # displaying the exact window location within the sequence (gaps are not counted)
                     tsv_writer.writerow(
                         [
-                            pubmedID[1],
+                            uniprotID[1],
                             Species_name[0],
                             lysine_no[1],
                             lysine_location,
