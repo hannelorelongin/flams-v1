@@ -46,7 +46,6 @@ def display_result(output_filename, blast_records):
                     lysine_location = int(pos_type_speciesSplitBracket[0].split()[0])
                     modification_type = pos_type_speciesSplitBracket[0].split()[1]
                     species = pos_type_speciesSplitBracket[1][:-1]
-                    print(hsp.sbjct_end)
                     tsv_writer.writerow(
                         [
                             uniprot_id,
