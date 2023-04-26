@@ -57,6 +57,21 @@ def display_result(output_filename, blast_records):
                     )
 
 def _getSequenceWindow(hsp,lysine_location):
+    """
+    This function creates generates the sequence window around the modified lysine.
+    If the modified lysine is not near the end (neither in the query as well as aligned sequence),
+        it simply returns the window containing the 5 amino acids before and after the modified lysine.
+    However, if the modified lysine is near either the start or the end of the aligned sequence, the sequence window can only contain part of this window,
+        and this function makes sure this limit is respected.
+
+    Parameters
+    ----------
+    hsp: hsp
+        High Scoring partner, contains information on the alignment between the query protein and one of the aligned entries of the modification database
+    lysine_location: int
+        Position of lysine in the aligned protein that is known to be modified
+
+    """
     sequence = hsp.sbjct.replace("-","")
     protSize = len(sequence)
     modPos = lysine_location - hsp.sbjct_start
