@@ -19,6 +19,12 @@ This script deals with parsing the input and checking the validity of all provid
 """
 
 DATA_PATH = Path(__file__).parent / "data"
+logging.basicConfig(
+        level = logging.INFO,
+        format = '[%(asctime)s] %(levelname)s: %(message)s',
+        datefmt = '%d/%m %H:%M:%S',
+        force=True
+    )
 
 
 def parse_args(sys_args) -> Tuple[argparse.Namespace, Path]:

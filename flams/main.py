@@ -53,7 +53,6 @@ def main(args, protein_file):
         datefmt = '%d/%m %H:%M:%S',
         force=True
     )
-    logging.info("Welcome to FLAMS v.1.")
 
     is_available('blastp')
 
