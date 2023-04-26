@@ -94,7 +94,9 @@ The output file is a tsv containing one row per modification that matched the qu
 * Species: the textual description of the species of the matched protein
 * Modification: the type of modification found in the matched protein
 * Lysine location: the location of this matched modification in the matched protein
-* Lysine window: the local sequence containing the conserved lysine modification (window of five amino acids before and after)
+* Lysine window: the local sequence containing the conserved lysine modification (window of five amino acids before and after°)
+
+°: window can be smaller than the [+5;-5] window if the sequence alignment ends sooner, which can happen for modified lysines near the start/end of the protein
 
 ## Contact
 
