@@ -89,7 +89,7 @@ def create_args_parser():
         "--modification",
         nargs="+",
         default=["acetylation"],
-        help="List of modifications to search for at the given lysine position. Possible values  is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation, formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation",
+        help="List of modifications to search for at the given lysine position. Possible values  is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation, formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database.",
     )
 
     # BLAST settings
@@ -262,7 +262,8 @@ def is_position_lysine(position: int, input: Path) -> bool:
 def check_modifications(args, parser):
     """
     This function checks whether the user provided modification is part of the collection of modifications that can be queried.
-    If not, it returns an error.
+    If not, it returns an error. It also transforms the aggregate modification options Ubs, Acylations, Others, and All
+    to their respective collection of modifications. Finally, it removes any duplicate modification types.
 
     Parameters
     ----------
@@ -273,6 +274,28 @@ def check_modifications(args, parser):
 
     """
     if args.modification:
+        if ('Ubs' in args.modification) | ('Acylations' in args.modification) | ('Others' in args.modification) | ('All' in args.modification):
+            if 'Ubs' in args.modification:
+                args.modification.remove('Ubs')
+                args.modification.extend(['ubiquitination','sumoylation','pupylation','neddylation'])
+            if 'Acylations' in args.modification:
+                args.modification.remove('Acylations')
+                args.modification.extend(['lactylation','acetylation','succinylation','crotonylation','malonylation',
+                'beta-hydroxybutyrylation','benzoylation','propionylation','2-hydroxyisobutyrylation','formylation',
+                'hmgylation','mgcylation','mgylation','glutarylation','butyrylation'])
+            if 'Others' in args.modification:
+                args.modification.remove('Others')
+                args.modification.extend(['methylation','hydroxylation','phosphoglycerylation','biotinylation','lipoylation',
+                'dietylphosphorylation','glycation','carboxymethylation','carboxyethylation','carboxylation'])
+            if 'All' in args.modification:
+                args.modification.remove('All')
+                args.modification.extend(['ubiquitination','sumoylation','pupylation','neddylation',
+                'lactylation','acetylation','succinylation','crotonylation','malonylation',
+                'beta-hydroxybutyrylation','benzoylation','propionylation','2-hydroxyisobutyrylation','formylation',
+                'hmgylation','mgcylation','mgylation','glutarylation','butyrylation',
+                'methylation','hydroxylation','phosphoglycerylation','biotinylation','lipoylation',
+                'dietylphosphorylation','glycation','carboxymethylation','carboxyethylation','carboxylation'])
+        args.modification = list(set(args.modification))
         for i in args.modification:
             if i not in db_setup.MODIFICATIONS:
                 logging.error(f"Invalid modification type {i}. Please choose a modification from the list specified in the docs. ")
