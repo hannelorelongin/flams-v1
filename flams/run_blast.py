@@ -4,7 +4,7 @@
 @author: kasgel, hannelorelongin, annkamsk
 """
 
-import flams.databases.setup
+import databases.setup
 import re
 import os
 import logging
@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
-from flams.utils import get_data_dir
+from utils import get_data_dir
 from pathlib import Path
 
 
@@ -121,7 +121,7 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
 
     """
     # Get BLASTDB name for selected modification + get a temporary path for output
-    BLASTDB = flams.databases.setup.get_blastdb_name_for_modification(modification)
+    BLASTDB = databases.setup.get_blastdb_name_for_modification(modification)
     BLAST_OUT = "temp.xml"
 
     # Adjust working directory conditions

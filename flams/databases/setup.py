@@ -7,8 +7,8 @@
 from pathlib import Path
 import subprocess
 from typing import Any, List
-from flams.databases import cplmv4
-from flams.utils import get_data_dir
+from databases import cplmv4
+from utils import get_data_dir
 from dataclasses import dataclass
 
 """ setup

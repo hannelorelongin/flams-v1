@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 from typing import Tuple
 from Bio import SeqIO
-from flams.databases import setup as db_setup
+from databases import setup as db_setup
 import requests
 
 """ setup
@@ -19,6 +19,7 @@ This script deals with parsing the input and checking the validity of all provid
 """
 
 DATA_PATH = Path(__file__).parent / "data"
+
 logging.basicConfig(
         level = logging.INFO,
         format = '[%(asctime)s] %(levelname)s: %(message)s',
