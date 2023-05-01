@@ -81,7 +81,7 @@ def create_args_parser():
 
     parser.add_argument(
         "-m",
-        "--mod",
+        "--modification",
         nargs="+",
         default=["Acylations"],
         help="List of modifications to search for at the given lysine position. Possible values  is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation, formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database. [default: Acylations]",
@@ -108,7 +108,7 @@ def create_args_parser():
 
     parser.add_argument(
         "-o",
-        "--out",
+        "--output",
         type=Path,
         default=Path("out.tsv"),
         help="Path to output .tsv file. [default: out.tsv]",
