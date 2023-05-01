@@ -60,37 +60,40 @@ def create_args_parser():
         dest="input",
         type=Path,
         help="Path to input .fasta file.",
+        metavar="inputFilePath"
     )
     group.add_argument(
-        "--id", type=str, help="UniProt ID of input protein.", metavar="id"
+        "--id",
+        type=str,
+        help="UniProt ID of input protein.",
+        metavar="UniProtID"
     )
 
     # position
     parser.add_argument(
-        "pos", type=int, help="Position in input protein that will be searched for conserved modifications."
-    )
-    parser.add_argument(
-        "--range",
+        "-p",
+        "--pos",
+        required=True,
         type=int,
-        default=0,
-        help="Allowed error range for position.",
-    )
-
-    parser.add_argument(
-        "-o",
-        "--output",
-        type=Path,
-        default=Path("out.tsv"),
-        help="Path to output .tsv file.",
-        metavar="output",
+        help="Position in input protein that will be searched for conserved modifications.",
+        metavar="position"
     )
 
     parser.add_argument(
         "-m",
-        "--modification",
+        "--mod",
         nargs="+",
-        default=["acetylation"],
-        help="List of modifications to search for at the given lysine position. Possible values  is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation, formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database.",
+        default=["Acylations"],
+        help="List of modifications to search for at the given lysine position. Possible values  is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation, formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database. [default: Acylations]",
+        metavar="modification"
+    )
+
+    parser.add_argument(
+        "--range",
+        type=int,
+        default=0,
+        help="Allowed error range for position. [default: 0]",
+        metavar="errorRange"
     )
 
     # BLAST settings
@@ -99,8 +102,19 @@ def create_args_parser():
         "--num_threads",
         type=int,
         default=1,
-        help="Number of threads to run BLAST with.",
+        help="Number of threads to run BLAST with. [default: 1]",
+        metavar="threadsBLAST"
     )
+
+    parser.add_argument(
+        "-o",
+        "--out",
+        type=Path,
+        default=Path("out.tsv"),
+        help="Path to output .tsv file. [default: out.tsv]",
+        metavar="outputFilePath",
+    )
+
     return parser
 
 

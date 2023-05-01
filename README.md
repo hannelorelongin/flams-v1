@@ -67,25 +67,25 @@ Download the project:
 
 Run the tool:
 
-`python -m flams.main [-h | --help] (--in INPUT | --id id) [--range RANGE] [-o output] [-m MODIFICATION [MODIFICATION ...]] [-t NUM_THREADS] pos`
+`python FLAMS [-h] (--in inputFilePath | --id UniProtID) -p position [-m modification [modification ...]] [--range errorRange] [-t threadsBLAST] [-o outputFilePath] `
 
 Required arguments:
-* `MODIFICATION` is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation,  formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation
 * one of:
-  * `INPUT` is the path to a fasta file with the protein you wish to query against (has to contain only 1 protein)
-  * `id` is the UniProt ID of the protein you wish to query against
-* `pos` is the position of a lysine in the protein, which you want to query against
+  * `inputFilePath` is the path to a .fasta file with the protein you wish to query against (has to contain only 1 protein)
+  * `UniProtID` is the UniProt ID of the protein you wish to query against
+* `position` is the position of a lysine in the protein, which you want to query against
 
 Optional arguments:
-* `RANGE` (default: 0) is an number of positions before and after `pos` to also search for modifications
-* `NUM_THREADS` (default: 1) is a BLAST parameter, allows you to speed up the search by multithreading
-* `output` (default: out.tsv) is the path to where the result will be saved (tsv file format)
+* `modification` is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation,  formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database. [default: Acylations]"
+* `errorRange` is an number of positions before and after `pos` to also search for modifications. [default: 0]
+* `threadsBLAST` is a BLAST parameter, allows you to speed up the search by multithreading. [default: 1]
+* `outputFilePath` is the path to where the result will be saved (in a .tsv file format). [default: out.tsv]
 
 Example:
 
-`python -m flams.main --in P57703.fa --range 5 -o results.tsv 306 -m acetylation succinylation`
+`python FLAMS --in P57703.fa -p 306 --range 5 -o results.tsv -m acetylation succinylation`
 
-`python -m flams.main --id P57703 738 -m acetylation propionylation`
+`python FLAMS --id P57703 738 -m acetylation propionylation`
 
 ## Output
 
