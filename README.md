@@ -63,7 +63,7 @@ Download the project:
 
 `git@github.com:hannelorelongin/flams-v1.git`
 
-`cd flams-v1`
+`cd flams`
 
 Run the tool:
 
