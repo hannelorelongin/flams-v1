@@ -1,0 +1,5 @@
+# This folder just needs to exist so that UniProt files can be stored here during execution of FLAMS
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
