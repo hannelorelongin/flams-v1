@@ -61,8 +61,8 @@ Optional arguments:
 * `errorRange` is an number of positions before and after `pos` to also search for modifications. [default: 0]
 * `threadsBLAST` is a BLAST parameter, allows you to speed up the search by multithreading. [default: 1]
 * `outputFilePath` is the path to where the result will be saved (in a .tsv file format). [default: out.tsv]
-* `dataDir` is the path to directory where intermediate files (the UniProt sequence files) are stored. [default: $PWD/data]"
-* `modification` is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation,  formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database. [default: Acylations]"
+* `dataDir` is the path to directory where intermediate files (the UniProt sequence files) are stored. [default: $PWD/data]
+* `modification` is one or a combination (seperated by spaces) of: ubiquitination, sumoylation, pupylation, neddylation, acetylation, succinylation, crotonylation, malonylation, 2-hydroxyisobutyrylation, beta-hydroxybutyrylation, butyrylation, propionylation, glutarylation, lactylation,  formylation, benzoylation, hmgylation, mgcylation, mgylation, methylation, glycation, hydroxylation, phosphoglycerylation, carboxymethylation, lipoylation, carboxylation, dietylphosphorylation, biotinylation, carboxyethylation. We also provide aggregated combinations: 'All','Ubs','Acylations' and'Others', in analogy to the CPLM database. [default: Acylations]
 
 Example:
 
