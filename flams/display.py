@@ -8,12 +8,12 @@ import csv
 import logging
 
 """ setup
-This script deals with returning the results of FLAMS to the user in a tsv file.
+This script deals with returning the results of FLAMS to the user in a .tsv file.
 """
 
 def display_result(output_filename, blast_records):
     """
-    This function creates a tsv file containing all conserved modification sites, based on a specific FLAMS run.
+    This function creates a .tsv file containing all conserved modification sites, based on a specific FLAMS run.
 
     Parameters
     ----------
@@ -58,8 +58,8 @@ def display_result(output_filename, blast_records):
 
 def _getSequenceWindow(hsp,lysine_location):
     """
-    This function creates generates the sequence window around the modified lysine.
-    If the modified lysine is not near the end (neither in the query as well as aligned sequence),
+    This function generates the sequence window around the modified lysine.
+    If the modified lysine is not near the end (neither in the query nor in the aligned sequence),
         it simply returns the window containing the 5 amino acids before and after the modified lysine.
     However, if the modified lysine is near either the start or the end of the aligned sequence, the sequence window can only contain part of this window,
         and this function makes sure this limit is respected.

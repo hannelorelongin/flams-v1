@@ -25,6 +25,10 @@ def get_data_dir(app_name="flams"):
 
     """
     # Ensure data dir exists and return.
-    data_dir = appdirs.user_data_dir(app_name)
-    Path(data_dir).mkdir(parents=True, exist_ok=True)
+    try:
+        data_dir = appdirs.user_data_dir(app_name)
+        Path(data_dir).mkdir(parents=True, exist_ok=True)
+    except PermissionError: # This should only apply for deployment of web-app
+        data_dir = "/app/flams_data/"
+        Path(data_dir).mkdir(parents=True, exist_ok=True)
     return data_dir

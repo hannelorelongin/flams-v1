@@ -7,12 +7,12 @@
 from pathlib import Path
 import subprocess
 from typing import Any, List
-from databases import cplmv4
-from utils import get_data_dir
+from ..databases import cplmv4
+from ..utils import get_data_dir
 from dataclasses import dataclass
 
 """ setup
-This script contains our modification database, and all associated functions to generate and maintain blast databases for each modification type.
+This script contains our modification database, and all associated functions to generate and maintain BLAST databases for each modification type.
 """
 
 @dataclass
@@ -35,7 +35,7 @@ class ModificationDatabase:
 @dataclass
 class ModificationType:
     """
-    This dataclass contains the different types of modification, which can be identied by type and database version, and contain their modification database.
+    This dataclass contains the different types of modifications, which can be identied by type and database version, and contains their modification databases.
 
     Parameters
     ----------
@@ -212,7 +212,7 @@ def _generate_blastdb(data_dir, modification: ModificationType):
     Parameters
     ----------
     data_dir: directory
-        Platform-specific directory that stores app data. The local blast database will be stored here.
+        Platform-specific directory that stores app data. The local BLAST database will be stored here.
     modification: ModificationType
         ModificationType for which a local BLAST database will be generated
 

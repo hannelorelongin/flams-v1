@@ -6,19 +6,18 @@
 
 import argparse
 import logging
+import os
 import sys
 
 from pathlib import Path
 from typing import Tuple
 from Bio import SeqIO
-from databases import setup as db_setup
+from .databases import setup as db_setup
 import requests
 
 """ setup
 This script deals with parsing the input and checking the validity of all provided arguments.
 """
-
-DATA_PATH = Path(__file__).parent / "data"
 
 logging.basicConfig(
         level = logging.INFO,
@@ -112,7 +111,17 @@ def create_args_parser():
         type=Path,
         default=Path("out.tsv"),
         help="Path to output .tsv file. [default: out.tsv]",
-        metavar="outputFilePath",
+        metavar="outputFilePath"
+    )
+
+    parser.add_argument(
+        "-d",
+        "--data_dir",
+        type=Path,
+        default=Path(os.getcwd()) / "data",
+        help="Path to directory where intermediate files should be " +
+        "saved. [default: $PWD/data]",
+        metavar="dataDir"
     )
 
     return parser
@@ -141,12 +150,15 @@ def validate_input(args, parser) -> Path:
 
 def check_files_valid(args, parser):
     """
-    This function checks whether (i) the provided input FASTA file exists and is a valid FASTA file and (ii) if the provided output file is a file, not a directory.
+    This function checks whether (i) the provided input FASTA file
+    exists and is a valid FASTA file,  (ii) if the provided output file
+    is a file, not a directory, and (iii) if the data directory exists
+    when a UniProtID is provided.
 
     Parameters
     ----------
     args:
-        Arguments passed to flams
+        Arguments passed to FLAMS
     parser:
         Argument parser
 
@@ -163,6 +175,16 @@ def check_files_valid(args, parser):
     if args.output and args.output.is_dir():
         logging.error(f"Provided output: {args.output} is a directory name, not a file name. Please provide an output filename instead. Exiting FLAMS...")
         sys.exit()
+
+    if (args.id is not None) & (not args.data_dir.is_dir()):
+        if args.data_dir.parent.is_dir():
+            os.mkdir(args.data_dir)
+            logging.info(f"Data directory created: {args.data_dir}")
+        else:
+            logging.error(f"Provided path is not an existing " +
+                        "path: {args.data_dir}. Please make sure the provided path " +
+                        "is correct. Exiting FLAMS...")
+            sys.exit()
 
 
 def is_valid_fasta_file(path: Path):
@@ -200,33 +222,33 @@ def get_protein_file(args, parser) -> Path:
         return args.input
 
     try:
-        return retrieve_protein_from_uniprot(args.id)
+        return retrieve_protein_from_uniprot(args)
     except requests.HTTPError:
         logging.error("Non-existing UniProt ID. Please provide a valid UniProt ID. Exiting FLAMS...")
         sys.exit()
 
 
-def retrieve_protein_from_uniprot(uniprot_id) -> Path:
+def retrieve_protein_from_uniprot(args) -> Path:
     """
     This function downloads the FASTA file from UniProt, based on the provided UniProt ID, then returns the path to the downloaded protein fasta.
 
     Parameters
     ----------
-    uniprot_id: str
-        UniProt ID of query protein as provided by user with --id
+    args:
+        Arguments passed to flams
 
     """
-    url = f"https://rest.uniprot.org/uniprotkb/{uniprot_id}.fasta"
-    logging.info(f"Retrieving FASTA file for Uniprot ID {uniprot_id} at {url}")
+    url = f"https://rest.uniprot.org/uniprotkb/{args.id}.fasta"
+    logging.info(f"Retrieving FASTA file for Uniprot ID {args.id} at {url}")
     r = requests.get(url)
 
     r.raise_for_status()
 
-    filename = DATA_PATH / f"{uniprot_id}.fasta.tmp"
+    filename = args.data_dir / f"{args.id}.fasta.tmp"
     with filename.open("w+") as f:
         f.write(r.text)
 
-    logging.info(f"Stored FASTA file for Uniprot ID {uniprot_id} at {filename}")
+    logging.info(f"Stored FASTA file for Uniprot ID {args.id} at {filename}")
     return filename
 
 

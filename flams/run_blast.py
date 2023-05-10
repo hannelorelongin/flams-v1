@@ -4,7 +4,7 @@
 @author: kasgel, hannelorelongin, annkamsk
 """
 
-import databases.setup
+from .databases import setup as db_setup
 import re
 import os
 import logging
@@ -13,12 +13,12 @@ from dataclasses import dataclass
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast.Record import Blast, Alignment
 from Bio.Blast import NCBIXML
-from utils import get_data_dir
+from .utils import get_data_dir
 from pathlib import Path
 
 
 """ run_blast
-This script deals contains all functions necessary to search through the proteins stored in the CPLM database, with BLAST,
+This script contains all functions necessary to search through the proteins stored in the CPLM database, with BLAST,
 and retrieve those that contain conserved lysine modifications.
 """
 
@@ -32,14 +32,14 @@ def run_blast(
     **kwargs,
 ):
     """
-    This function runs the blast search and the following filter steps for each modification.
-    Ultimately, it only returns conserved (within range) protein modifications for similar proteins.
+    This function runs the BLAST search and the following filter steps for each modification.
+    Ultimately, it only returns conserved (within the specified range) protein modifications for similar proteins.
     It flattens the results to an array.
 
     Parameters
     ----------
     input: fasta
-        Name of application, i.e., flams
+        Sequence file of query protein
     modifications: str
         Space-seperated list of modifications (which are keys to any of the ModificationType's stored in the MODIFICATIONS dictionary)
     lysine_pos: int
@@ -101,13 +101,13 @@ class ModificationHeader:
 
 def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_threads=1):
     """
-    This function runs the blast search and the following filter steps for 1 modification.
-    Ultimately, it only returns conserved (within range) protein modifications for similar proteins.
+    This function runs the BLAST search and the following filter steps for 1 modification.
+    Ultimately, it only returns conserved (within the specified range) protein modifications for similar proteins.
 
     Parameters
     ----------
     input: fasta
-        Fasta file of protein being queried
+        Sequence file of query protein
     modification: str
         Modification for which you search (which is the key to any of the ModificationType's stored in the MODIFICATIONS dictionary)
     lysine_pos: int
@@ -121,7 +121,7 @@ def _run_blast(input, modification, lysine_pos, lysine_range, evalue, num_thread
 
     """
     # Get BLASTDB name for selected modification + get a temporary path for output
-    BLASTDB = databases.setup.get_blastdb_name_for_modification(modification)
+    BLASTDB = db_setup.get_blastdb_name_for_modification(modification)
     BLAST_OUT = "temp.xml"
 
     # Adjust working directory conditions
@@ -158,7 +158,7 @@ def _filter_blast(blast_record, lysine_position, lysine_range, evalue) -> Blast:
     Parameters
     ----------
     blast_record: Blast
-        Blast record containg all similar proteins to the queried one, that are in the specific modification database
+        Blast record containing all similar proteins to the queried one, that are in the specific modification database
     lysine_pos: int
         Position of lysine in query that is under investigation for conservation
     lysine_range: int

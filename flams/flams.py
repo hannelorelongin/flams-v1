@@ -9,10 +9,10 @@ import sys
 import shutil
 import logging
 
-from display import display_result
-from input import parse_args
-from run_blast import run_blast
-from databases.setup import update_db_for_modifications
+from .display import display_result
+from .input import parse_args
+from .run_blast import run_blast
+from .databases.setup import update_db_for_modifications
 
 """ FLAMS
 FLAMS is a tool that looks for conservation of modifications on lysine residues
@@ -24,8 +24,6 @@ to aid in identifying functional lysine modification sites and the comparison of
 The tool takes as input a protein sequence and the position of a lysine.
 """
 
-DATA_PATH = Path(__file__) / "data"
-
 def is_available(program):
     """
     This function verifies the installation of third-party dependencies and prints out the result to users.
@@ -33,7 +31,7 @@ def is_available(program):
     Parameters
     ----------
     program: program
-        Third-party dependeny program.
+        Third-party dependency program.
 
     """
 
@@ -43,9 +41,12 @@ def is_available(program):
         logging.error("Checking third-party depencies. Installation of " + program + " failed verification: it is not available on the path.. exiting FLAMS.")
         sys.exit()
 
-def main(args, protein_file):
+def main():
     """ Main function of FLAMS
     """
+
+
+    args, protein_file = parse_args(sys.argv[1:])
 
     logging.basicConfig(
         level = logging.INFO,
@@ -75,5 +76,4 @@ def main(args, protein_file):
 
 
 if __name__ == "__main__":
-    args, input_file = parse_args(sys.argv[1:])
-    main(args, input_file)
+    main()
