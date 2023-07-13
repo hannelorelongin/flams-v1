@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: Retro212, hannelorelongin, annkamsk
+@author: annkamsk, hannelorelongin, Retro212
 """
 
 import csv

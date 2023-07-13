@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: kasgel
+@author: hannelorelongin, kasgel, MaartenLangen
 """
 
-from pathlib import Path
 import appdirs
+from pathlib import Path
 
 """ setup
 This script deals with getting a platform-specific directory to store app data.
@@ -21,7 +21,7 @@ def get_data_dir(app_name="flams"):
     Parameters
     ----------
     app_name: str
-    Name of application, i.e., flams
+        Name of application, i.e., flams
 
     """
     # Ensure data dir exists and return.

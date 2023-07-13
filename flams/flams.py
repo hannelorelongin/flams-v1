@@ -1,27 +1,28 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: kasgel, Retro212, annkamsk, hannelorelongin
+@author: annkamsk, hannelorelongin, kasgel, MaartenLangen, Retro212
 """
 
-from pathlib import Path
-import sys
-import shutil
 import logging
+import shutil
+import sys
+from pathlib import Path
 
+from .databases.setup import update_db_for_modifications
 from .display import display_result
 from .input import parse_args
 from .run_blast import run_blast
-from .databases.setup import update_db_for_modifications
 
 """ FLAMS
-FLAMS is a tool that looks for conservation of modifications on lysine residues
-by first looking for similar proteins in the Compendium of Protein Lysine Modification Sites (CPLM v.4, Zhang, W. et al. Nucleic Acids Research. 2021, 44 (5): 243–250.),
-and then extracting those proteins that contain a modified lysine at the queried position.
-The aim of this analysis is to easily identify conserved lysine modifications,
-to aid in identifying functional lysine modification sites and the comparison of the results of PTM identification studies across species.
+FLAMS is a tool that serves to find previously identified lysine modification sites,
+by enabling a position-based search of the CPLM database (CPLM v.4, Zhang, W. et al. Nucleic Acids Research. 2021, 44 (5): 243–250.).
+FLAMS can be used
+(i) to quickly verify whether modifications in a specific protein have been reported before,
+(ii) to assess whether findings in one species might translate to other species, and
+(iii) to systematically assess the novelty and conservation of all reported lysine modification sites.
 
-The tool takes as input a protein sequence and the position of a lysine.
+The tool takes as input a protein (ID/sequence) and the position of a lysine.
 """
 
 def is_available(program):

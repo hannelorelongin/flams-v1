@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: kasgel, hannelorelongin, annkamsk
+@author: annkamsk, hannelorelongin, kasgel, MaartenLangen
 """
 
-from pathlib import Path
 import subprocess
+from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, List
+
 from ..databases import cplmv4
 from ..utils import get_data_dir
-from dataclasses import dataclass
 
 """ setup
 This script contains our modification database, and all associated functions to generate and maintain BLAST databases for each modification type.
@@ -23,9 +24,10 @@ class ModificationDatabase:
     Parameters
     ----------
     module: Any
-        Refers to database module, necessary to retrieve the fasta files on the modification described by Descriptor
-    descriptor:
-        Label to identify the modification
+        Refers to database module, necessary to retrieve the FASTA files on the modification described by Descriptor
+    descriptor: str
+        Label that identifies the modification type,
+        reflecting the spelling of the modification on the CPLM website
 
     """
     module: Any
@@ -40,7 +42,9 @@ class ModificationType:
     Parameters
     ----------
     type: str
-        Label to identify modification
+        Label that identifies the modification type,
+        but spelled to circumvent special characters
+        (so could be slightly different from ModificationDatabase.descriptor)
     version: float
         Label to identify CPLM database version
     dbs: List[ModificationDatabase]
@@ -192,12 +196,12 @@ def _generate_blastdb_if_not_up_to_date(modification: ModificationType):
 def _get_fasta_from_dbs(modification: ModificationType, fasta_location):
     """
     This function calls on the get_fasta function from a specific module for a modification.
-    It will store a fasta file containing all entries in the CPLM database related to this to modification file in the fasta_location.
+    It will store a FASTA file containing all entries in the CPLM database related to this to modification file in the fasta_location.
 
     Parameters
     ----------
     modification: ModificationType
-        ModificationType for which a fasta file will be generated
+        ModificationType for which a FASTA file will be generated
     fasta_location:
         Output file
     """
@@ -245,7 +249,7 @@ def get_blastdb_name_for_modification(modification: str, version=None):
         Description of a specific modification,
         must be the key to any of the ModificationType's stored in the MODIFICATIONS dictionary.
     version: float
-        Database version
+        Database version (CPLMv4 = version 1 of )
 
     """
     # If version was not specified, get the current

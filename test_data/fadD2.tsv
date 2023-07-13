@@ -1,0 +1,96 @@
+Uniprot ID	Modification	Lysine location	Lysine Window	Species
+Q6P1M0	beta-Hydroxybutyrylation	595	590-KTGTYKFQKTE-600	Homo sapiens
+Q0DV32	Crotonylation	537	532-KSASGKILRRQ-542	Oryza sativa subsp. japonica
+Q5KZK3	Propionylation	526	521-MTASGKIQKFK-531	Geobacillus kaustophilus (strain HTA426)
+A4F799	Propionylation	520	515-MTVTGKVRKVE-525	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+A4FPZ7	Propionylation	518	513-KTSVGKFDKKR-523	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+Q5KY15	Propionylation	542	537-ATPSGKVLRKL-547	Geobacillus kaustophilus (strain HTA426)
+Q5KW92	Propionylation	535	530-KTPSGKIQRFI-540	Geobacillus kaustophilus (strain HTA426)
+F0NGM2	Propionylation	530	525-RTETGKLKRFE-535	Sulfolobus islandicus (strain REY15A)
+F0NE63	Propionylation	534	529-KTSVGKFDKKV-539	Sulfolobus islandicus (strain REY15A)
+Q5KW45	Propionylation	548	543-KTRSGKIMRRV-553	Geobacillus kaustophilus (strain HTA426)
+P39062	Propionylation	549	544-KTRSGKIMRRV-554	Bacillus subtilis (strain 168)
+P55912	Propionylation	592	587-KTRSGKMLRRT-597	Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+Q5SIW6	Propionylation	612	607-KTRSGKIMRRL-617	Thermus thermophilus (strain HB8 / ATCC 27634 / DSM 579)
+P9WQ37	Succinylation	487	482-RNPTGKILKTV-492	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+O53406	Succinylation	521	516-RTSVGKYDKKA-526	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+Q8VCW8	Succinylation	599	594-LTISGKIQKFK-604	Mus musculus
+Q3URE1	Succinylation	561	556-RNQMGKVNKKE-566	Mus musculus
+O06417	Succinylation	552	547-LTGLGKPDKKA-557	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+G4N0E5	Succinylation	503	498-KTATGKIQRR-507	Magnaporthe oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)
+Q91VA0	Succinylation	559	554-KTVTGKIKRKE-564	Mus musculus
+Q5JMG5	Succinylation	290	285-RNAMGKVNKKE-295	Oryza sativa subsp. japonica
+Q8BGA8	Succinylation	565	560-KTVSGKILRSK-570	Mus musculus
+Q0J879	Succinylation	250	245-VTTTGKIRREQ-255	Oryza sativa subsp. japonica
+G4MT84	Succinylation	617	612-RNAMGKINKKQ-622	Magnaporthe oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)
+P95227	Acetylation	551	546-RNPTGKVLKRE-556	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+P96396	Acetylation	525	520-RTDTGKLYKSG-530	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+Q6N8Y8	Acetylation	506	501-RNASGKILRRQ-511	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q6N1I4	Acetylation	499	494-RSAIGKVLKRE-504	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q6N948	Acetylation	496	491-RTPTGKLVKRH-501	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q6N7W2	Acetylation	514	509-MTATGKLRKVE-519	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+A4FF59	Acetylation	541	536-KTATGKLLRRQ-546	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+P9WQ37	Acetylation	487	482-RNPTGKILKTV-492	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+P23971	Acetylation	471	466-RNASNKLLRNQ-476	Bacillus subtilis (strain 168)
+Q6N4N8	Acetylation	499	494-LSGAGKILKRE-504	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+O53406	Acetylation	521	516-RTSVGKYDKKA-526	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+Q6NB27	Acetylation	524	519-RNANGKIQKTV-529	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q8VCW8	Acetylation	599	594-LTISGKIQKFK-604	Mus musculus
+A4F799	Acetylation	520	515-MTVTGKVRKVE-525	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+A4FPZ7	Acetylation	518	513-KTSVGKFDKKR-523	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+I3R905	Acetylation	509	504-RTTTGKVQKFE-514	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+A4FMT1	Acetylation	492	487-RNSSGKLLKRV-497	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+P69451	Acetylation	543	538-KSNVGKILRRE-548	Escherichia coli (strain K12)
+F0NE75	Acetylation	544	539-KSGSGKILWRI-549	Sulfolobus islandicus (strain REY15A)
+A3D3Q7	Acetylation	544	539-KTNVGKILRRE-549	Shewanella baltica (strain OS155 / ATCC BAA-1091)
+G3XCR5	Acetylation	532	527-ATPSGKIQKFR-537	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q3URE1	Acetylation	561	556-RNQMGKVNKKE-566	Mus musculus
+A0KKA7	Acetylation	529	524-KTSTGKVQKFM-534	Aeromonas hydrophila subsp. hydrophila (strain ATCC 7966 / DSM 30187 / JCM 1027 / KCTC 2358 / NCIMB 9240)
+A4FE55	Acetylation	489	484-RTATGKIQKFK-494	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+Q6N638	Acetylation	531	526-KTSTGKIQKFM-536	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+I3RB53	Acetylation	517	512-KTATGKIQKYE-522	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+P94547	Acetylation	543	538-KTAVGKILRRR-548	Bacillus subtilis (strain 168)
+A0KKC7	Acetylation	544	539-KTNVGKILRRV-549	Aeromonas hydrophila subsp. hydrophila (strain ATCC 7966 / DSM 30187 / JCM 1027 / KCTC 2358 / NCIMB 9240)
+F0NGM2	Acetylation	530	525-RTETGKLKRFE-535	Sulfolobus islandicus (strain REY15A)
+I3R6H9	Acetylation	540	535-KTVTGKIRRTE-545	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+F0NE63	Acetylation	534	529-KTSVGKFDKKV-539	Sulfolobus islandicus (strain REY15A)
+Q6N1Y5	Acetylation	546	541-KTNVGKILRRE-551	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+F0ND80	Acetylation	524	519-LTSTNKIDKKV-529	Sulfolobus islandicus (strain REY15A)
+Q6NC13	Acetylation	512	507-KTATGKIQRFK-517	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q6N1G3	Acetylation	522	517-HTATGKILKTA-527	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+Q5KW45	Acetylation	548	543-KTRSGKIMRRV-553	Geobacillus kaustophilus (strain HTA426)
+Q53005	Acetylation	503	498-KTSSGKLQRYL-508	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+I3R4J9	Acetylation	523	518-KTATGKFDKKV-528	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+P39062	Acetylation	549	544-KTRSGKIMRRV-554	Bacillus subtilis (strain 168)
+A4FGF3	Acetylation	471	466-RNEMGKVMKKA-476	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+F0NC60	Acetylation	488	483-KTSTGKLDKKL-493	Sulfolobus islandicus (strain REY15A)
+Q6N6A3	Acetylation	502	497-VTGLGKIDRKV-507	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+A3D167	Acetylation	523	518-KSTVGKILRRE-528	Shewanella baltica (strain OS155 / ATCC BAA-1091)
+I3R3Z5	Acetylation	523	518-KTSSGKIRRIE-528	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+A0A3B6CGB4	Acetylation	531	526-KTSTGKIQKYV-536	Triticum aestivum
+Q6N7F5	Acetylation	539	534-KTPSGKLQRFI-544	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+A0A3B6B8S7	Acetylation	531	526-KTSTGKIQKYV-536	Triticum aestivum
+Q3UNX5	Acetylation	566	561-KTVSGKVKRNE-571	Mus musculus
+A0A3B6MUY5	Acetylation	455	450-KTSTGKIQKYV-460	Triticum aestivum
+A0A1D5UN35	Acetylation	578	573-KTSTGKIQKYV-583	Triticum aestivum
+I3R539	Acetylation	630	625-KTQSGKIIRRA-635	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+A0A3B6LQI9	Acetylation	301	296-KTSTGKIQKYV-306	Triticum aestivum
+A0A1D5UGG2	Acetylation	455	450-KTSTGKIQKYV-460	Triticum aestivum
+Q6N0D4	Acetylation	516	511-RSTLEKVAKAE-521	Rhodopseudomonas palustris (strain ATCC BAA-98 / CGA009)
+O70490	Acetylation	557	552-KTITGKIERAK-562	Rattus norvegicus
+Q91VA0	Acetylation	559	554-KTVTGKIKRKE-564	Mus musculus
+A0A3B6KLX2	Acetylation	504	499-KTSTGKIQKYV-509	Triticum aestivum
+O14975	Acetylation	572	567-ITGTFKHRKMT-577	Homo sapiens
+Q9NUB1	Acetylation	642	637-KTRSGKVMRRL-647	Homo sapiens
+A0R5G1	Acetylation	906	901-KTRSGKIMRRL-911	Mycolicibacterium smegmatis (strain ATCC 700084 / mc(2)155)
+Q99NB1	Acetylation	635	630-KTRSGKVMRRL-640	Mus musculus
+A4FIX2	Acetylation	615	610-KTRSGKIMRRL-620	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+A4F6L2	Acetylation	620	615-KTRSGKIMRRL-625	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+A4FCA0	Acetylation	628	623-KTRSGKIMRRL-633	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+A4FD53	Acetylation	2018	2013-LMPSGKVDRRS-2023	Saccharopolyspora erythraea (strain ATCC 11635 / DSM 40517 / JCM 4748 / NBRC 13426 / NCIMB 8594 / NRRL 2338)
+Q8ZKF6	Acetylation	609	604-KTRSGKIMRRI-614	Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+P9WQD1	Acetylation	617	612-KTRSGKIMRRL-622	Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+Q91VE0	Acetylation	595	590-KTGTFKFQKTE-600	Mus musculus
+P27550	Acetylation	609	604-KTRSGKIMRRI-614	Escherichia coli (strain K12)
+Q6P1M0	Acetylation	595	590-KTGTYKFQKTE-600	Homo sapiens
+Q8BGA8	Glutarylation	565	560-KTVSGKILRSK-570	Mus musculus

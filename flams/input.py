@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: kasgel, hannelorelongin, annkamsk
+@author: annkamsk, hannelorelongin, kasgel, MaartenLangen
 """
 
 import argparse
 import logging
 import os
+import requests
 import sys
-
 from pathlib import Path
 from typing import Tuple
+
 from Bio import SeqIO
+
 from .databases import setup as db_setup
-import requests
 
 """ setup
 This script deals with parsing the input and checking the validity of all provided arguments.
@@ -143,6 +144,7 @@ def validate_input(args, parser) -> Path:
 
     protein_file = get_protein_file(args, parser)
 
+    check_position_in_range(protein_file, args.pos)
     check_lysine(protein_file, args.pos, parser)
     check_modifications(args, parser)
     return protein_file
@@ -208,7 +210,7 @@ def get_protein_file(args, parser) -> Path:
     """
     This function retrieves the protein input file, by either:
     - returning the path to the user provided input file through option --input directly
-    - downloading the FASTA file from UniProt, based on the user provided UniProt ID, then returning the path to the downloaded protein fasta
+    - downloading the FASTA file from UniProt, based on the user provided UniProt ID, then returning the path to the downloaded protein FASTA
 
     Parameters
     ----------
@@ -230,7 +232,7 @@ def get_protein_file(args, parser) -> Path:
 
 def retrieve_protein_from_uniprot(args) -> Path:
     """
-    This function downloads the FASTA file from UniProt, based on the provided UniProt ID, then returns the path to the downloaded protein fasta.
+    This function downloads the FASTA file from UniProt, based on the provided UniProt ID, then returns the path to the downloaded protein FASTA.
 
     Parameters
     ----------
@@ -295,6 +297,43 @@ def is_position_lysine(position: int, input: Path) -> bool:
     input_seq = SeqIO.read(input, "fasta").seq
     return input_seq[position_idx] == "K"
 
+def check_position_in_range(protein_file, pos):
+    """
+    This function checks whether the user provided position is actually part of the protein.
+    If not, it returns an error.
+
+    Parameters
+    ----------
+    protein_file: fasta
+        FASTA file containing query protein
+    pos: int
+        User provided position in the query protein
+    """
+
+    if not is_within_range(pos, protein_file):
+        logging.error(
+            f"Please provide a lysine position smaller than the size " +
+            f"of your protein ({_get_length_protein(protein_file)})."
+            )
+        sys.exit()
+
+
+def is_within_range(position: int, protein_file: Path) -> bool:
+    """
+    This function assess whether the user provided position is actually part of the query protein.
+
+    Parameters
+    ----------
+    position: int
+        User provided position in the query protein
+    input: Path
+        Path to FASTA file containing query protein
+
+    """
+    # user provides position in 1-based indexing system
+    position_idx = position - 1
+    length = _get_length_protein(protein_file)
+    return position_idx < length
 
 def check_modifications(args, parser):
     """
@@ -361,3 +400,7 @@ def _get_position_display_str(position: int, input: Path) -> str:
     seq_row = f"{prefix}{seq[lower:upper]}{sufix}"
     pointer_row = " " * pos_idx + "^"
     return "".join(["\n", seq_row, "\n", pointer_row])
+
+def _get_length_protein(protein_file: Path) -> int:
+    prot_seq = SeqIO.read(protein_file, "fasta").seq
+    return len(prot_seq)

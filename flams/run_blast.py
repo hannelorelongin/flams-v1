@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: kasgel, hannelorelongin, annkamsk
+@author: annkamsk, hannelorelongin, kasgel, MaartenLangen
 """
 
-from .databases import setup as db_setup
-import re
-import os
 import logging
-
+import os
+import re
 from dataclasses import dataclass
-from Bio.Blast.Applications import NcbiblastpCommandline
-from Bio.Blast.Record import Blast, Alignment
-from Bio.Blast import NCBIXML
-from .utils import get_data_dir
 from pathlib import Path
 
+from Bio.Blast import NCBIXML
+from Bio.Blast.Applications import NcbiblastpCommandline
+from Bio.Blast.Record import Blast, Alignment
+
+from .databases import setup as db_setup
+from .utils import get_data_dir
 
 """ run_blast
 This script contains all functions necessary to search through the proteins stored in the CPLM database, with BLAST,
-and retrieve those that contain conserved lysine modifications.
+and to retrieve those that contain conserved lysine modifications.
 """
 
 def run_blast(
