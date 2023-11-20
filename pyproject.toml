@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["dependencies"]
+name = "flams"
+description = "Find Lysine Acylations & other Modification Sites"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "1.1.1"
+
+[project.scripts]
+FLAMS = "flams.flams:main"
+
+[project.urls]
+repository = "https://github.com/hannelorelongin/FLAMS"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

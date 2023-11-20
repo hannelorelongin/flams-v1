@@ -16,7 +16,7 @@ from Bio.SeqRecord import SeqRecord
 
 
 """ cplmv4
-This script downloads the different contents of the CPLM database, and saves them under the FASTA format.
+This script downloads the different contents of the CPLM database, and transforms them into a fasta format.
 Script developed to work with CPLM database version 4.
 """
 
@@ -24,17 +24,15 @@ URL = "http://cplm.biocuckoo.cn/Download/{0}.zip"
 
 def get_fasta(descriptor, location):
     """
-    This function downloads the entries of the CPLM database for a modification type (specified by $descriptor),
-    and saves this information as a multi-FASTA file, with one sequence record per modification, in $location.
+    This function downloads the entries of the CPLM database for a specific modification (according to $descriptor),
+    and saves it as a fasta format in $location.
 
     Parameters
     ----------
     descriptor: str
-        Label that identifies the modification type,
-        reflecting the spelling of the modification on the CPLM website
-        (must be one from .setup.ModificationDatabase)
+        Description of a specific modification
     location: str
-        Name of output file
+        Output file
 
     """
     # HTTP request with stream. This way, we get the size of the file first and can begin downloading it in chunks.
@@ -54,7 +52,7 @@ def get_fasta(descriptor, location):
         if descriptor == "β-Hydroxybutyrylation":
             plm = plm.replace('β','beta')
 
-    with open(location, "a") as out:
+    with open(location, "a", encoding="UTF-8") as out:
         SeqIO.write(_convert_plm_to_fasta(plm), out, "fasta")
 
     logging.info(f"Converted and stored CPMLv4 {descriptor} Database entries as FASTA entries for the local {descriptor} BLAST database format.")
@@ -62,8 +60,8 @@ def get_fasta(descriptor, location):
 
 def _convert_plm_to_fasta(plm):
     """
-    This function converts the string containing all entries of the CPLM database for a specific modification
-    to a list of sequence records of the FASTA format (one sequence record per modification).
+    This function converts the string containing all entries of the CPLM database for a specific modification to a fasta format.
+    It stores relevant data on the entries in the sequence records.
 
     Parameters
     ----------
@@ -74,19 +72,16 @@ def _convert_plm_to_fasta(plm):
     recs = []
     reader = csv.reader(StringIO(plm), delimiter="\t")
     for row in reader:
+        #Fix issue with spaces by casting them to underscores
+        proteinNoSpaces = f"{row[4]}".replace(" ","__")
+        speciesNoSpaces = f"{row[5]}".replace(" ","__")
         seq = Seq(row[6])
-        id = f"{row[0]}|{row[1]}|{row[2]}"
+        length = len(row[6])
+        id = f"{row[1]}|{row[2]}|{length}|CPLM"
         rec = SeqRecord(
             seq,
             id=id,
-            description=f"{row[3]} [{row[5]}]",
-            annotations={
-                "Species": row[5],
-                "Uniprot Accession": row[1],
-                "Position": row[2],
-                "Type": row[3],
-                "PMIDs": row[6].split(";"),
-            },
+            description=f"{proteinNoSpaces}|{row[3]}|{speciesNoSpaces} [{row[0]}|{row[7]}|{row[8]}]",
         )
         recs.append(rec)
     return recs

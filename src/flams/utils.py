@@ -21,7 +21,7 @@ def get_data_dir(app_name="flams"):
     Parameters
     ----------
     app_name: str
-        Name of application, i.e., flams
+    Name of application, i.e., flams
 
     """
     # Ensure data dir exists and return.
