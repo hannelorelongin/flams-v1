@@ -132,6 +132,8 @@ FLAMS updates its search databases regularly. To get an overview of the supporte
 |v1.1|v4|2023_November|[yes](https://doi.org/10.5281/zenodo.10143464)|
 |v1.0|v4| |[yes](https://doi.org/10.5281/zenodo.10143464)|
 
+**Important**: if you update FLAMS from v1.0 to v1.1, please remove any pre-generated local databases. These are stored in ~/.local/share/flams on Linux ; /Users/$YOURUSENAME/Library/Application Support/flams on Mac ; C:\\Users\\$YOURUSENAME \\AppData\\Local\\flams\\flams .
+
 Please note that only part of dbPTM is integrated into FLAMS, namely the PTM sites with experimental evidence, as found [here](https://awi.cuhk.edu.cn/dbPTM/download.php). Moreover, proteins that carry a UniProt ID that was obsolete or missing at the time of database creation are also not included in the database.
 
 Instructions on how to download the CPLM and dbPTM database yourself are in [section 'Local CPLM and dbPTM install'](#local-cplm-and-dbptm-install). This is not recommended, as it takes multiple hours to generate some databases.
