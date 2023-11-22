@@ -185,7 +185,7 @@ def create_args_parser():
         "--output",
         type=Path,
         default=Path("out.tsv"),
-        help="Path to output .tsv file. [default: out.tsv] If FLAMS is run with --batch, the specified -o/--output is used as preposition, followed by '_UniProtID_position'. [default: '']",
+        help="Path to output .tsv file. [default: out.tsv] If FLAMS is run with --batch, the specified -o/--output is used as preposition, followed by '_$UniProtID_$position.tsv'. [default: '']",
         metavar="outputFilePath"
     )
 

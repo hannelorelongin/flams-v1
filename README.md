@@ -50,7 +50,7 @@ Linux 64-bit, Windows and Mac OS supported.
 
 The recommended installation for Mac OS and Linux is through conda:
 
-`conda install -c bioconda flams`
+`conda install -c conda-forge -c bioconda flams`
 
 It is also possible to install FLAMS through pip (recommended installation for Windows):
 
@@ -75,8 +75,8 @@ Required argument when running FLAMS with --id/--in:
 * `position` is the position of a lysine in the protein, which you want to query against.
 
 Optional arguments:
-* `errorRange` is an number of positions before and after `pos` to also search for modifications. [default: 0]
-* `outputFilePath` is the path to where the result will be saved (in a .tsv file format). [default: out.tsv]
+* `errorRange` is an number of positions before and after `position` to also search for modifications. [default: 0]
+* `outputFilePath` is the path to where the result will be saved (in a .tsv file format). [default: out.tsv] If FLAMS is run with --batch, the specified -o/--output is used as preposition, followed by '\_$UniProtID\_$position.tsv'. [default: '']
 * `dataDir` is the path to the directory where intermediate files (the UniProt sequence files) are stored. [default: $PWD/data]
 * `threadsBLAST` is a BLAST parameter, allows you to speed up the search by multithreading. [default: 1]
 * `evalueBLAST` is a BLAST parameter, allows you to filter out low quality BLAST hits. [default: 0.01]
@@ -129,10 +129,8 @@ FLAMS updates its search databases regularly. To get an overview of the supporte
 
 |FLAMS version|CPLM version|dbPTM version|database available for download|
 |:----|:----|:----|:----|
-|v1.1|v4|2023_November|[yes](https://doi.org/10.5281/zenodo.10143464)|
-|v1.0|v4| |[yes](https://doi.org/10.5281/zenodo.10143464)|
-
-**Important**: if you update FLAMS from v1.0 to v1.1, please remove any pre-generated local databases. These are stored in ~/.local/share/flams on Linux ; /Users/$YOURUSENAME/Library/Application Support/flams on Mac ; C:\\Users\\$YOURUSENAME \\AppData\\Local\\flams\\flams .
+|v1.1|v4|2023_November|[yes](https://doi.org/10.5281/zenodo.10171879)|
+|v1.0|v4| |[yes](https://cplm.biocuckoo.cn/Download.php)|
 
 Please note that only part of dbPTM is integrated into FLAMS, namely the PTM sites with experimental evidence, as found [here](https://awi.cuhk.edu.cn/dbPTM/download.php). Moreover, proteins that carry a UniProt ID that was obsolete or missing at the time of database creation are also not included in the database.
 
@@ -230,31 +228,44 @@ FLAMS allows searches for all PTM types included in CPLM, and for those with exp
 
 It is possible to install the CPLM and dbPTM databases directly, instead of using the pre-generated databases that are hosted on Zenodo. This is however **not** recommended as the download takes several hours for larger databases, such as phosphorylation, ubiquitination and acetylation.
 
-However, if desired, find your local FLAMS installation and follow these instructions to modify the scripts:
+However, if desired, follow these instructions to modify the scripts:
 
-* on a fresh install:
-  - go to `src/flams/databases/setup.py`
-  - comment out lines 495-501 (function `_generate_blastdb_if_not_up_to_date`)
-  - uncomment line 505 (function `_generate_blastdb_if_not_up_to_date`)
+0. Make sure you are working in an environment with the correct dependencies:
 
-* on a FLAMS version with previously generated BLAST databases:
-  - go to `src/flams/databases/setup.py`
-  - change the version numbers of the databases you wish to update on lines 67-453.  E.g.:
+  * on Linux/MacOS: create a FLAMS conda environment, get all dependencies by installing FLAMS as specified for Linux/MacOS
+  * on Windows: create a FLAMS conda environment, get all dependencies by installing FLAMS as specified for Windows. Make sure BLAST+ is correctly installed.
 
-  `"2-hydroxyisobutyrylation": ModificationType(
+1. Download the latest FLAMS version from GitHub.
+
+2. Adapt the scripts:
+
+  * on a fresh install (= never ran FLAMS before, so no FLAMS databases yet):
+    - go to `src/flams/databases/setup.py`
+    - comment out lines 503-508 (function `_generate_blastdb_if_not_up_to_date` - the try/except _get_fasta_from_zenodo)
+    - uncomment line 512 (function `_generate_blastdb_if_not_up_to_date` - the _get_fasta_for_blast)
+
+  * on a FLAMS version with previously generated BLAST databases:
+    - go to `src/flams/databases/setup.py`
+    - change the version numbers of the databases you wish to update on lines 75-458.  E.g.:
+
+    `"2-hydroxyisobutyrylation": ModificationType(
         "2-hydroxyisobutyrylation", 1.0, [ModificationDatabase(cplmv4, "2-Hydroxyisobutyrylation")],
         ["K"]
-  ),`
+      ),`
 
-  becomes
+    becomes
 
-  `"2-hydroxyisobutyrylation": ModificationType(
+    `"2-hydroxyisobutyrylation": ModificationType(
         "2-hydroxyisobutyrylation", 2.0, [ModificationDatabase(cplmv4, "2-Hydroxyisobutyrylation")],
         ["K"]
-  ),`
+      ),`
 
-  - comment out lines 495-501 (function `_generate_blastdb_if_not_up_to_date`)
-  - uncomment line 505 (function `_generate_blastdb_if_not_up_to_date`)
+    - comment out lines 503-508 (function `_generate_blastdb_if_not_up_to_date` - the try/except _get_fasta_from_zenodo)
+    - uncomment line 512 (function `_generate_blastdb_if_not_up_to_date` - the _get_fasta_for_blast)
+
+3. Install your adapted FLAMS version locally:
+
+  `python -m pip install ./PathToLocalFLAMS`
 
 ## Contact
 
