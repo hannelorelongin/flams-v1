@@ -80,7 +80,7 @@ Optional arguments:
 * `dataDir` is the path to the directory where intermediate files (the UniProt sequence files) are stored. [default: $PWD/data]
 * `threadsBLAST` is a BLAST parameter, allows you to speed up the search by multithreading. [default: 1]
 * `evalueBLAST` is a BLAST parameter, allows you to filter out low quality BLAST hits. [default: 0.01]
-* `modification` is a space-seperated list of modifications (all lower case) to search for at the given position. Possible values are any (combinations) of the CPLM and dbPTM modifications. We also provide aggregated combinations for each amino acid ($AA-All), and the CPLM combinations. For a full list of all supported PTMs, and how they are named, see the [Supported PTM types](#supported-ptm-types) section of the README. In general, PTMs are written all lowercase, and spaces within a PTM name are replaced by underscores. [default: K-All]
+* `modification` is a space-separated list of modifications (all lower case) to search for at the given position. Possible values are any (combinations) of the CPLM and dbPTM modifications. We also provide aggregated combinations for each amino acid ($AA-All), and the CPLM combinations. For a full list of all supported PTMs, and how they are named, see the [Supported PTM types](#supported-ptm-types) section of the README. In general, PTMs are written all lowercase, and spaces within a PTM name are replaced by underscores. [default: K-All]
 
 ### Example use case
 
@@ -94,7 +94,7 @@ With the following command, you search whether the *Mycobabcterium smegmatis*' F
 
 `FLAMS --id A0QQ22 -p 537 -m CPLM-Acylations -o FadD2.tsv`
 
-You can find the example input and output data in the folder `test_data`.
+You can find the example input and output data in the folder `test_data`. The output data is organized in folders reflecting the FLAMS version used to generate it, as the output can vary depending on the exact FLAMS version (due to FLAMS database updates).
 
 For more example use cases, see the Supplementary information of the paper.
 
@@ -127,12 +127,13 @@ The output file contains 14 columns:
 
 FLAMS updates its search databases regularly. To get an overview of the supported databases, see the table below.
 
-|FLAMS version|CPLM version|dbPTM version|database available for download|
-|:----|:----|:----|:----|
-|v1.1|v4|2023_November|[yes](https://doi.org/10.5281/zenodo.10171879)|
-|v1.0|v4| |[yes](https://cplm.biocuckoo.cn/Download.php)|
+|FLAMS version|CPLM version|dbPTM version|database available for download|UniProt release|
+|:----|:----|:----|:----|:----|
+|v1.1.4|v4|2024_April|[yes](https://doi.org/10.5281/zenodo.10958721)|2024_02|
+|v1.1.0-3|v4|2023_November|[yes](https://doi.org/10.5281/zenodo.10171879)|2023_05|
+|v1.0|v4| |[yes](https://cplm.biocuckoo.cn/Download.php)|NA|
 
-Please note that only part of dbPTM is integrated into FLAMS, namely the PTM sites with experimental evidence, as found [here](https://awi.cuhk.edu.cn/dbPTM/download.php). Moreover, proteins that carry a UniProt ID that was obsolete or missing at the time of database creation are also not included in the database.
+Please note that only part of dbPTM is integrated into FLAMS, namely the PTM sites with experimental evidence, as found [here](https://awi.cuhk.edu.cn/dbPTM/download.php). As dbPTM does not store complete protein sequences, these are fetched during database creation based on UniProt identifiers reported in dbPTM and the UniProt release available at the time of database creation. As a consequence, FLAMS database updates can change the content of the PTM databases, beyond the simple addition of new dbPTM and/or CPLM entries, reflecting changes in UniProt. The most common UniProt changes affecting FLAMS databases are removed UniProt entries (leading to the removal of PTM entries on the affected protein in our database) and sequence updates. We are aware of this issue, impacting the completeness and interpretation of FLAMS' results, and will consider solutions in future FLAMS releases.
 
 Instructions on how to download the CPLM and dbPTM database yourself are in [section 'Local CPLM and dbPTM install'](#local-cplm-and-dbptm-install). This is not recommended, as it takes multiple hours to generate some databases.
 
@@ -163,7 +164,9 @@ FLAMS allows searches for all PTM types included in CPLM, and for those with exp
 |deamination| |Deamination| | | | | | | | |X| | | | | | | | | | | | | | | |
 |decanoylation| |Decanoylation| | | | | | | | | | | | | | | |X|X| | | | | | | |
 |decarboxylation| |Decarboxylation| | |X| | | | | | | | | | | | | |X| | | | | | | |
+|dephosphorylation| |Dephosphorylation| | | | | | | | | | | | | | | |X|X| | |X| | | | |
 |dietylphosphorylation|Dietylphosphorylation| | | | | | | | | |X| | | | | | | | | | | | | |X|X|
+|disulfide_bond| |Disulfide bond| |X| | | | | | | | | | | | | | | | | | | | | | |
 |d-glucuronylation| |D-glucuronoylation| | | | | |X| | | | | | | | | | | | | | | | | | |
 |farnesylation| |Farnesylation| |X| | | | | | | | | | | | | | | | | | | | | | |
 |formation_of_an_isopeptide_bond| |Formation of an isopeptide bond| | | |X| | | | | | | | | |X| | | | | | | | | | |
@@ -265,7 +268,7 @@ However, if desired, follow these instructions to modify the scripts:
 
 3. Install your adapted FLAMS version locally:
 
-  `python -m pip install ./PathToLocalFLAMS`
+    `python -m pip install ./PathToLocalFLAMS`
 
 ## Contact
 
@@ -273,7 +276,9 @@ Laboratory of Computational Systems Biology, KU Leuven.
 
 ## References
 
-If you use FLAMS in your work, please cite us.
+If you use FLAMS in your work, please cite:
+
+Longin, H. *et al* (2024) "FLAMS: Find Lysine Acylations and other Modification Sites." Bioinformatics. 40(1):btae005.
 
 In addition, FLAMS relies on third-party software & databases:
 

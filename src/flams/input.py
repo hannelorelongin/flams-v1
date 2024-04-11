@@ -698,7 +698,7 @@ def untangle_modifications(modifications):
             'n-palmitoylation','pyrrolylation','s-archaeol','s-carbamoylation',
             's-cyanation','s-cysteinylation','s-diacylglycerol','s-linked_glycosylation',
             's-nitrosylation','s-palmitoylation','stearoylation',
-            'succinylation','sulfhydration'])
+            'succinylation','sulfhydration','disulfide_bond'])
         if 'D-All' in modifications:
             modifications.remove('D-All')
             modifications.extend(['phosphorylation','acetylation','gpi-anchor',
@@ -774,14 +774,15 @@ def untangle_modifications(modifications):
             'o-palmitoylation','umpylation','ampylation','blocked_amino_end',
             'o-palmitoleoylation','adp-ribosylation','gpi-anchor','sulfation',
             'oxidation','pyruvate','amidation','hydroxylation','o-linked_glycosylation',
-            'methylation','n-linked_glycosylation','acetylation','ubiquitination'])
+            'methylation','n-linked_glycosylation','acetylation','ubiquitination',
+            'dephosphorylation'])
         if 'T-All' in modifications:
             modifications.remove('T-All')
             modifications.extend(['phosphorylation','decarboxylation','decanoylation',
             'octanoylation','o-palmitoylation','umpylation','ampylation',
             'blocked_amino_end','gpi-anchor','sulfation',
             'amidation','hydroxylation','o-linked_glycosylation',
-            'methylation','n-linked_glycosylation','acetylation'])
+            'methylation','n-linked_glycosylation','acetylation', 'dephosphorylation'])
         if 'V-All' in modifications:
             modifications.remove('V-All')
             modifications.extend(['phosphorylation','blocked_amino_end','amidation',
@@ -794,4 +795,5 @@ def untangle_modifications(modifications):
             modifications.remove('Y-All')
             modifications.extend(['phosphorylation','umpylation','iodination',
             'ampylation','adp-ribosylation','sulfation','nitration','amidation',
-            'hydroxylation','o-linked_glycosylation','methylation','acetylation'])
+            'hydroxylation','o-linked_glycosylation','methylation','acetylation',
+            'dephosphorylation'])
