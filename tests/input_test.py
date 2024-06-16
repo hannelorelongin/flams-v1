@@ -15,11 +15,16 @@ class InputTest(unittest.TestCase):
 
     def test_check_data_dir(self):
         # Nonexistent directory, creates it:
-        path = Path(f"{self.temp_dir.name}/nonexistent")
-        self.assertFalse(path.exists())
-        args = SimpleNamespace(data_dir=path)
-        check_data_dir(args)
-        self.assertTrue(path.exists())
+        with self.assertLogs() as logs:
+            path = Path(f"{self.temp_dir.name}/nonexistent")
+            self.assertFalse(path.exists())
+            args = SimpleNamespace(data_dir=path)
+
+            check_data_dir(args)
+
+            self.assertTrue(path.exists())
+            self.assertGreater(len(logs.output), 0)
+            self.assertRegex(logs.output[-1], r'created: .*?/nonexistent')
 
         # Existing directory, no error:
         path = Path(f"{self.temp_dir.name}/existing_dir")
@@ -32,7 +37,11 @@ class InputTest(unittest.TestCase):
         path.touch()
 
         args = SimpleNamespace(data_dir = path)
-        self.assertRaises(SystemExit, check_data_dir, args)
+        with self.assertLogs() as logs:
+            self.assertRaises(SystemExit, check_data_dir, args)
+
+            self.assertGreater(len(logs.output), 0)
+            self.assertRegex(logs.output[-1], r'not a directory: .*?/existing_file')
 
 if __name__ == '__main__':
     unittest.main()
