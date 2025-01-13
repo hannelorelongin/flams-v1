@@ -22,7 +22,7 @@ A bioinformatics tool to analyze the conservation of post-translational modifica
 
 ## Introduction
 
-FLAMS is a bioinformatics tool to analyze the conservation of post-translational modifications, by means of a position-based search against the CPLM database v.4 (Zhang, W. et al. Nucleic Acids Research. 2021, 44 (5): 243–250.) and the part of the dbPTM database with experimental support (Li, Z. et al. Nucleic Acids Research. 2022, 50:D471–D479.). FLAMS can be used (i) to quickly verify whether modifications in a specific protein have been reported before, (ii) to assess whether findings in one species might translate to other species, and (iii) to systematically assess the novelty and conservation of reported  modification sites.
+FLAMS is a bioinformatics tool to analyze the conservation of post-translational modifications, by means of a position-based search against the CPLM database v.4 (Zhang, W. *et al.* Nucleic Acids Research. 2021, 44(5):243–250.) and the part of the dbPTM database with experimental support (Chung, C.-R. *et al.* Nucleic Acids Research. 2025, 53(D1):D377–D386.). FLAMS can be used (i) to quickly verify whether modifications in a specific protein have been reported before, (ii) to assess whether findings in one species might translate to other species, and (iii) to systematically assess the novelty and conservation of reported  modification sites.
 
 The tool takes as input a protein (identifier or sequence) and the position of an amino acid. This repository contains the command-line tool `FLAMS`, which obtains an overview of the previously reported post-translational modifications matching your query, by using the following scripts:
 
@@ -44,7 +44,7 @@ Linux 64-bit, Windows and Mac OS supported.
 
 ### Third-party dependencies
 
-* [BLAST+ v.13](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+* [BLAST+ v.13](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.13.0/)
 
 ## Installation
 
@@ -72,7 +72,7 @@ Required argument:
   * `batchFilePath`, used with `--batch`, is the path to a tab seperated file for batch runs. The file should contain 1 entry per line, with UniProt IDs in the 1st column, and positions in the 2nd column.
 
 Required argument when running FLAMS with --id/--in:
-* `position` is the position of a lysine in the protein, which you want to query against.
+* `position` is the position of a (modified) residue in the protein, which you want to query against.
 
 Optional arguments:
 * `errorRange` is an number of positions before and after `position` to also search for modifications. [default: 0]
@@ -129,11 +129,12 @@ FLAMS updates its search databases regularly. To get an overview of the supporte
 
 |FLAMS version|CPLM version|dbPTM version|database available for download|UniProt release|
 |:----|:----|:----|:----|:----|
+|v1.1.5|v4|2025_January|[yes](https://doi.org/10.5281/zenodo.14616210)|2024_06|
 |v1.1.4|v4|2024_April|[yes](https://doi.org/10.5281/zenodo.10958721)|2024_02|
 |v1.1.0-3|v4|2023_November|[yes](https://doi.org/10.5281/zenodo.10171879)|2023_05|
 |v1.0|v4| |[yes](https://cplm.biocuckoo.cn/Download.php)|NA|
 
-Please note that only part of dbPTM is integrated into FLAMS, namely the PTM sites with experimental evidence, as found [here](https://awi.cuhk.edu.cn/dbPTM/download.php). As dbPTM does not store complete protein sequences, these are fetched during database creation based on UniProt identifiers reported in dbPTM and the UniProt release available at the time of database creation. As a consequence, FLAMS database updates can change the content of the PTM databases, beyond the simple addition of new dbPTM and/or CPLM entries, reflecting changes in UniProt. The most common UniProt changes affecting FLAMS databases are removed UniProt entries (leading to the removal of PTM entries on the affected protein in our database) and sequence updates. We are aware of this issue, impacting the completeness and interpretation of FLAMS' results, and will consider solutions in future FLAMS releases.
+Please note that only part of dbPTM is integrated into FLAMS, namely the PTM sites with experimental evidence, as found [here](https://biomics.lab.nycu.edu.tw/dbPTM/download.php). As dbPTM does not store complete protein sequences, these are fetched during database creation based on UniProt identifiers reported in dbPTM and the UniProt release available at the time of database creation. As a consequence, FLAMS database updates can change the content of the PTM databases, beyond the simple addition of new dbPTM and/or CPLM entries, reflecting changes in UniProt. The most common UniProt changes affecting FLAMS databases are removed UniProt entries (leading to the removal of PTM entries on the affected protein in our database) and sequence updates. We are aware of this issue, impacting the completeness and interpretation of FLAMS' results, and will consider solutions in future FLAMS releases.
 
 Instructions on how to download the CPLM and dbPTM database yourself are in [section 'Local CPLM and dbPTM install'](#local-cplm-and-dbptm-install). This is not recommended, as it takes multiple hours to generate some databases.
 
@@ -235,7 +236,7 @@ However, if desired, follow these instructions to modify the scripts:
 
 0. Make sure you are working in an environment with the correct dependencies:
 
-  * on Linux/MacOS: create a FLAMS conda environment, get all dependencies by installing FLAMS as specified for Linux/MacOS
+  * on Linux/MacOS: create a FLAMS conda environment, get all dependencies by installing FLAMS as specified for Linux/MacOS.
   * on Windows: create a FLAMS conda environment, get all dependencies by installing FLAMS as specified for Windows. Make sure BLAST+ is correctly installed.
 
 1. Download the latest FLAMS version from GitHub.
@@ -244,12 +245,12 @@ However, if desired, follow these instructions to modify the scripts:
 
   * on a fresh install (= never ran FLAMS before, so no FLAMS databases yet):
     - go to `src/flams/databases/setup.py`
-    - comment out lines 503-508 (function `_generate_blastdb_if_not_up_to_date` - the try/except _get_fasta_from_zenodo)
-    - uncomment line 512 (function `_generate_blastdb_if_not_up_to_date` - the _get_fasta_for_blast)
+    - comment out lines 515-520 (function `_generate_blastdb_if_not_up_to_date` - the try/except _get_fasta_from_zenodo)
+    - uncomment line 524 (function `_generate_blastdb_if_not_up_to_date` - the _get_fasta_for_blast)
 
   * on a FLAMS version with previously generated BLAST databases:
     - go to `src/flams/databases/setup.py`
-    - change the version numbers of the databases you wish to update on lines 75-458.  E.g.:
+    - change the version numbers of the databases you wish to update on lines 76-472.  E.g.:
 
     `"2-hydroxyisobutyrylation": ModificationType(
         "2-hydroxyisobutyrylation", 1.0, [ModificationDatabase(cplmv4, "2-Hydroxyisobutyrylation")],
@@ -263,8 +264,8 @@ However, if desired, follow these instructions to modify the scripts:
         ["K"]
       ),`
 
-    - comment out lines 503-508 (function `_generate_blastdb_if_not_up_to_date` - the try/except _get_fasta_from_zenodo)
-    - uncomment line 512 (function `_generate_blastdb_if_not_up_to_date` - the _get_fasta_for_blast)
+    - comment out lines 515-520 (function `_generate_blastdb_if_not_up_to_date` - the try/except _get_fasta_from_zenodo)
+    - uncomment line 524 (function `_generate_blastdb_if_not_up_to_date` - the _get_fasta_for_blast)
 
 3. Install your adapted FLAMS version locally:
 
@@ -284,7 +285,7 @@ In addition, FLAMS relies on third-party software & databases:
 
 Altschul, S.F. *et al* (1990) "Basic local alignment search tool." J. Mol. Biol. 215:403-410.
 
-Li, Z. *et al* (2022) "dbPTM in 2022: an updated database for exploring regulatory networks and functional associations of protein post-translational modifications." Nucleic Acids Research. 50:D471–D479.
+Chung, C.-R. *et al* (2025) "dbPTM 2025 update: comprehensive integration of PTMs and proteomic data for advanced insights into cancer research." Nucleic Acids Research. 53(D1):D377–D386.
 
 Zhang, W. *et al* (2021) "CPLM 4.0: an updated database with rich annotations for protein lysine modifications." Nucleic Acids Research. 44(5):243–250.
 

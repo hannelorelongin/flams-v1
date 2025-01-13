@@ -19,10 +19,13 @@ from Bio.SeqRecord import SeqRecord
 
 """ dbptm
 This script downloads the different contents of the dbPTM database, and transforms them into a fasta format.
-Script developed to work with dbPTM database version 2023.
+Script developed to work with dbPTM database versions 2023-2025.
 """
 
-URL = "https://awi.cuhk.edu.cn/dbPTM/download/experiment/{0}.zip"
+# This URL refers to the dbPTM databases before the 2025 release
+# URL = "https://awi.cuhk.edu.cn/dbPTM/download/experiment/{0}.zip"
+# The following URL refers to the dbPTM databases since the 2025 update
+URL = "https://biomics.lab.nycu.edu.tw/dbPTM/download/experiment/{0}.zip"
 
 def get_fasta(descriptor, location):
     """
